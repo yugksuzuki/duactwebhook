@@ -34,7 +34,7 @@ function carregarRepresentantes() {
     }));
 }
 
-// Obtem lat/lng via OpenCage com string completa (endereço)
+// Geocodifica endereço com OpenCage
 async function geocodificarEndereco(endereco) {
   const OPENCAGE_KEY = "24d5173c43b74f549f4c6f5b263d52b3";
   const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(endereco)}&countrycode=br&key=${OPENCAGE_KEY}`;
@@ -42,15 +42,38 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
+// Fallback para CEPs genéricos como 35570-000
+async function tentarVariacoesDeCep(cepBase) {
+  const prefixo = cepBase.slice(0, 5);
+  const tentativas = [cepBase];
+
+  for (let i = 1; i <= 10; i++) {
+    const sufixoAlternativo = i.toString().padStart(3, "0");
+    tentativas.push(`${prefixo}${sufixoAlternativo}`);
+  }
+
+  for (const cep of tentativas) {
+    try {
+      const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      if (!data.erro) return { cep, dados: data };
+    } catch {
+      continue;
+    }
+  }
+
+  return null;
+}
+
+// Handler principal
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
   }
 
   const { variables } = req.body;
-  const cep = variables?.CEP_usuario?.replace(/\D/g, "");
+  const cepOriginal = variables?.CEP_usuario?.replace(/\D/g, "");
 
-  if (!cep || cep.length !== 8) {
+  if (!cepOriginal || cepOriginal.length !== 8) {
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
@@ -58,12 +81,10 @@ export default async function handler(req, res) {
   let dados = null;
 
   try {
-    const viaCepURL = `https://viacep.com.br/ws/${cep}/json/`;
-    const resposta = await axios.get(viaCepURL);
-    dados = resposta.data;
+    const tentativa = await tentarVariacoesDeCep(cepOriginal);
+    if (!tentativa) throw new Error("CEP inválido");
 
-    if (dados.erro) throw new Error("CEP não encontrado");
-
+    dados = tentativa.dados;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
   } catch (err) {
     return res.status(200).json({
@@ -84,32 +105,32 @@ export default async function handler(req, res) {
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
 
-  // 🟨 EXCEÇÕES para SP
+  // 🟨 Regras específicas para SP
   if (dados.uf === "SP") {
-    // 1. Agnaldo – Raio de 100km de Santo Anastácio
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
       return res.status(200).json({
-        reply: `✅ Representante mais próximo do CEP ${cep}:\n\n📍 *Agnaldo* – Santo Anastácio/SP\n📞 WhatsApp: https://wa.me/5518996653510\n📏 Distância: ${distAgnaldo.toFixed(1)} km`,
+        reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *Agnaldo* – Santo Anastácio/SP\n📞 WhatsApp: https://wa.me/5518996653510\n📏 Distância: ${distAgnaldo.toFixed(1)} km`,
       });
     }
 
-    // 2. Marcelo – Litoral Paulista + Barretos
     const cidadesMarcelo = [
-      "Santos", "São Vicente", "Praia Grande", "Guarujá", "Bertioga",
-      "Itanhaém", "Mongaguá", "Peruíbe", "Ubatuba", "Caraguatatuba",
-      "São Sebastião", "Ilhabela", "Cubatão", "Barretos"
+      "santos", "são vicente", "praia grande", "guarujá", "bertioga",
+      "itanhaém", "mongaguá", "peruíbe", "ubatuba", "caraguatatuba",
+      "são sebastião", "ilhabela", "cubatão", "barretos"
     ];
-    if (cidadesMarcelo.includes(dados.localidade)) {
+
+    const cidadeUsuario = dados.localidade?.trim().toLowerCase();
+    if (cidadesMarcelo.includes(cidadeUsuario)) {
       return res.status(200).json({
         reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
       });
     }
 
-    // 3. Demais regiões de SP → continua com busca padrão (Neilson, William, etc.)
+    // SP continua para busca padrão
   }
 
-  // 🔎 Busca padrão com representantes do mesmo estado
+  // 🔎 Busca padrão por estado
   const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
 
   let maisProximo = null;
@@ -125,7 +146,7 @@ export default async function handler(req, res) {
 
   if (maisProximo && menorDistancia <= 200) {
     return res.status(200).json({
-      reply: `✅ Representante mais próximo do CEP ${cep}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
+      reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
     });
   }
 
