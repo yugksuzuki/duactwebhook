@@ -51,7 +51,10 @@ async function tentarVariacoesDeCep(cepBase) {
   for (const cep of tentativas) {
     try {
       const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      if (!data.erro) return { cep, dados: data };
+      if (!data.erro) {
+        console.log(`[DEBUG] CEP usado com sucesso: ${cep}`);
+        return { cep, dados: data };
+      }
     } catch {
       continue;
     }
@@ -80,9 +83,13 @@ export default async function handler(req, res) {
     if (!tentativa) throw new Error("CEP inválido");
 
     dados = tentativa.dados;
-    endereco = dados.logradouro
-      ? `${dados.logradouro}, ${dados.localidade} - ${dados.uf}, Brasil`
-      : `${dados.localidade} - ${dados.uf}, Brasil`;
+    const cidade = (dados.localidade || "").trim();
+    const estado = dados.uf;
+    const logradouro = dados.logradouro?.trim();
+
+    endereco = logradouro
+      ? `${logradouro}, ${cidade} - ${estado}, Brasil`
+      : `${cidade} - ${estado}, Brasil`;
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
@@ -93,9 +100,12 @@ export default async function handler(req, res) {
   try {
     coordenadas = await geocodificarEndereco(endereco);
 
-    // Fallback: tenta só com cidade e estado
-    if (!coordenadas) {
-      coordenadas = await geocodificarEndereco(`${dados.localidade} - ${dados.uf}, Brasil`);
+    const cidade = (dados.localidade || "").trim();
+    const estado = dados.uf;
+
+    if (!coordenadas && cidade && estado) {
+      console.log(`[DEBUG] Geocodificação fallback com cidade: ${cidade}, estado: ${estado}`);
+      coordenadas = await geocodificarEndereco(`${cidade} - ${estado}, Brasil`);
     }
 
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
@@ -108,9 +118,9 @@ export default async function handler(req, res) {
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
   const estado = dados.uf;
-  const cidadeUsuario = dados.localidade?.trim().toLowerCase();
+  const cidadeUsuario = (dados.localidade || "").trim().toLowerCase();
 
-  // Regras personalizadas seguem inalteradas...
+  // Regras personalizadas...
 
   if (estado === "RS" && cidadeUsuario === "rio grande") {
     const dioneiLat = -32.035;
@@ -136,15 +146,13 @@ export default async function handler(req, res) {
   }
 
   if (estado === "PR") {
-    const distLoanda = haversine(latCliente, lonCliente, -22.9297, -53.1366); // Loanda-PR
+    const distLoanda = haversine(latCliente, lonCliente, -22.9297, -53.1366);
     const cidadesOeste = ["toledo", "cascavel", "foz do iguaçu", "medianeira", "marechal cândido rondon"];
-
     if (distLoanda <= 200 || cidadesOeste.includes(cidadeUsuario)) {
       return res.status(200).json({
         reply: `✅ Representante para raio de 200km a partir de Loanda (PR) e Oeste do PR:\n\n📍 *Mela*\n📞 WhatsApp: https://wa.me/5544991254963`,
       });
     }
-
     return res.status(200).json({
       reply: `✅ Representante para Curitiba e demais regiões do Paraná:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
     });
@@ -162,8 +170,10 @@ export default async function handler(req, res) {
     });
   }
 
-  if ((estado === "RS" && ["santa rosa", "ijui", "cruz alta", "são luiz gonzaga", "santo ângelo", "passo fundo", "santa maria"].includes(cidadeUsuario)) ||
-      (estado === "SC" && ["chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"].includes(cidadeUsuario))) {
+  if (
+    (estado === "RS" && ["santa rosa", "ijui", "cruz alta", "são luiz gonzaga", "santo ângelo", "passo fundo", "santa maria"].includes(cidadeUsuario)) ||
+    (estado === "SC" && ["chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"].includes(cidadeUsuario))
+  ) {
     return res.status(200).json({
       reply: `✅ Representante para Oeste Gaúcho e Extremo Oeste Catarinense:\n\n📍 *Cristian*\n📞 WhatsApp: https://wa.me/555984491079`,
     });
@@ -187,7 +197,7 @@ export default async function handler(req, res) {
     });
   }
 
-if (estado === "SP") {
+  if (estado === "SP") {
     const litoralSP = [
       "santos", "são vicente", "guarujá", "praia grande", "cubatão", "bertioga",
       "caraguatatuba", "ubatuba", "ilhabela", "mongaguá", "itanhaém", "peruíbe"
@@ -226,8 +236,6 @@ if (estado === "SP") {
     });
   }
 
-  // [SEU BLOCO DE REGRAS PERSONALIZADAS ESTÁ OK, então mantenha como está]
-
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
   let maisProximo = null;
   let menorDistancia = Infinity;
@@ -241,11 +249,11 @@ if (estado === "SP") {
   }
 
   if (maisProximo && menorDistancia <= 200) {
-  console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | DIST: ${maisProximo?.distancia?.toFixed(1)}km`);
-  return res.status(200).json({
-    reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
-  });
-}
+    console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | DIST: ${maisProximo.distancia.toFixed(1)} km`);
+    return res.status(200).json({
+      reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
+    });
+  }
 
   return res.status(200).json({
     reply: `❗ Nenhum representante encontrado em até 200 km no seu estado.\n\nPara assuntos gerais, por favor entre em contato com nosso atendimento:\n☎️ *Everson*\n+55 (48) 9211-0383`,
