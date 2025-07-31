@@ -7,7 +7,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
   const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
+  const dLon = toRad(lat2 - lon1);
   const a =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
@@ -77,38 +77,61 @@ export default async function handler(req, res) {
 
   let endereco = null;
   let dados = null;
+  let coordenadas = null;
 
   try {
-    const tentativa = await tentarVariacoesDeCep(cepOriginal);
-    if (!tentativa) throw new Error("CEP inválido");
+    let tentativa = await tentarVariacoesDeCep(cepOriginal);
 
-    dados = tentativa.dados;
-    const cidade = (dados.localidade || "").trim();
-    const estado = dados.uf;
-    const logradouro = dados.logradouro?.trim();
+    if (!tentativa) {
+      const geoFallback = await geocodificarEndereco(`${cepOriginal}, Brasil`);
+      if (!geoFallback) {
+        return res.status(200).json({
+          reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
+        });
+      }
 
-    endereco = logradouro
-      ? `${logradouro}, ${cidade} - ${estado}, Brasil`
-      : `${cidade} - ${estado}, Brasil`;
+      dados = {
+        localidade: "",
+        uf: "",
+        logradouro: "",
+      };
+      endereco = `${cepOriginal}, Brasil`;
+      coordenadas = geoFallback;
+    } else {
+      dados = tentativa.dados;
+      const cidade = (dados.localidade || "").trim();
+      const estado = dados.uf;
+      const logradouro = dados.logradouro?.trim();
+
+      endereco = logradouro
+        ? `${logradouro}, ${cidade} - ${estado}, Brasil`
+        : `${cidade} - ${estado}, Brasil`;
+    }
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
   }
 
-  let coordenadas = null;
   try {
-    coordenadas = await geocodificarEndereco(endereco);
-
-    const cidade = (dados.localidade || "").trim();
-    const estado = dados.uf;
-
-    if (!coordenadas && cidade && estado) {
-      console.log(`[DEBUG] Geocodificação fallback com cidade: ${cidade}, estado: ${estado}`);
-      coordenadas = await geocodificarEndereco(`${cidade} - ${estado}, Brasil`);
+    if (!coordenadas) {
+      coordenadas = await geocodificarEndereco(endereco);
     }
 
-    if (!coordenadas) throw new Error("Sem resultado do OpenCage");
+    if (!dados.uf && coordenadas) {
+      const reverse = await axios.get(
+        `https://api.opencagedata.com/geocode/v1/json?q=${coordenadas.lat}+${coordenadas.lng}&key=24d5173c43b74f549f4c6f5b263d52b3&language=pt`
+      );
+      const componente = reverse.data?.results?.[0]?.components;
+      if (componente) {
+        dados.localidade = componente.city || componente.town || componente.village || "";
+        dados.uf = componente.state_code || "";
+      }
+    }
+
+    if (!coordenadas) {
+      throw new Error("Sem resultado do OpenCage");
+    }
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
@@ -120,7 +143,8 @@ export default async function handler(req, res) {
   const estado = dados.uf;
   const cidadeUsuario = (dados.localidade || "").trim().toLowerCase();
 
-  // Regras personalizadas...
+  // ⬇️ Coloque as regras aqui
+
 
   if (estado === "RS" && cidadeUsuario === "rio grande") {
     const dioneiLat = -32.035;
@@ -235,6 +259,8 @@ export default async function handler(req, res) {
       reply: `✅ Representante para São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
     });
   }
+
+  //fim regras
 
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
   let maisProximo = null;
