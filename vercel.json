@@ -6,6 +6,6 @@
   ],
   "routes": [
     { "src": "/webhook", "dest": "api/webhook.js" },
-    { "src": "/webhook-representante", "dest": "api/webhook-representante.js" }
+    { "src": "/webhook-localiza-representante", "dest": "api/webhook-localiza-representante.js" }
   ]
 }
