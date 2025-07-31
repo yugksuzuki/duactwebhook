@@ -3,6 +3,7 @@ import path from "path";
 import axios from "axios";
 import Papa from "papaparse";
 
+// Haversine (distância entre dois pontos em km)
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
@@ -15,8 +16,9 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
+// Carrega representantes do CSV
 function carregarRepresentantes() {
-  const filePath = path.resolve("./public", "cepsr.csv");
+  const filePath = path.resolve("./public", "ceps.csv");
   const csvContent = fs.readFileSync(filePath, "utf8");
   const parsed = Papa.parse(csvContent, { header: true });
 
@@ -26,41 +28,18 @@ function carregarRepresentantes() {
       nome: row.REPRESENTANTE,
       cidade: row.CIDADE,
       estado: row.ESTADO,
-      celular: row["CELULAR"] || row["CELULAR 2"] || "",
+      celular: row.CELULAR,
       lat: parseFloat(row.Latitude),
       lon: parseFloat(row.Longitude),
     }));
 }
 
+// Obtem lat/lng via OpenCage com string completa (endereço)
 async function geocodificarEndereco(endereco) {
   const OPENCAGE_KEY = "24d5173c43b74f549f4c6f5b263d52b3";
   const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(endereco)}&countrycode=br&key=${OPENCAGE_KEY}`;
   const geoResp = await axios.get(geoURL);
   return geoResp?.data?.results?.[0]?.geometry;
-}
-
-async function tentarVariacoesDeCep(cepBase) {
-  const prefixo = cepBase.slice(0, 5);
-  const tentativas = [cepBase];
-
-  for (let i = 1; i <= 99; i++) {
-    const sufixoAlternativo = i.toString().padStart(3, "0");
-    tentativas.push(`${prefixo}${sufixoAlternativo}`);
-  }
-
-  for (const cep of tentativas) {
-    try {
-      const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      if (!data.erro) {
-        console.log(`[DEBUG] CEP usado com sucesso: ${cep}`);
-        return { cep, dados: data };
-      }
-    } catch {
-      continue;
-    }
-  }
-
-  return null;
 }
 
 export default async function handler(req, res) {
@@ -69,9 +48,9 @@ export default async function handler(req, res) {
   }
 
   const { variables } = req.body;
-  const cepOriginal = variables?.CEP_usuario?.replace(/\D/g, "");
+  const cep = variables?.CEP_usuario?.replace(/\D/g, "");
 
-  if (!cepOriginal || cepOriginal.length !== 8) {
+  if (!cep || cep.length !== 8) {
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
@@ -79,17 +58,13 @@ export default async function handler(req, res) {
   let dados = null;
 
   try {
-    const tentativa = await tentarVariacoesDeCep(cepOriginal);
-    if (!tentativa) throw new Error("CEP inválido");
+    const viaCepURL = `https://viacep.com.br/ws/${cep}/json/`;
+    const resposta = await axios.get(viaCepURL);
+    dados = resposta.data;
 
-    dados = tentativa.dados;
-    const cidade = (dados.localidade || "").trim();
-    const estado = dados.uf;
-    const logradouro = dados.logradouro?.trim();
+    if (dados.erro) throw new Error("CEP não encontrado");
 
-    endereco = logradouro
-      ? `${logradouro}, ${cidade} - ${estado}, Brasil`
-      : `${cidade} - ${estado}, Brasil`;
+    endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
@@ -99,15 +74,6 @@ export default async function handler(req, res) {
   let coordenadas = null;
   try {
     coordenadas = await geocodificarEndereco(endereco);
-
-    const cidade = (dados.localidade || "").trim();
-    const estado = dados.uf;
-
-    if (!coordenadas && cidade && estado) {
-      console.log(`[DEBUG] Geocodificação fallback com cidade: ${cidade}, estado: ${estado}`);
-      coordenadas = await geocodificarEndereco(`${cidade} - ${estado}, Brasil`);
-    }
-
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
     return res.status(200).json({
@@ -117,11 +83,35 @@ export default async function handler(req, res) {
 
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
-  const estado = dados.uf;
-  const cidadeUsuario = (dados.localidade || "").trim().toLowerCase();
 
-  // Lógica base: busca o representante mais próximo no mesmo estado
-  const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
+  // 🟨 EXCEÇÕES para SP
+  if (dados.uf === "SP") {
+    // 1. Agnaldo – Raio de 100km de Santo Anastácio
+    const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
+    if (distAgnaldo <= 100) {
+      return res.status(200).json({
+        reply: `✅ Representante mais próximo do CEP ${cep}:\n\n📍 *Agnaldo* – Santo Anastácio/SP\n📞 WhatsApp: https://wa.me/5518996653510\n📏 Distância: ${distAgnaldo.toFixed(1)} km`,
+      });
+    }
+
+    // 2. Marcelo – Litoral Paulista + Barretos
+    const cidadesMarcelo = [
+      "Santos", "São Vicente", "Praia Grande", "Guarujá", "Bertioga",
+      "Itanhaém", "Mongaguá", "Peruíbe", "Ubatuba", "Caraguatatuba",
+      "São Sebastião", "Ilhabela", "Cubatão", "Barretos"
+    ];
+    if (cidadesMarcelo.includes(dados.localidade)) {
+      return res.status(200).json({
+        reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
+      });
+    }
+
+    // 3. Demais regiões de SP → continua com busca padrão (Neilson, William, etc.)
+  }
+
+  // 🔎 Busca padrão com representantes do mesmo estado
+  const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
+
   let maisProximo = null;
   let menorDistancia = Infinity;
 
@@ -134,9 +124,8 @@ export default async function handler(req, res) {
   }
 
   if (maisProximo && menorDistancia <= 200) {
-    console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | DIST: ${maisProximo.distancia.toFixed(1)} km`);
     return res.status(200).json({
-      reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
+      reply: `✅ Representante mais próximo do CEP ${cep}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
     });
   }
 
