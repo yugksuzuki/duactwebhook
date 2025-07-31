@@ -3,7 +3,7 @@ import path from "path";
 import axios from "axios";
 import Papa from "papaparse";
 
-// Haversine (distância entre dois pontos em km)
+// Cálculo de distância (Haversine)
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
@@ -16,7 +16,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// Carrega representantes do CSV
+// Lê representantes do CSV
 function carregarRepresentantes() {
   const filePath = path.resolve("./public", "ceps.csv");
   const csvContent = fs.readFileSync(filePath, "utf8");
@@ -34,7 +34,7 @@ function carregarRepresentantes() {
     }));
 }
 
-// Geocodifica endereço com OpenCage
+// Geocodifica via OpenCage
 async function geocodificarEndereco(endereco) {
   const OPENCAGE_KEY = "24d5173c43b74f549f4c6f5b263d52b3";
   const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(endereco)}&countrycode=br&key=${OPENCAGE_KEY}`;
@@ -42,75 +42,66 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
-// Tenta variações de CEP (para CEPs genéricos tipo 35570-000)
+// Tenta CEPs alternativos (001...010)
 async function tentarVariacoesDeCep(cepBase) {
   const prefixo = cepBase.slice(0, 5);
   const tentativas = [cepBase];
-
   for (let i = 1; i <= 10; i++) {
-    const sufixoAlternativo = i.toString().padStart(3, "0");
-    tentativas.push(`${prefixo}${sufixoAlternativo}`);
+    tentativas.push(`${prefixo}${i.toString().padStart(3, "0")}`);
   }
 
   for (const cep of tentativas) {
     try {
       const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       if (!data.erro) return { cep, dados: data };
-    } catch {
-      continue;
-    }
+    } catch {}
   }
 
   return null;
 }
 
-// Webhook Umbler: localizar representante por CEP
+// Handler principal
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
+    return res.send({ reply: "Método inválido. Use POST." });
   }
 
   const { variables } = req.body;
   const cepOriginal = variables?.CEP_usuario?.replace(/\D/g, "");
 
   if (!cepOriginal || cepOriginal.length !== 8) {
-    return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
+    return res.send({ reply: "CEP inválido. Envie um CEP completo com 8 dígitos." });
   }
 
-  let endereco = null;
   let dados = null;
+  let endereco = null;
 
   try {
     const tentativa = await tentarVariacoesDeCep(cepOriginal);
     if (!tentativa) throw new Error("CEP inválido");
-
     dados = tentativa.dados;
-    endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
-  } catch (err) {
-    return res.status(200).json({
-      reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
-    });
+    endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}`;
+  } catch {
+    return res.send({ reply: "Erro ao consultar o CEP. Verifique se está correto." });
   }
 
-  let coordenadas = null;
+  let coordenadas;
   try {
     coordenadas = await geocodificarEndereco(endereco);
-    if (!coordenadas) throw new Error("Sem resultado do OpenCage");
-  } catch (err) {
-    return res.status(200).json({
-      reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
-    });
+    if (!coordenadas) throw new Error("Sem coordenadas");
+  } catch {
+    return res.send({ reply: "Erro ao localizar sua região. Tente novamente." });
   }
 
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
 
-  // 🟨 Regras específicas para SP
+  // Regra SP - Agnaldo
   if (dados.uf === "SP") {
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
-      return res.status(200).json({
-        reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *Agnaldo* – Santo Anastácio/SP\n📞 WhatsApp: https://wa.me/5518996653510\n📏 Distância: ${distAgnaldo.toFixed(1)} km`,
+      return res.send({
+        reply: `Representante próximo:\n*Agnaldo* – Santo Anastácio/SP\nWhatsApp: wa.me/5518996653510`
       });
     }
 
@@ -119,36 +110,35 @@ export default async function handler(req, res) {
       "itanhaém", "mongaguá", "peruíbe", "ubatuba", "caraguatatuba",
       "são sebastião", "ilhabela", "cubatão", "barretos"
     ];
-
-    const cidadeUsuario = dados.localidade?.trim().toLowerCase();
+    const cidadeUsuario = dados.localidade?.toLowerCase().trim();
     if (cidadesMarcelo.includes(cidadeUsuario)) {
-      return res.status(200).json({
-        reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
+      return res.send({
+        reply: `Representante para o litoral:\n*Marcelo*\nWhatsApp: wa.me/5511980323728`
       });
     }
   }
 
-  // 🔎 Busca padrão por estado
+  // Busca padrão
   const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
 
   let maisProximo = null;
-  let menorDistancia = Infinity;
+  let menorDist = Infinity;
 
   for (const rep of lista) {
     const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
-    if (dist < menorDistancia) {
-      menorDistancia = dist;
+    if (dist < menorDist) {
+      menorDist = dist;
       maisProximo = { ...rep, distancia: dist };
     }
   }
 
-  if (maisProximo && menorDistancia <= 200) {
-    return res.status(200).json({
-      reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
+  if (maisProximo && menorDist <= 200) {
+    return res.send({
+      reply: `Representante próximo:\n*${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\nWhatsApp: wa.me/55${maisProximo.celular}`
     });
   }
 
-  return res.status(200).json({
-    reply: `❗ Nenhum representante encontrado em até 200 km no seu estado.\n\nPara assuntos gerais, por favor entre em contato com nosso atendimento:\n☎️ *Everson*\n+55 (48) 9211-0383`,
+  return res.send({
+    reply: `Nenhum representante encontrado perto de você.\nFale com nosso suporte:\nwa.me/554892110383`
   });
 }
