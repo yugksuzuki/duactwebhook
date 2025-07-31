@@ -43,7 +43,7 @@ async function tentarVariacoesDeCep(cepBase) {
   const prefixo = cepBase.slice(0, 5);
   const tentativas = [cepBase];
 
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 99; i++) {
     const sufixoAlternativo = i.toString().padStart(3, "0");
     tentativas.push(`${prefixo}${sufixoAlternativo}`);
   }
@@ -80,7 +80,9 @@ export default async function handler(req, res) {
     if (!tentativa) throw new Error("CEP inválido");
 
     dados = tentativa.dados;
-    endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
+    endereco = dados.logradouro
+      ? `${dados.logradouro}, ${dados.localidade} - ${dados.uf}, Brasil`
+      : `${dados.localidade} - ${dados.uf}, Brasil`;
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
@@ -90,6 +92,12 @@ export default async function handler(req, res) {
   let coordenadas = null;
   try {
     coordenadas = await geocodificarEndereco(endereco);
+
+    // Fallback: tenta só com cidade e estado
+    if (!coordenadas) {
+      coordenadas = await geocodificarEndereco(`${dados.localidade} - ${dados.uf}, Brasil`);
+    }
+
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
     return res.status(200).json({
@@ -101,6 +109,8 @@ export default async function handler(req, res) {
   const lonCliente = coordenadas.lng;
   const estado = dados.uf;
   const cidadeUsuario = dados.localidade?.trim().toLowerCase();
+
+  // Regras personalizadas seguem inalteradas...
 
   if (estado === "RS" && cidadeUsuario === "rio grande") {
     const dioneiLat = -32.035;
@@ -215,6 +225,8 @@ if (estado === "SP") {
       reply: `✅ Representante para São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
     });
   }
+
+  // [SEU BLOCO DE REGRAS PERSONALIZADAS ESTÁ OK, então mantenha como está]
 
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
   let maisProximo = null;
