@@ -7,7 +7,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
   const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lat2 - lon1);
+  const dLon = toRad(lon2 - lon1);
   const a =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
@@ -77,61 +77,38 @@ export default async function handler(req, res) {
 
   let endereco = null;
   let dados = null;
-  let coordenadas = null;
 
   try {
-    let tentativa = await tentarVariacoesDeCep(cepOriginal);
+    const tentativa = await tentarVariacoesDeCep(cepOriginal);
+    if (!tentativa) throw new Error("CEP inválido");
 
-    if (!tentativa) {
-      const geoFallback = await geocodificarEndereco(`${cepOriginal}, Brasil`);
-      if (!geoFallback) {
-        return res.status(200).json({
-          reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
-        });
-      }
+    dados = tentativa.dados;
+    const cidade = (dados.localidade || "").trim();
+    const estado = dados.uf;
+    const logradouro = dados.logradouro?.trim();
 
-      dados = {
-        localidade: "",
-        uf: "",
-        logradouro: "",
-      };
-      endereco = `${cepOriginal}, Brasil`;
-      coordenadas = geoFallback;
-    } else {
-      dados = tentativa.dados;
-      const cidade = (dados.localidade || "").trim();
-      const estado = dados.uf;
-      const logradouro = dados.logradouro?.trim();
-
-      endereco = logradouro
-        ? `${logradouro}, ${cidade} - ${estado}, Brasil`
-        : `${cidade} - ${estado}, Brasil`;
-    }
+    endereco = logradouro
+      ? `${logradouro}, ${cidade} - ${estado}, Brasil`
+      : `${cidade} - ${estado}, Brasil`;
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
   }
 
+  let coordenadas = null;
   try {
-    if (!coordenadas) {
-      coordenadas = await geocodificarEndereco(endereco);
+    coordenadas = await geocodificarEndereco(endereco);
+
+    const cidade = (dados.localidade || "").trim();
+    const estado = dados.uf;
+
+    if (!coordenadas && cidade && estado) {
+      console.log(`[DEBUG] Geocodificação fallback com cidade: ${cidade}, estado: ${estado}`);
+      coordenadas = await geocodificarEndereco(`${cidade} - ${estado}, Brasil`);
     }
 
-    if (!dados.uf && coordenadas) {
-      const reverse = await axios.get(
-        `https://api.opencagedata.com/geocode/v1/json?q=${coordenadas.lat}+${coordenadas.lng}&key=24d5173c43b74f549f4c6f5b263d52b3&language=pt`
-      );
-      const componente = reverse.data?.results?.[0]?.components;
-      if (componente) {
-        dados.localidade = componente.city || componente.town || componente.village || "";
-        dados.uf = componente.state_code || "";
-      }
-    }
-
-    if (!coordenadas) {
-      throw new Error("Sem resultado do OpenCage");
-    }
+    if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
@@ -143,127 +120,124 @@ export default async function handler(req, res) {
   const estado = dados.uf;
   const cidadeUsuario = (dados.localidade || "").trim().toLowerCase();
 
-  // ⬇️ Coloque as regras aqui
+  // 📌 Regras personalizadas:
 
-// Regras fixas por estado
-if (["RJ", "ES"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante para todo o estado do ${estado}:\n\n📍 *Rafa*\n📞 WhatsApp: https://wa.me/5522992417676`,
-  });
-}
+  if (estado === "RS" && cidadeUsuario === "rio grande") {
+    const dioneiLat = -32.035;
+    const dioneiLon = -52.099;
+    const dist = haversine(latCliente, lonCliente, dioneiLat, dioneiLon);
+    if (dist <= 50) {
+      return res.status(200).json({
+        reply: `✅ Representante para Rio Grande (RS) e 50km ao redor:\n\n📍 *Dionei*\n📞 WhatsApp: https://wa.me/53532910789\n📏 Distância: ${dist.toFixed(1)} km`,
+      });
+    }
+  }
 
-if (estado === "MG") {
-  return res.status(200).json({
-    reply: `✅ Representante para Minas Gerais:\n\n📍 *Luiz Carlos*\n📞 WhatsApp: https://wa.me/5531996036765`,
-  });
-}
-
-if (["MS", "MT"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante para ${estado}:\n\n📍 *Rodolfo*\n📞 WhatsApp: https://wa.me/5567993044747`,
-  });
-}
-
-if (["BA", "SE", "AL", "PE", "PB", "RN", "CE", "PI"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante para a região Nordeste (${estado}):\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
-  });
-}
-
-if (["PA", "AM", "AC", "RO", "RR", "TO", "AP"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante para a região Norte (${estado}):\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
-  });
-}
-
-// São Paulo
-if (estado === "SP") {
-  const cidadesLitoraisSP = [
-    "Santos", "Guarujá", "São Vicente", "Praia Grande", "Mongaguá", "Itanhaém", "Peruíbe",
-    "Bertioga", "Caraguatatuba", "São Sebastião", "Ilhabela", "Ubatuba", "Cubatão", "Cananéia",
-    "Iguape", "Ilha Comprida", "Jacupiranga", "Registro", "Pariquera-Açu", "Juquiá", "Miracatu",
-    "Pedro de Toledo", "Itariri", "Sete Barras", "Eldorado"
-  ];
-  
-  if (cidadesLitoraisSP.includes(cidade)) {
+  if (["RJ", "ES"].includes(estado)) {
     return res.status(200).json({
-      reply: `✅ Representante para o litoral de São Paulo:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5519996718937`,
-    });
-  } else {
-    return res.status(200).json({
-      reply: `✅ Representante para o interior de São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5547991710236`,
+      reply: `✅ Representante para todo o estado do ${estado}:\n\n📍 *Rafa*\n📞 WhatsApp: https://wa.me/5522992417676`,
     });
   }
-}
 
-// Paraná
-if (estado === "PR") {
-  const distanciaLoanda = haversine(lat, lon, -23.0862, -53.0697); // Coordenadas de Loanda
-  if (distanciaLoanda <= 100) {
+  if (estado === "MG") {
     return res.status(200).json({
-      reply: `✅ Representante para a região de Loanda (PR):\n\n📍 *Luiz Carlos*\n📞 WhatsApp: https://wa.me/5531996036765`,
-    });
-  } else {
-    return res.status(200).json({
-      reply: `✅ Representante para o Paraná:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
+      reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5516999774274`,
     });
   }
-}
 
-// Santa Catarina
-if (estado === "SC") {
-  if (cidade === "Chapecó") {
+  if (estado === "PR") {
+    const distLoanda = haversine(latCliente, lonCliente, -22.9297, -53.1366);
+    const cidadesOeste = ["toledo", "cascavel", "foz do iguaçu", "medianeira", "marechal cândido rondon"];
+    if (distLoanda <= 200 || cidadesOeste.includes(cidadeUsuario)) {
+      return res.status(200).json({
+        reply: `✅ Representante para raio de 200km a partir de Loanda (PR) e Oeste do PR:\n\n📍 *Mela*\n📞 WhatsApp: https://wa.me/5544991254963`,
+      });
+    }
     return res.status(200).json({
-      reply: `✅ Representante para Chapecó e região Oeste:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
+      reply: `✅ Representante para Curitiba e demais regiões do Paraná:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
     });
-  } else if (
-    ["Joinville", "Blumenau", "Itajaí", "Jaraguá do Sul", "Brusque", "São Bento do Sul", "Rio do Sul"].includes(cidade)
+  }
+
+  if (estado === "RS" && ["torres", "tramandaí", "terra de areia", "arroio do sal", "são joão do sul", "morrinhos do sul"].includes(cidadeUsuario)) {
+    return res.status(200).json({
+      reply: `✅ Representante para o Litoral Gaúcho:\n\n📍 *Daniel*\n📞 WhatsApp: https://wa.me/555199987333`,
+    });
+  }
+
+  if (estado === "RS" && ["porto alegre", "guaíba", "sapucaia do sul", "cachoeirinha"].includes(cidadeUsuario)) {
+    return res.status(200).json({
+      reply: `✅ Representante para Região Metropolitana de Porto Alegre e Serra Gaúcha:\n\n📍 *Adriano e Reginaldo*\n📞 WhatsApp: https://wa.me/5551991089339`,
+    });
+  }
+
+  if (
+    (estado === "RS" && ["santa rosa", "ijui", "cruz alta", "são luiz gonzaga", "santo ângelo", "passo fundo", "santa maria"].includes(cidadeUsuario)) ||
+    (estado === "SC" && ["chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"].includes(cidadeUsuario))
   ) {
     return res.status(200).json({
-      reply: `✅ Representante para a região Norte/Centro de SC:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5547991710236`,
-    });
-  } else {
-    return res.status(200).json({
-      reply: `✅ Representante para o litoral e sul de SC:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
+      reply: `✅ Representante para Oeste Gaúcho e Extremo Oeste Catarinense:\n\n📍 *Cristian*\n📞 WhatsApp: https://wa.me/555984491079`,
     });
   }
-}
 
-// Rio Grande do Sul
-if (estado === "RS") {
-  const distanciaRioGrande = haversine(lat, lon, -32.0339, -52.0986); // Coordenadas de Rio Grande
-  const cidadesSerraRS = ["Caxias do Sul", "Gramado", "Canela", "Bento Gonçalves", "Farroupilha", "Nova Petrópolis"];
-
-  if (cidadesSerraRS.includes(cidade) || cidade === "Porto Alegre") {
+  if (estado === "SC" && ["blumenau", "brusque"].includes(cidadeUsuario)) {
     return res.status(200).json({
-      reply: `✅ Representante para Porto Alegre e Serra Gaúcha:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5547991710236`,
-    });
-  } else if (distanciaRioGrande <= 150) {
-    return res.status(200).json({
-      reply: `✅ Representante para a região sul e litoral do RS:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
-    });
-  } else {
-    return res.status(200).json({
-      reply: `✅ Representante para o interior do Rio Grande do Sul:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5547991710236`,
+      reply: `✅ Representante para Blumenau, Brusque e região:\n\n📍 *Alan*\n📞 WhatsApp: https://wa.me/554799638565`,
     });
   }
-}
 
-// Fallback (caso nenhuma das regras acima seja satisfeita)
-return res.status(200).json({
-  reply: `✅ Representante disponível para sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/5547985418374`,
-});
+  if (estado === "SC" && ["imbituba", "garopaba", "laguna", "tubarão"].includes(cidadeUsuario)) {
+    return res.status(200).json({
+      reply: `✅ Representante para o Litoral Sul de SC:\n\n📍 *Peterson*\n📞 WhatsApp: https://wa.me/554899658600`,
+    });
+  }
 
-  //fim regras
+  if (estado === "SC" && ["balneário camboriú", "itajai", "navegantes", "penha", "itapema", "porto belo", "bombinhas"].includes(cidadeUsuario)) {
+    return res.status(200).json({
+      reply: `✅ Representante para o Litoral Centro-Norte de SC:\n\n📍 *Diego*\n📞 WhatsApp: https://wa.me/554898445939`,
+    });
+  }
 
- let lista = carregarRepresentantes().filter(rep => rep.estado === estado);
+  if (estado === "SP") {
+    const litoralSP = [
+      "santos", "são vicente", "guarujá", "praia grande", "cubatão", "bertioga",
+      "caraguatatuba", "ubatuba", "ilhabela", "mongaguá", "itanhaém", "peruíbe"
+    ];
 
-// Se não encontrar ninguém no estado, usa todos os representantes (modo fallback)
-if (lista.length === 0) {
-  console.log(`[INFO] Nenhum representante no estado ${estado}, buscando geral`);
-  lista = carregarRepresentantes();
-}
+    const interiorSP = [
+      "barretos", "franca", "ribeirão preto", "guaira", "batatais", "são joaquim da barra",
+      "sertãozinho", "bebedouro", "orlândia", "altinópolis", "jardinópolis"
+    ];
 
+    const oesteSP = [
+      "santo anastácio", "presidente prudente", "presidente epitácio", "dracena",
+      "teodoro sampaio", "mirante do paranapanema"
+    ];
+
+    if (litoralSP.includes(cidadeUsuario)) {
+      return res.status(200).json({
+        reply: `✅ Representante para o Litoral Paulista:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5516997774274`
+      });
+    }
+
+    if (interiorSP.includes(cidadeUsuario)) {
+      return res.status(200).json({
+        reply: `✅ Representante para o Interior de São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
+      });
+    }
+
+    if (oesteSP.includes(cidadeUsuario)) {
+      return res.status(200).json({
+        reply: `✅ Representante para o Oeste Paulista:\n\n📍 *Aguinaldo*\n📞 WhatsApp: https://wa.me/5518996653510`
+      });
+    }
+
+    return res.status(200).json({
+      reply: `✅ Representante para São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
+    });
+  }
+
+  // 🔄 Fallback com cálculo de distância por Haversine
+  const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
   let maisProximo = null;
   let menorDistancia = Infinity;
 
