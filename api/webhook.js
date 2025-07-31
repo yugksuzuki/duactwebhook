@@ -8,7 +8,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
   const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
+  const dLon = toRad(lat2 - lat1);
   const a =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
@@ -85,7 +85,9 @@ export default async function handler(req, res) {
     if (!tentativa) throw new Error("CEP inválido");
 
     dados = tentativa.dados;
-    endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
+    endereco = dados.logradouro
+      ? `${dados.logradouro}, ${dados.localidade} - ${dados.uf}, Brasil`
+      : `${dados.localidade} - ${dados.uf}, Brasil`;
   } catch (err) {
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
@@ -95,6 +97,12 @@ export default async function handler(req, res) {
   let coordenadas = null;
   try {
     coordenadas = await geocodificarEndereco(endereco);
+
+    // fallback: geocodificar só cidade e estado se logradouro falhar
+    if (!coordenadas) {
+      coordenadas = await geocodificarEndereco(`${dados.localidade} - ${dados.uf}, Brasil`);
+    }
+
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
     return res.status(200).json({
@@ -104,11 +112,14 @@ export default async function handler(req, res) {
 
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
+  const cidadeUsuario = dados.localidade?.trim().toLowerCase();
+  const estado = dados.uf;
 
   // 🟨 Regras específicas para SP
-  if (dados.uf === "SP") {
+  if (estado === "SP") {
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
+      console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | AGNALDO - ${distAgnaldo.toFixed(1)} km`);
       return res.status(200).json({
         reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *Agnaldo* – Santo Anastácio/SP\n📞 WhatsApp: https://wa.me/5518996653510\n📏 Distância: ${distAgnaldo.toFixed(1)} km`,
       });
@@ -120,8 +131,8 @@ export default async function handler(req, res) {
       "são sebastião", "ilhabela", "cubatão", "barretos"
     ];
 
-    const cidadeUsuario = dados.localidade?.trim().toLowerCase();
     if (cidadesMarcelo.includes(cidadeUsuario)) {
+      console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | MARCELO`);
       return res.status(200).json({
         reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
       });
@@ -131,7 +142,7 @@ export default async function handler(req, res) {
   }
 
   // 🔎 Busca padrão por estado
-  const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
+  const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
 
   let maisProximo = null;
   let menorDistancia = Infinity;
@@ -145,11 +156,13 @@ export default async function handler(req, res) {
   }
 
   if (maisProximo && menorDistancia <= 200) {
+    console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | +${maisProximo.nome} - ${menorDistancia.toFixed(1)} km`);
     return res.status(200).json({
       reply: `✅ Representante mais próximo do CEP ${cepOriginal}:\n\n📍 *${maisProximo.nome}* – ${maisProximo.cidade}/${maisProximo.estado}\n📞 WhatsApp: https://wa.me/55${maisProximo.celular}\n📏 Distância: ${maisProximo.distancia.toFixed(1)} km`,
     });
   }
 
+  console.log(`[DEBUG] CEP: ${cepOriginal} | CIDADE: ${cidadeUsuario} | ESTADO: ${estado} | SEM REPRESENTANTE <=200km`);
   return res.status(200).json({
     reply: `❗ Nenhum representante encontrado em até 200 km no seu estado.\n\nPara assuntos gerais, por favor entre em contato com nosso atendimento:\n☎️ *Everson*\n+55 (48) 9211-0383`,
   });
