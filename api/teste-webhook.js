@@ -262,7 +262,14 @@ export default async function handler(req, res) {
 
   //fim regras
 
-  const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
+ let lista = carregarRepresentantes().filter(rep => rep.estado === estado);
+
+// Se não encontrar ninguém no estado, usa todos os representantes (modo fallback)
+if (lista.length === 0) {
+  console.log(`[INFO] Nenhum representante no estado ${estado}, buscando geral`);
+  lista = carregarRepresentantes();
+}
+
   let maisProximo = null;
   let menorDistancia = Infinity;
 
