@@ -42,7 +42,7 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
-// Fallback para CEPs genéricos como 35570-000
+// Tenta variações de CEP (para CEPs genéricos tipo 35570-000)
 async function tentarVariacoesDeCep(cepBase) {
   const prefixo = cepBase.slice(0, 5);
   const tentativas = [cepBase];
@@ -64,7 +64,7 @@ async function tentarVariacoesDeCep(cepBase) {
   return null;
 }
 
-// Handler principal do webhook
+// Webhook Umbler: localizar representante por CEP
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
@@ -126,8 +126,6 @@ export default async function handler(req, res) {
         reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
       });
     }
-
-    // SP continua para busca padrão
   }
 
   // 🔎 Busca padrão por estado
