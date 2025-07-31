@@ -3,9 +3,5 @@
   "builds": [
     { "src": "api/webhook.js", "use": "@vercel/node" },
     { "src": "api/webhook-representante.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/webhook", "dest": "api/webhook.js" },
-    { "src": "/webhook-localiza-representante", "dest": "api/webhook-localiza-representante.js" }
   ]
 }
