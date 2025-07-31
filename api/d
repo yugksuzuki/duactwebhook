@@ -242,6 +242,19 @@ if (estado === "SC" && ["balneário camboriú", "itajai", "navegantes", "penha",
       reply: `✅ Representante para ${estado}:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
     });
   }
+
+// Estados sem regra personalizada – redirecionar para Everson
+  const semRegra = ["DF", "GO", "TO", "MT", "MS", "AM", "PA", "AP", "MA", "RO", "RR", "AC"];
+  if (semRegra.includes(estado)) {
+    return res.status(200).json({
+      reply: `❗ Nenhum representante definido para ${estado}.
+
+Para assuntos gerais, entre em contato com nosso atendimento:
+☎️ *Everson*
++55 (48) 9211-0383`,
+    });
+  }
+
   // Fallback: busca por proximidade
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
   let maisProximo = null;
