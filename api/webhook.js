@@ -36,7 +36,7 @@ function carregarRepresentantes() {
 
 // Obtem lat/lng via OpenCage com string completa (endereço)
 async function geocodificarEndereco(endereco) {
-  const OPENCAGE_KEY = "24d5173c43b74f549f4c6f5b263d52b3";
+  const OPENCAGE_KEY = "6f023fbf4eb34fedb8a992699fe98330";
   const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(endereco)}&countrycode=br&key=${OPENCAGE_KEY}`;
   const geoResp = await axios.get(geoURL);
   return geoResp?.data?.results?.[0]?.geometry;
