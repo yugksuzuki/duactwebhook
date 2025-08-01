@@ -16,11 +16,6 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// Normaliza estado removendo espaços, \r, \n e capitalizando
-function normalizarEstado(str) {
-  return str?.toString().replace(/[\s\r\n]+/g, "").toUpperCase();
-}
-
 // Carrega representantes do CSV
 function carregarRepresentantes() {
   const filePath = path.resolve("./public", "ceps.csv");
@@ -47,6 +42,45 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
+// Tentativas inteligentes de variações de CEP (FASE 1 e 2)
+async function tentarVariacoesDeCep(cepBase) {
+  const prefixoBase = cepBase.slice(0, 5);
+  const tentativas = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const sufixo = i.toString().padStart(3, "0");
+    tentativas.push({ cep: `${prefixoBase}${sufixo}`, fase: "FASE 1" });
+  }
+
+  const penultimos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for (const n of penultimos) {
+    const novoPrefixo = `${prefixoBase.slice(0, 3)}${n}0`;
+    tentativas.push({ cep: `${novoPrefixo}000`, fase: "FASE 2" });
+  }
+
+  console.time("🧠 Tempo total para busca de CEP válido");
+
+  for (const tentativa of tentativas) {
+    const { cep, fase } = tentativa;
+    try {
+      const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      if (!data.erro) {
+        console.log(`[✅ ${fase}] CEP encontrado: ${cep}`);
+        console.timeEnd("🧠 Tempo total para busca de CEP válido");
+        return { cep, dados: data };
+      } else {
+        console.log(`[❌ ${fase}] CEP ${cep} inválido.`);
+      }
+    } catch (err) {
+      console.warn(`[ERRO ${fase}] Falha ao consultar CEP ${cep}: ${err.message}`);
+    }
+  }
+
+  console.timeEnd("🧠 Tempo total para busca de CEP válido");
+  return null;
+}
+
+// Webhook principal
 export default async function handler(req, res) {
   console.log("🚀 Iniciando webhook");
 
@@ -57,36 +91,33 @@ export default async function handler(req, res) {
   const { variables } = req.body;
   const cep = variables?.CEP_usuario?.replace(/\D/g, "");
 
+  console.log("🔍 CEP recebido:", cep);
+
   if (!cep || cep.length !== 8) {
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
-  console.log("🔍 CEP recebido:", cep);
-
   let dados = null;
   let endereco = null;
 
-  // 🧠 Consulta direta ao ViaCEP
   try {
-    const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-    if (data.erro) throw new Error("CEP não encontrado");
-    dados = data;
+    const tentativa = await tentarVariacoesDeCep(cep);
+    if (!tentativa) throw new Error("Nenhum CEP válido encontrado");
+    dados = tentativa.dados;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
-    console.log("📍 Localidade:", dados.localidade, "| Estado:", dados.uf);
+    console.log("📍 Localidade encontrada:", dados.localidade, "| Estado:", dados.uf);
   } catch (err) {
-    console.error("❌ Erro ao consultar ViaCEP:", err.message);
+    console.error("❌ Erro ao encontrar CEP:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
   }
 
-  // 🗺️ Coordenadas
   let coordenadas = null;
   try {
     coordenadas = await geocodificarEndereco(endereco);
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
-    console.error("❌ Erro ao geocodificar:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
     });
@@ -94,9 +125,8 @@ export default async function handler(req, res) {
 
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
-  console.log("📌 Coordenadas cliente:", latCliente, lonCliente);
 
-  // 🟨 EXCEÇÕES para SP
+  // 🟨 Exceções SP
   if (dados.uf === "SP") {
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
@@ -117,16 +147,18 @@ export default async function handler(req, res) {
     }
   }
 
-  // 🔎 Busca padrão com representantes do mesmo estado
+  // 🔎 Busca padrão por estado
   const repsTodos = carregarRepresentantes();
-  console.log("📦 Estados no CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
+
+  console.log("📦 Estados carregados do CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
   console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
 
   const lista = repsTodos.filter(rep =>
-    normalizarEstado(rep.estado) === normalizarEstado(dados.uf)
+    rep.estado?.toString().trim().toUpperCase() === dados.uf?.toString().trim().toUpperCase()
   );
 
-  console.log("👥 Representantes no estado:", lista.length);
+  console.log("📍 Coordenadas cliente:", latCliente, lonCliente);
+  console.log("📍 Total de representantes no estado:", lista.length);
 
   let maisProximo = null;
   let menorDistancia = Infinity;
