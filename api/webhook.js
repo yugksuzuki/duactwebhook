@@ -8,7 +8,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
   const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
+  const dLon = toRad(lat2 - lon1);
   const a =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
@@ -42,6 +42,48 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
+// Variações de CEP inteligentes com logs
+async function tentarVariacoesDeCep(cepBase) {
+  const prefixoBase = cepBase.slice(0, 5);
+  const tentativas = [];
+
+  console.time("[FASE 1] Tempo para sufixos 001 a 020");
+  for (let i = 1; i <= 20; i++) {
+    const sufixo = i.toString().padStart(3, "0");
+    tentativas.push({ cep: `${prefixoBase}${sufixo}`, fase: "FASE 1" });
+  }
+  console.timeEnd("[FASE 1] Tempo para sufixos 001 a 020");
+
+  console.time("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
+  const penultimos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for (const n of penultimos) {
+    const novoPrefixo = `${prefixoBase.slice(0, 3)}${n}0`;
+    tentativas.push({ cep: `${novoPrefixo}000`, fase: "FASE 2" });
+  }
+  console.timeEnd("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
+
+  console.time("🧠 Tempo total para busca de CEP válido");
+
+  for (const tentativa of tentativas) {
+    const { cep, fase } = tentativa;
+    try {
+      const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      if (!data.erro) {
+        console.log(`[✅ ${fase}] CEP encontrado: ${cep}`);
+        console.timeEnd("🧠 Tempo total para busca de CEP válido");
+        return { cep, dados: data };
+      } else {
+        console.log(`[❌ ${fase}] CEP ${cep} inválido.`);
+      }
+    } catch (err) {
+      console.warn(`[ERRO ${fase}] Falha ao consultar CEP ${cep}: ${err.message}`);
+    }
+  }
+
+  console.timeEnd("🧠 Tempo total para busca de CEP válido");
+  return null;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
@@ -58,12 +100,10 @@ export default async function handler(req, res) {
   let dados = null;
 
   try {
-    const viaCepURL = `https://viacep.com.br/ws/${cep}/json/`;
-    const resposta = await axios.get(viaCepURL);
-    dados = resposta.data;
+    const tentativa = await tentarVariacoesDeCep(cep);
+    if (!tentativa) throw new Error("CEP não encontrado");
 
-    if (dados.erro) throw new Error("CEP não encontrado");
-
+    dados = tentativa.dados;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
   } catch (err) {
     return res.status(200).json({
@@ -86,7 +126,6 @@ export default async function handler(req, res) {
 
   // 🟨 EXCEÇÕES para SP
   if (dados.uf === "SP") {
-    // 1. Agnaldo – Raio de 100km de Santo Anastácio
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
       return res.status(200).json({
@@ -94,7 +133,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 2. Marcelo – Litoral Paulista + Barretos
     const cidadesMarcelo = [
       "Santos", "São Vicente", "Praia Grande", "Guarujá", "Bertioga",
       "Itanhaém", "Mongaguá", "Peruíbe", "Ubatuba", "Caraguatatuba",
@@ -105,13 +143,10 @@ export default async function handler(req, res) {
         reply: `✅ Representante para o Litoral Paulista e Barretos:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5511980323728`,
       });
     }
-
-    // 3. Demais regiões de SP → continua com busca padrão (Neilson, William, etc.)
   }
 
   // 🔎 Busca padrão com representantes do mesmo estado
   const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
-
   let maisProximo = null;
   let menorDistancia = Infinity;
 
