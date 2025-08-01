@@ -40,28 +40,54 @@ async function geocodificarEndereco(endereco) {
 }
 
 async function tentarVariacoesDeCep(cepBase) {
-  const prefixo = cepBase.slice(0, 5);
-  const tentativas = [cepBase];
+  const prefixoBase = cepBase.slice(0, 5);
+  const tentativas = [];
 
-  for (let i = 1; i <= 99; i++) {
-    const sufixoAlternativo = i.toString().padStart(3, "0");
-    tentativas.push(`${prefixo}${sufixoAlternativo}`);
+  console.time("[FASE 1] Tempo para sufixos 001 a 020");
+
+  // 🔁 Fase 1: apenas 20 sufixos de 001 a 020
+  for (let i = 1; i <= 20; i++) {
+    const sufixo = i.toString().padStart(3, "0");
+    tentativas.push({ cep: `${prefixoBase}${sufixo}`, fase: "FASE 1" });
   }
 
-  for (const cep of tentativas) {
+  console.timeEnd("[FASE 1] Tempo para sufixos 001 a 020");
+
+  console.time("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
+
+  // 🔁 Fase 2: variação no penúltimo dígito (94910-000, 94920-000, ..., 94990-000)
+  const penultimos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for (const n of penultimos) {
+    const novoPrefixo = `${prefixoBase.slice(0, 3)}${n}0`;
+    tentativas.push({ cep: `${novoPrefixo}000`, fase: "FASE 2" });
+  }
+
+  console.timeEnd("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
+
+  console.time("🧠 Tempo total para busca de CEP válido");
+
+  // 🔎 Tenta os CEPs gerados, um por um
+  for (const tentativa of tentativas) {
+    const { cep, fase } = tentativa;
     try {
       const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       if (!data.erro) {
-        console.log(`[DEBUG] CEP usado com sucesso: ${cep}`);
+        console.log(`[✅ ${fase}] CEP encontrado: ${cep}`);
+        console.timeEnd("🧠 Tempo total para busca de CEP válido");
         return { cep, dados: data };
+      } else {
+        console.log(`[❌ ${fase}] CEP ${cep} inválido.`);
       }
-    } catch {
+    } catch (err) {
+      console.warn(`[ERRO ${fase}] Falha ao consultar CEP ${cep}: ${err.message}`);
       continue;
     }
   }
 
-  return null;
+  console.timeEnd("🧠 Tempo total para busca de CEP válido");
+  return null; // Nenhum CEP válido encontrado
 }
+
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
