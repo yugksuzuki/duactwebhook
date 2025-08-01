@@ -3,6 +3,11 @@ import path from "path";
 import axios from "axios";
 import Papa from "papaparse";
 
+function normalize(str) {
+  return str?.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
+
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
@@ -144,20 +149,71 @@ export default async function handler(req, res) {
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
   const estado = dados.uf;
-  const cidadeUsuario = (dados.localidade || "").trim().toLowerCase();
+ const cidadeUsuario = normalize(dados.localidade || "");
+
 
   // 📌 Regras personalizadas:
+// 🎯 Regras específicas para o estado do RS
 
-  if (estado === "RS" && cidadeUsuario === "rio grande") {
-    const dioneiLat = -32.035;
-    const dioneiLon = -52.099;
-    const dist = haversine(latCliente, lonCliente, dioneiLat, dioneiLon);
-    if (dist <= 50) {
-      return res.status(200).json({
-        reply: `✅ Representante para Rio Grande (RS) e 50km ao redor:\n\n📍 *Dionei*\n📞 WhatsApp: https://wa.me/53532910789\n📏 Distância: ${dist.toFixed(1)} km`,
-      });
-    }
+// Rio Grande (e 50km ao redor)
+if (estado === "RS" && cidadeUsuario === "rio grande") {
+  const dioneiLat = -32.035;
+  const dioneiLon = -52.099;
+  const dist = haversine(latCliente, lonCliente, dioneiLat, dioneiLon);
+  if (dist <= 50) {
+    return res.status(200).json({
+      reply: `✅ Representante para Rio Grande (RS) e 50km ao redor:\n\n📍 *Dionei*\n📞 WhatsApp: https://wa.me/53532910789\n📏 Distância: ${dist.toFixed(1)} km`,
+    });
   }
+}
+
+// Viamão (e 100km ao redor de Porto Alegre)
+if (estado === "RS" && cidadeUsuario === "viamão") {
+  const adrianoLat = -30.0277;
+  const adrianoLon = -51.2287;
+  const dist = haversine(latCliente, lonCliente, adrianoLat, adrianoLon);
+  if (dist <= 100) {
+    return res.status(200).json({
+      reply: `✅ Representante para Viamão (RS) e 100km ao redor:\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339\n📏 Distância: ${dist.toFixed(1)} km`,
+    });
+  }
+}
+
+// Litoral Gaúcho
+if (estado === "RS" && [
+  "torres", "tramandaí", "terra de areia", "arroio do sal", 
+  "são joão do sul", "morrinhos do sul", "capão da canoa",
+  "cidreira", "xangri-lá", "atlântida", "imbé", "balneário pinhal"
+].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para o Litoral Gaúcho:\n\n📍 *Daniel*\n📞 WhatsApp: https://wa.me/555199987333`,
+  });
+}
+
+// Região Metropolitana de Porto Alegre e Serra
+if (estado === "RS" && [
+  "porto alegre", "canoas", "sapucaia do sul", "cachoeirinha",
+  "gravataí", "esteio", "nova santa rita", "alvorada", "guaíba"
+].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para Região Metropolitana de Porto Alegre e Serra Gaúcha:\n\n📍 *Adriano e Reginaldo*\n📞 WhatsApp: https://wa.me/5551991089339`,
+  });
+}
+
+// Oeste Gaúcho (e parte do Oeste Catarinense)
+if (
+  (estado === "RS" && [
+    "santa rosa", "ijui", "cruz alta", "são luiz gonzaga",
+    "santo ângelo", "passo fundo", "santa maria", "alegrete", "uruguaiana"
+  ].includes(cidadeUsuario)) ||
+  (estado === "SC" && [
+    "chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"
+  ].includes(cidadeUsuario))
+) {
+  return res.status(200).json({
+    reply: `✅ Representante para Oeste Gaúcho e Extremo Oeste Catarinense:\n\n📍 *Cristian (Andre)*\n📞 WhatsApp: https://wa.me/555984491079`,
+  });
+}
 
   if (["RJ", "ES"].includes(estado)) {
     return res.status(200).json({
@@ -181,27 +237,6 @@ export default async function handler(req, res) {
     }
     return res.status(200).json({
       reply: `✅ Representante para Curitiba e demais regiões do Paraná:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
-    });
-  }
-
-  if (estado === "RS" && ["torres", "tramandaí", "terra de areia", "arroio do sal", "são joão do sul", "morrinhos do sul"].includes(cidadeUsuario)) {
-    return res.status(200).json({
-      reply: `✅ Representante para o Litoral Gaúcho:\n\n📍 *Daniel*\n📞 WhatsApp: https://wa.me/555199987333`,
-    });
-  }
-
-  if (estado === "RS" && ["porto alegre", "guaíba", "sapucaia do sul", "cachoeirinha"].includes(cidadeUsuario)) {
-    return res.status(200).json({
-      reply: `✅ Representante para Região Metropolitana de Porto Alegre e Serra Gaúcha:\n\n📍 *Adriano e Reginaldo*\n📞 WhatsApp: https://wa.me/5551991089339`,
-    });
-  }
-
-  if (
-    (estado === "RS" && ["santa rosa", "ijui", "cruz alta", "são luiz gonzaga", "santo ângelo", "passo fundo", "santa maria"].includes(cidadeUsuario)) ||
-    (estado === "SC" && ["chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"].includes(cidadeUsuario))
-  ) {
-    return res.status(200).json({
-      reply: `✅ Representante para Oeste Gaúcho e Extremo Oeste Catarinense:\n\n📍 *Cristian*\n📞 WhatsApp: https://wa.me/555984491079`,
     });
   }
 
@@ -261,6 +296,42 @@ export default async function handler(req, res) {
       reply: `✅ Representante para São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
     });
   }
+
+// 🌎 Regras para o Nordeste
+
+// Piauí (apenas Teresina)
+if (estado === "PI" && cidadeUsuario === "teresina") {
+  return res.status(200).json({
+    reply: `✅ Representante para Teresina (PI):\n\n📍 *Nonato*\n📞 WhatsApp: https://wa.me/5586998492624`,
+  });
+}
+
+// Ceará e Rio Grande do Norte (inteiros)
+if (["CE", "RN"].includes(estado)) {
+  return res.status(200).json({
+    reply: `✅ Representante para ${estado === "CE" ? "Ceará" : "Rio Grande do Norte"}:\n\n📍 *Júnior*\n📞 WhatsApp: https://wa.me/5585999965434`,
+  });
+}
+
+// Paraíba (somente Campina Grande)
+if (estado === "PB" && cidadeUsuario === "campina grande") {
+  return res.status(200).json({
+    reply: `✅ Representante para Campina Grande (PB):\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
+  });
+}
+
+// Pernambuco / Alagoas (apenas Maceió) / Sergipe / Bahia inteira
+if (
+  estado === "PE" ||
+  estado === "SE" ||
+  estado === "BA" ||
+  (estado === "AL" && cidadeUsuario === "maceió")
+) {
+  return res.status(200).json({
+    reply: `✅ Representante para ${estado === "PE" ? "Pernambuco" : estado === "SE" ? "Sergipe" : estado === "BA" ? "Bahia" : "Maceió (AL)"}:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
+  });
+}
+
 
   // 🔄 Fallback com cálculo de distância por Haversine
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);

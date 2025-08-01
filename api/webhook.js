@@ -3,6 +3,10 @@ import path from "path";
 import axios from "axios";
 import Papa from "papaparse";
 
+function normalize(str) {
+  return str?.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
 // Haversine (distância entre dois pontos em km)
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -146,6 +150,83 @@ export default async function handler(req, res) {
       });
     }
   }
+
+// 🎯 Regra para Região Metropolitana de Porto Alegre e arredores (Adriano)
+if (dados.uf === "RS") {
+  const cidadesAdriano = [
+    "porto alegre", "canoas", "viamão", "cachoeirinha", "sapucaia do sul",
+    "esteio", "alvorada", "gravataí", "nova santa rita", "guaíba"
+  ];
+
+  if (cidadesAdriano.includes(dados.localidade.toLowerCase())) {
+    return res.status(200).json({
+      reply: `✅ Representante para Região Metropolitana de Porto Alegre:\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339`,
+    });
+  }
+
+  // Fallback por raio de 100 km de Porto Alegre
+  const adrianoLat = -30.0277;
+  const adrianoLon = -51.2287;
+  const distAdriano = haversine(latCliente, lonCliente, adrianoLat, adrianoLon);
+  if (distAdriano <= 100) {
+    return res.status(200).json({
+      reply: `✅ Representante para região próxima a Porto Alegre (RS):\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339\n📏 Distância: ${distAdriano.toFixed(1)} km`,
+    });
+  }
+}
+
+// 🟦 Regras para SC
+if (dados.uf === "SC") {
+  const cidade = normalize(dados.localidade);
+
+  // Bruno → Itajaí e Navegantes
+  if (["itajai", "navegantes"].includes(cidade)) {
+    return res.status(200).json({
+      reply: `✅ Representante para Itajaí, Navegantes e região:\n\n📍 *Bruno*\n📞 WhatsApp: https://wa.me/5547999582138`,
+    });
+  }
+
+  // Cristian (Andre) → Oeste Catarinense
+  if (
+    [
+      "chapeco", "dionisio cerqueira", "joacaba", "palmitos",
+      "pinhalzinho", "sao miguel do oeste", "seara", "xanxere", "xaxim"
+    ].includes(cidade)
+  ) {
+    return res.status(200).json({
+      reply: `✅ Representante para o Oeste Catarinense:\n\n📍 *Cristian (Andre)*\n📞 WhatsApp: https://wa.me/555984480883`,
+    });
+  }
+
+  // Diego → Tubarão
+  if (cidade === "tubarao") {
+    return res.status(200).json({
+      reply: `✅ Representante para Tubarão e região:\n\n📍 *Diego*\n📞 WhatsApp: https://wa.me/5548996823353`,
+    });
+  }
+
+  // Peter → Litoral Sul de SC
+  if (
+    [
+      "ararangua", "balneario gaivota", "balneario rincao", "cocal do sul",
+      "criciuma", "forquilhinha", "jacinto machado", "meleiro", "passo de torres",
+      "praia grande", "santa rosa do sul", "sombrio", "timbe do sul", "turvo"
+    ].includes(cidade)
+  ) {
+    return res.status(200).json({
+      reply: `✅ Representante para o Litoral Sul de SC:\n\n📍 *Peter*\n📞 WhatsApp: https://wa.me/554896894570`,
+    });
+  }
+
+  // Duact → Porto Belo
+  if (cidade === "porto belo") {
+    return res.status(200).json({
+      reply: `✅ Representante oficial DUACT para Porto Belo:\n\n📍 *Duact*\n📞 WhatsApp: https://wa.me/555189204839`,
+    });
+  }
+}
+
+
 
   // 🔎 Busca padrão por estado
   const repsTodos = carregarRepresentantes();
