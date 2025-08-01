@@ -16,7 +16,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// Função para limpar o campo de estado
+// Normaliza estado removendo espaços, \r, \n e capitalizando
 function normalizarEstado(str) {
   return str?.toString().replace(/[\s\r\n]+/g, "").toUpperCase();
 }
@@ -47,29 +47,6 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
-// Tenta variações de CEP
-async function tentarVariacoesDeCep(cepBase) {
-  const prefixoBase = cepBase.slice(0, 5);
-  const tentativas = [];
-
-  for (let i = 1; i <= 20; i++) {
-    const sufixo = i.toString().padStart(3, "0");
-    tentativas.push(`${prefixoBase}${sufixo}`);
-  }
-
-  for (const cep of tentativas) {
-    try {
-      const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      if (!data.erro) return { cep, dados: data };
-    } catch (err) {
-      console.warn(`[ERRO] CEP ${cep}: ${err.message}`);
-    }
-  }
-
-  return null;
-}
-
-// Handler principal
 export default async function handler(req, res) {
   console.log("🚀 Iniciando webhook");
 
@@ -84,25 +61,32 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
-  let endereco = null;
-  let dados = null;
+  console.log("🔍 CEP recebido:", cep);
 
+  let dados = null;
+  let endereco = null;
+
+  // 🧠 Consulta direta ao ViaCEP
   try {
-    const tentativa = await tentarVariacoesDeCep(cep);
-    if (!tentativa) throw new Error("CEP não encontrado");
-    dados = tentativa.dados;
+    const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+    if (data.erro) throw new Error("CEP não encontrado");
+    dados = data;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
+    console.log("📍 Localidade:", dados.localidade, "| Estado:", dados.uf);
   } catch (err) {
+    console.error("❌ Erro ao consultar ViaCEP:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
   }
 
+  // 🗺️ Coordenadas
   let coordenadas = null;
   try {
     coordenadas = await geocodificarEndereco(endereco);
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
+    console.error("❌ Erro ao geocodificar:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
     });
@@ -110,11 +94,9 @@ export default async function handler(req, res) {
 
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
+  console.log("📌 Coordenadas cliente:", latCliente, lonCliente);
 
-  console.log(`📍 CEP: ${cep} | CIDADE: ${dados.localidade} | ESTADO: ${dados.uf}`);
-  console.log(`📍 Coordenadas cliente: ${latCliente}, ${lonCliente}`);
-
-  // 🟨 EXCEÇÕES SP
+  // 🟨 EXCEÇÕES para SP
   if (dados.uf === "SP") {
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
@@ -135,14 +117,16 @@ export default async function handler(req, res) {
     }
   }
 
-  // 🔍 Carga e filtro dos representantes
+  // 🔎 Busca padrão com representantes do mesmo estado
   const repsTodos = carregarRepresentantes();
+  console.log("📦 Estados no CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
+  console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
 
   const lista = repsTodos.filter(rep =>
     normalizarEstado(rep.estado) === normalizarEstado(dados.uf)
   );
 
-  console.log("📦 Representantes no mesmo estado:", lista.length);
+  console.log("👥 Representantes no estado:", lista.length);
 
   let maisProximo = null;
   let menorDistancia = Infinity;
