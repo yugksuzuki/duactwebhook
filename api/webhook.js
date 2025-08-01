@@ -18,17 +18,17 @@ function haversine(lat1, lon1, lat2, lon2) {
 
 // Carrega representantes do CSV
 function carregarRepresentantes() {
-  const filePath = path.resolve("./public", "ceps.csv");
+  const filePath = path.resolve("./public", "ceps.csv"); // ou ceps_corrigido.csv
   const csvContent = fs.readFileSync(filePath, "utf8");
   const parsed = Papa.parse(csvContent, { header: true });
 
   return parsed.data
     .filter(row => row.Latitude && row.Longitude)
     .map(row => ({
-      nome: row.REPRESENTANTE,
-      cidade: row.CIDADE,
-      estado: row.ESTADO,
-      celular: row.CELULAR,
+      nome: row.REPRESENTANTE?.trim(),
+      cidade: row.CIDADE?.trim(),
+      estado: row.ESTADO?.toString().trim().toUpperCase(),
+      celular: row.CELULAR?.replace(/\D/g, ""),
       lat: parseFloat(row.Latitude),
       lon: parseFloat(row.Longitude),
     }));
@@ -85,14 +85,20 @@ async function tentarVariacoesDeCep(cepBase) {
 }
 
 export default async function handler(req, res) {
+  console.log("🚀 handler foi chamado");
+
   if (req.method !== "POST") {
+    console.log("⚠️ Método não é POST");
     return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
   }
 
   const { variables } = req.body;
   const cep = variables?.CEP_usuario?.replace(/\D/g, "");
 
+  console.log("🧾 CEP recebido:", cep);
+
   if (!cep || cep.length !== 8) {
+    console.log("❌ CEP inválido detectado");
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
@@ -105,7 +111,11 @@ export default async function handler(req, res) {
 
     dados = tentativa.dados;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
+
+    console.log("📍 Endereço montado:", endereco);
+    console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
   } catch (err) {
+    console.log("❌ Erro ao buscar CEP:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
@@ -116,6 +126,7 @@ export default async function handler(req, res) {
     coordenadas = await geocodificarEndereco(endereco);
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
+    console.log("❌ Erro ao geocodificar:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
     });
@@ -146,36 +157,31 @@ export default async function handler(req, res) {
   }
 
   // 🔎 Busca padrão com representantes do mesmo estado
-// 🔎 Busca padrão com representantes do mesmo estado
-const repsTodos = carregarRepresentantes();
+  const repsTodos = carregarRepresentantes();
 
-// 🔍 Debug dos estados únicos carregados
-console.log("📦 Estados carregados do CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
+  // 🔍 Debug dos estados únicos carregados
+  console.log("📦 Estados carregados do CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
 
-// 🔍 Debug do estado retornado pela API do CEP
-console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
+  // Filtro robusto
+  const lista = repsTodos.filter(rep =>
+    rep.estado?.toString().trim().toUpperCase() === dados.uf?.toString().trim().toUpperCase()
+  );
 
-// Filtra de forma robusta
-const lista = repsTodos.filter(rep =>
-  rep.estado?.toString().trim().toUpperCase() === dados.uf?.toString().trim().toUpperCase()
-);
+  let maisProximo = null;
+  let menorDistancia = Infinity;
 
-let maisProximo = null;
-let menorDistancia = Infinity;
+  console.log("📍 Coordenadas cliente:", latCliente, lonCliente);
+  console.log("📍 Representantes encontrados no estado:", lista.length);
 
-// LOGS para debug
-console.log("📍 Coordenadas cliente:", latCliente, lonCliente);
-console.log("📍 Lista de representantes carregados:", lista.length);
+  for (const rep of lista) {
+    const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
+    console.log(`🔎 ${rep.nome} em ${rep.cidade} → ${dist.toFixed(2)} km`);
 
-for (const rep of lista) {
-  const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
-  console.log(`🔎 ${rep.nome} em ${rep.cidade} → ${dist.toFixed(2)} km`);
-
-  if (dist < menorDistancia) {
-    menorDistancia = dist;
-    maisProximo = { ...rep, distancia: dist };
+    if (dist < menorDistancia) {
+      menorDistancia = dist;
+      maisProximo = { ...rep, distancia: dist };
+    }
   }
-}
 
   if (maisProximo && menorDistancia <= 200) {
     return res.status(200).json({
