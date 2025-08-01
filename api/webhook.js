@@ -147,7 +147,19 @@ export default async function handler(req, res) {
 
   // 🔎 Busca padrão com representantes do mesmo estado
 // 🔎 Busca padrão com representantes do mesmo estado
-const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
+const repsTodos = carregarRepresentantes();
+
+// 🔍 Debug dos estados únicos carregados
+console.log("📦 Estados carregados do CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
+
+// 🔍 Debug do estado retornado pela API do CEP
+console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
+
+// Filtra de forma robusta
+const lista = repsTodos.filter(rep =>
+  rep.estado?.toString().trim().toUpperCase() === dados.uf?.toString().trim().toUpperCase()
+);
+
 let maisProximo = null;
 let menorDistancia = Infinity;
 
