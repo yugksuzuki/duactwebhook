@@ -8,7 +8,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const toRad = deg => (deg * Math.PI) / 180;
   const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lat2 - lon1);
+  const dLon = toRad(lon2 - lon1);
   const a =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
@@ -16,19 +16,24 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
+// Função para limpar o campo de estado
+function normalizarEstado(str) {
+  return str?.toString().replace(/[\s\r\n]+/g, "").toUpperCase();
+}
+
 // Carrega representantes do CSV
 function carregarRepresentantes() {
-  const filePath = path.resolve("./public", "ceps.csv"); // ou ceps_corrigido.csv
+  const filePath = path.resolve("./public", "ceps.csv");
   const csvContent = fs.readFileSync(filePath, "utf8");
   const parsed = Papa.parse(csvContent, { header: true });
 
   return parsed.data
     .filter(row => row.Latitude && row.Longitude)
     .map(row => ({
-      nome: row.REPRESENTANTE?.trim(),
-      cidade: row.CIDADE?.trim(),
-      estado: row.ESTADO?.toString().trim().toUpperCase(),
-      celular: row.CELULAR?.replace(/\D/g, ""),
+      nome: row.REPRESENTANTE,
+      cidade: row.CIDADE,
+      estado: row.ESTADO,
+      celular: row.CELULAR,
       lat: parseFloat(row.Latitude),
       lon: parseFloat(row.Longitude),
     }));
@@ -42,63 +47,40 @@ async function geocodificarEndereco(endereco) {
   return geoResp?.data?.results?.[0]?.geometry;
 }
 
-// Variações de CEP inteligentes com logs
+// Tenta variações de CEP
 async function tentarVariacoesDeCep(cepBase) {
   const prefixoBase = cepBase.slice(0, 5);
   const tentativas = [];
 
-  console.time("[FASE 1] Tempo para sufixos 001 a 020");
   for (let i = 1; i <= 20; i++) {
     const sufixo = i.toString().padStart(3, "0");
-    tentativas.push({ cep: `${prefixoBase}${sufixo}`, fase: "FASE 1" });
+    tentativas.push(`${prefixoBase}${sufixo}`);
   }
-  console.timeEnd("[FASE 1] Tempo para sufixos 001 a 020");
 
-  console.time("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
-  const penultimos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  for (const n of penultimos) {
-    const novoPrefixo = `${prefixoBase.slice(0, 3)}${n}0`;
-    tentativas.push({ cep: `${novoPrefixo}000`, fase: "FASE 2" });
-  }
-  console.timeEnd("[FASE 2] Tempo para prefixos 94910-000 a 94990-000");
-
-  console.time("🧠 Tempo total para busca de CEP válido");
-
-  for (const tentativa of tentativas) {
-    const { cep, fase } = tentativa;
+  for (const cep of tentativas) {
     try {
       const { data } = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      if (!data.erro) {
-        console.log(`[✅ ${fase}] CEP encontrado: ${cep}`);
-        console.timeEnd("🧠 Tempo total para busca de CEP válido");
-        return { cep, dados: data };
-      } else {
-        console.log(`[❌ ${fase}] CEP ${cep} inválido.`);
-      }
+      if (!data.erro) return { cep, dados: data };
     } catch (err) {
-      console.warn(`[ERRO ${fase}] Falha ao consultar CEP ${cep}: ${err.message}`);
+      console.warn(`[ERRO] CEP ${cep}: ${err.message}`);
     }
   }
 
-  console.timeEnd("🧠 Tempo total para busca de CEP válido");
   return null;
 }
 
+// Handler principal
 export default async function handler(req, res) {
-  console.log("🚀 handler foi chamado");
+  console.log("🚀 Iniciando webhook");
 
   if (req.method !== "POST") {
-    console.log("⚠️ Método não é POST");
     return res.status(200).json({ reply: "❌ Método não permitido. Use POST." });
   }
 
   const { variables } = req.body;
   const cep = variables?.CEP_usuario?.replace(/\D/g, "");
 
-  console.log("🧾 CEP recebido:", cep);
-
   if (!cep || cep.length !== 8) {
-    console.log("❌ CEP inválido detectado");
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
 
@@ -108,14 +90,9 @@ export default async function handler(req, res) {
   try {
     const tentativa = await tentarVariacoesDeCep(cep);
     if (!tentativa) throw new Error("CEP não encontrado");
-
     dados = tentativa.dados;
     endereco = `${dados.logradouro || ""}, ${dados.localidade} - ${dados.uf}, Brasil`;
-
-    console.log("📍 Endereço montado:", endereco);
-    console.log("📍 Estado retornado pelo CEP:", `"${dados.uf}"`);
   } catch (err) {
-    console.log("❌ Erro ao buscar CEP:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível consultar o CEP informado. Verifique se está correto.",
     });
@@ -126,7 +103,6 @@ export default async function handler(req, res) {
     coordenadas = await geocodificarEndereco(endereco);
     if (!coordenadas) throw new Error("Sem resultado do OpenCage");
   } catch (err) {
-    console.log("❌ Erro ao geocodificar:", err.message);
     return res.status(200).json({
       reply: "❌ Não foi possível localizar sua região geográfica. Tente novamente mais tarde.",
     });
@@ -135,7 +111,10 @@ export default async function handler(req, res) {
   const latCliente = coordenadas.lat;
   const lonCliente = coordenadas.lng;
 
-  // 🟨 EXCEÇÕES para SP
+  console.log(`📍 CEP: ${cep} | CIDADE: ${dados.localidade} | ESTADO: ${dados.uf}`);
+  console.log(`📍 Coordenadas cliente: ${latCliente}, ${lonCliente}`);
+
+  // 🟨 EXCEÇÕES SP
   if (dados.uf === "SP") {
     const distAgnaldo = haversine(latCliente, lonCliente, -21.944455, -51.6483067);
     if (distAgnaldo <= 100) {
@@ -156,22 +135,17 @@ export default async function handler(req, res) {
     }
   }
 
-  // 🔎 Busca padrão com representantes do mesmo estado
+  // 🔍 Carga e filtro dos representantes
   const repsTodos = carregarRepresentantes();
 
-  // 🔍 Debug dos estados únicos carregados
-  console.log("📦 Estados carregados do CSV:", [...new Set(repsTodos.map(r => `"${r.estado}"`))]);
-
-  // Filtro robusto
   const lista = repsTodos.filter(rep =>
-    rep.estado?.toString().trim().toUpperCase() === dados.uf?.toString().trim().toUpperCase()
+    normalizarEstado(rep.estado) === normalizarEstado(dados.uf)
   );
+
+  console.log("📦 Representantes no mesmo estado:", lista.length);
 
   let maisProximo = null;
   let menorDistancia = Infinity;
-
-  console.log("📍 Coordenadas cliente:", latCliente, lonCliente);
-  console.log("📍 Representantes encontrados no estado:", lista.length);
 
   for (const rep of lista) {
     const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
