@@ -146,17 +146,24 @@ export default async function handler(req, res) {
   }
 
   // 🔎 Busca padrão com representantes do mesmo estado
-  const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
-  let maisProximo = null;
-  let menorDistancia = Infinity;
+// 🔎 Busca padrão com representantes do mesmo estado
+const lista = carregarRepresentantes().filter(rep => rep.estado === dados.uf);
+let maisProximo = null;
+let menorDistancia = Infinity;
 
-  for (const rep of lista) {
-    const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
-    if (dist < menorDistancia) {
-      menorDistancia = dist;
-      maisProximo = { ...rep, distancia: dist };
-    }
+// LOGS para debug
+console.log("📍 Coordenadas cliente:", latCliente, lonCliente);
+console.log("📍 Lista de representantes carregados:", lista.length);
+
+for (const rep of lista) {
+  const dist = haversine(latCliente, lonCliente, rep.lat, rep.lon);
+  console.log(`🔎 ${rep.nome} em ${rep.cidade} → ${dist.toFixed(2)} km`);
+
+  if (dist < menorDistancia) {
+    menorDistancia = dist;
+    maisProximo = { ...rep, distancia: dist };
   }
+}
 
   if (maisProximo && menorDistancia <= 200) {
     return res.status(200).json({
