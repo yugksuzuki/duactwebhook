@@ -21,21 +21,45 @@ function haversine(lat1, lon1, lat2, lon2) {
 }
 
 function carregarRepresentantes() {
-  const filePath = path.resolve("./public", "cepsr.csv");
-  const csvContent = fs.readFileSync(filePath, "utf8");
-  const parsed = Papa.parse(csvContent, { header: true });
+  const arquivos = ["cepsr.csv", "ceps2r.csv"];
+  const representantes = [];
 
-  return parsed.data
-    .filter(row => row.Latitude && row.Longitude)
-    .map(row => ({
-      nome: row.REPRESENTANTE,
-      cidade: row.CIDADE,
-      estado: row.ESTADO,
-      celular: row["CELULAR"] || row["CELULAR 2"] || "",
-      lat: parseFloat(row.Latitude),
-      lon: parseFloat(row.Longitude),
-    }));
+  for (const nomeArquivo of arquivos) {
+    const filePath = path.resolve("./public", nomeArquivo);
+    const csvContent = fs.readFileSync(filePath, "utf8");
+
+    const isSemCabecalho = nomeArquivo === "ceps2r.csv";
+    const parsed = Papa.parse(csvContent, {
+      header: !isSemCabecalho, // ceps2r.csv não tem cabeçalho
+      skipEmptyLines: true,
+    });
+
+    const linhas = isSemCabecalho
+      ? parsed.data.map(row => ({
+          nome: row[0],
+          cidade: row[3],
+          estado: row[2],
+          celular: row[6]?.toString().replace(/\D/g, ""),
+          lat: parseFloat(row[7]),
+          lon: parseFloat(row[8]),
+        }))
+      : parsed.data.map(row => ({
+          nome: row.REPRESENTANTE || row.LOJA || Object.values(row)[0],
+          cidade: row.CIDADE,
+          estado: row.ESTADO,
+          celular: row["CELULAR"] || row["CELULAR 2"] || "",
+          lat: parseFloat(row.Latitude),
+          lon: parseFloat(row.Longitude),
+        }));
+
+    representantes.push(
+      ...linhas.filter(r => r.nome && r.estado && !isNaN(r.lat) && !isNaN(r.lon))
+    );
+  }
+
+  return representantes;
 }
+
 
 async function geocodificarEndereco(endereco) {
   const OPENCAGE_KEY = "24d5173c43b74f549f4c6f5b263d52b3";
