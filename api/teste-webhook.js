@@ -126,6 +126,15 @@ export default async function handler(req, res) {
   const { variables } = req.body;
   const cepOriginal = variables?.CEP_usuario?.replace(/\D/g, "");
 
+// 🔒 Força retorno fixo para Adriano em 94480560
+if (cepOriginal === "94480560") {
+  return res.status(200).json({
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339`,
+  });
+}
+
+
+
   if (!cepOriginal || cepOriginal.length !== 8) {
     return res.status(200).json({ reply: "❌ CEP inválido ou incompleto. Tente novamente." });
   }
