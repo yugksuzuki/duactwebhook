@@ -273,23 +273,45 @@ if (
     });
   }
 
-  if (estado === "SC" && ["blumenau", "brusque"].includes(cidadeUsuario)) {
-    return res.status(200).json({
-      reply: `✅ Representante para Blumenau, Brusque e região:\n\n📍 *Alan*\n📞 WhatsApp: https://wa.me/554799638565`,
-    });
-  }
+ // 📍 Representantes SC
 
-  if (estado === "SC" && ["imbituba", "garopaba", "laguna", "tubarão"].includes(cidadeUsuario)) {
-    return res.status(200).json({
-      reply: `✅ Representante para o Litoral Sul de SC:\n\n📍 *Peterson*\n📞 WhatsApp: https://wa.me/554899658600`,
-    });
-  }
+// Blumenau a Brusque – Alan
+if (estado === "SC" && ["blumenau", "brusque"].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para Blumenau a Brusque:\n\n📍 *Alan*\n📞 WhatsApp: https://wa.me/554191690057`,
+  });
+}
 
-  if (estado === "SC" && ["balneário camboriú", "itajai", "navegantes", "penha", "itapema", "porto belo", "bombinhas"].includes(cidadeUsuario)) {
-    return res.status(200).json({
-      reply: `✅ Representante para o Litoral Centro-Norte de SC:\n\n📍 *Diego*\n📞 WhatsApp: https://wa.me/554898445939`,
-    });
-  }
+// Litoral Sul de SC (Gaivotas, Sombrio, Criciúma e 30km) – Peterson
+if (estado === "SC" && [
+  "balneário gaivota", "gaivota", "sombrio", "criciúma", "araranguá",
+  "forquilhinha", "turuçu", "timbé do sul", "turvo", "meleiro",
+  "maracajá", "nova veneza", "içara", "siderópolis", "morro grande", "laguna"
+].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para o Litoral Sul de SC:\n\n📍 *Peterson*\n📞 WhatsApp: https://wa.me/554896894570`,
+  });
+}
+
+// Itapema, Tijucas, Bombinhas, Porto Belo e região – Fagner
+if (estado === "SC" && [
+  "itapema", "tijucas", "bombinhas", "porto belo",
+  "camboriú", "canelinha", "são joão batista"
+].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para Itapema, Tijucas, Bombinhas, Porto Belo e região:\n\n📍 *Fagner*\n📞 WhatsApp: https://wa.me/554797693483`,
+  });
+}
+
+// Demais regiões do litoral de SC – Diego
+if (estado === "SC" && [
+  "balneário camboriú", "itajai", "navegantes", "penha", "piçarras",
+  "barra velha", "joinville", "são francisco do sul"
+].includes(cidadeUsuario)) {
+  return res.status(200).json({
+    reply: `✅ Representante para outras regiões do Litoral de SC:\n\n📍 *Diego*\n📞 WhatsApp: https://wa.me/554896823353`,
+  });
+}
 
   if (estado === "SP") {
    const marceloCidadesSP = [
