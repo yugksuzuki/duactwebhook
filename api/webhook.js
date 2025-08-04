@@ -64,7 +64,7 @@ function carregarRepresentantes() {
   return representantes;
 }
 
-
+//festa
 
 // Obtem lat/lng via OpenCage com string completa (endereço)
 async function geocodificarEndereco(endereco) {

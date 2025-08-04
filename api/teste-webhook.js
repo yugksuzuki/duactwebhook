@@ -76,7 +76,7 @@ async function tentarVariacoesDeCep(cepBase) {
 
   // 🔁 Fase 1: apenas 20 sufixos de 001 a 020
   for (let i = 1; i <= 20; i++) {
-    const sufixo = i.toString().padStart(3, "0");
+    const sufixo = i.toString().padStart(3, "0"); 
     tentativas.push({ cep: `${prefixoBase}${sufixo}`, fase: "FASE 1" });
   }
 
