@@ -29,25 +29,41 @@ function carregarRepresentantes() {
   for (const nomeArquivo of arquivos) {
     const filePath = path.resolve("./public", nomeArquivo);
     const csvContent = fs.readFileSync(filePath, "utf8");
-    const parsed = Papa.parse(csvContent, { header: true });
 
-    const reps = parsed.data
-      .filter(row => row.Latitude && row.Longitude)
-      .map(row => ({
-        nome: row.REPRESENTANTE || row["REPRESENTANTE/LOJA"] || row.LOJA || row.Loja || "Representante Desconhecido",
-        cidade: row.CIDADE,
-        estado: row.ESTADO,
-        celular: row.CELULAR?.replace(/\D/g, ""), // remove qualquer caractere não numérico
-        lat: parseFloat(row.Latitude),
-        lon: parseFloat(row.Longitude),
-      }))
-      .filter(r => r.nome && r.estado && !isNaN(r.lat) && !isNaN(r.lon)); // validação extra
+    const isCeps2 = nomeArquivo === "ceps2.csv";
+    const parsed = Papa.parse(csvContent, {
+      header: !isCeps2, // ceps2.csv não tem cabeçalho
+      skipEmptyLines: true,
+    });
 
-    representantes.push(...reps);
+    const linhas = isCeps2
+      ? parsed.data.map(row => ({
+          nome: row[0],
+          cidade: row[3],
+          estado: row[2],
+          celular: row[6]?.toString().replace(/\D/g, ""),
+          lat: parseFloat(row[7]),
+          lon: parseFloat(row[8]),
+        }))
+      : parsed.data.map(row => ({
+          nome: row.REPRESENTANTE || row.LOJA || Object.values(row)[0],
+          cidade: row.CIDADE,
+          estado: row.ESTADO,
+          celular: row.CELULAR?.toString().replace(/\D/g, ""),
+          lat: parseFloat(row.Latitude),
+          lon: parseFloat(row.Longitude),
+        }));
+
+    representantes.push(
+      ...linhas.filter(r => r.nome && r.estado && !isNaN(r.lat) && !isNaN(r.lon))
+      
+    );
+    console.log(`📄 Lendo ${nomeArquivo} → ${linhas.length} linhas válidas`);
   }
 
   return representantes;
 }
+
 
 
 // Obtem lat/lng via OpenCage com string completa (endereço)
