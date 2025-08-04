@@ -292,10 +292,14 @@ if (
   }
 
   if (estado === "SP") {
-    const litoralSP = [
-      "santos", "são vicente", "guarujá", "praia grande", "cubatão", "bertioga",
-      "caraguatatuba", "ubatuba", "ilhabela", "mongaguá", "itanhaém", "peruíbe"
-    ];
+   const marceloCidadesSP = [
+  // Litoral Paulista
+  "santos", "são vicente", "guarujá", "praia grande", "cubatão", "bertioga",
+  "caraguatatuba", "ubatuba", "ilhabela", "mongaguá", "itanhaém", "peruíbe",
+
+  // Vale do Paraíba
+  "taubaté", "pindamonhangaba", "são josé dos campos", "guaratinguetá", "cruzeiro"
+];
 
     const interiorSP = [
       "barretos", "franca", "ribeirão preto", "guaira", "batatais", "são joaquim da barra",
@@ -307,7 +311,7 @@ if (
       "teodoro sampaio", "mirante do paranapanema"
     ];
 
-    if (litoralSP.includes(cidadeUsuario)) {
+    if (marceloCidadesSP.includes(cidadeUsuario)) {
       return res.status(200).json({
         reply: `✅ Representante para o Litoral Paulista:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5516997774274`
       });
