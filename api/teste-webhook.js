@@ -21,41 +21,28 @@ function haversine(lat1, lon1, lat2, lon2) {
 }
 
 function carregarRepresentantes() {
-  const arquivos = ["cepsr.csv", "ceps2r.csv"];
-  const representantes = [];
+  const filePath = path.resolve("./data", "representantes.json");
+  const jsonContent = fs.readFileSync(filePath, "utf8");
+  const dados = JSON.parse(jsonContent);
 
-  for (const nomeArquivo of arquivos) {
-    const filePath = path.resolve("./public", nomeArquivo);
-    const csvContent = fs.readFileSync(filePath, "utf8");
-
-    const isSemCabecalho = nomeArquivo === "ceps2r.csv";
-    const parsed = Papa.parse(csvContent, {
-      header: !isSemCabecalho, // ceps2r.csv não tem cabeçalho
-      skipEmptyLines: true,
-    });
-
-    const linhas = isSemCabecalho
-      ? parsed.data.map(row => ({
-          nome: row[0],
-          cidade: row[3],
-          estado: row[2],
-          celular: row[6]?.toString().replace(/\D/g, ""),
-          lat: parseFloat(row[7]),
-          lon: parseFloat(row[8]),
-        }))
-      : parsed.data.map(row => ({
-          nome: row.REPRESENTANTE || row.LOJA || Object.values(row)[0],
-          cidade: row.CIDADE,
-          estado: row.ESTADO,
-          celular: row["CELULAR"] || row["CELULAR 2"] || "",
-          lat: parseFloat(row.Latitude),
-          lon: parseFloat(row.Longitude),
-        }));
-
-    representantes.push(
-      ...linhas.filter(r => r.nome && r.estado && !isNaN(r.lat) && !isNaN(r.lon))
+  const representantes = dados
+    .map((item) => ({
+      nome: item.REPRESENTANTE,
+      cidade: normalize(item.NM_MUNICIP),
+      estado: item.UF,
+      celular: item.CELULAR?.replace(/\D/g, ""),
+      lat: parseFloat(item.Latitude),
+      lon: parseFloat(item.Longitude),
+    }))
+    .filter(
+      (r) =>
+        r.nome &&
+        r.estado &&
+        r.cidade &&
+        !isNaN(r.lat) &&
+        !isNaN(r.lon) &&
+        r.celular
     );
-  }
 
   return representantes;
 }
@@ -188,66 +175,6 @@ if (cepOriginal === "94480560") {
   // 📌 Regras personalizadas:
 // 🎯 Regras específicas para o estado do RS
 
-// Rio Grande (e 50km ao redor)
-if (estado === "RS" && cidadeUsuario === "rio grande") {
-  const dioneiLat = -32.035;
-  const dioneiLon = -52.099;
-  const dist = haversine(latCliente, lonCliente, dioneiLat, dioneiLon);
-  if (dist <= 50) {
-    return res.status(200).json({
-      reply: `✅ Representante para Rio Grande (RS) e 50km ao redor:\n\n📍 *Dionei*\n📞 WhatsApp: https://wa.me/53532910789\n📏 Distância: ${dist.toFixed(1)} km`,
-    });
-  }
-}
-
-// Viamão (e 100km ao redor de Porto Alegre)
-if (estado === "RS" && cidadeUsuario === "viamão") {
-  const adrianoLat = -30.0277;
-  const adrianoLon = -51.2287;
-  const dist = haversine(latCliente, lonCliente, adrianoLat, adrianoLon);
-  if (dist <= 100) {
-    return res.status(200).json({
-      reply: `✅ Representante para Viamão (RS) e 100km ao redor:\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339\n📏 Distância: ${dist.toFixed(1)} km`,
-    });
-  }
-}
-
-// Litoral Gaúcho
-if (estado === "RS" && [
-  "torres", "tramandaí", "terra de areia", "arroio do sal", 
-  "são joão do sul", "morrinhos do sul", "capão da canoa",
-  "cidreira", "xangri-lá", "atlântida", "imbé", "balneário pinhal"
-].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para o Litoral Gaúcho:\n\n📍 *Daniel*\n📞 WhatsApp: https://wa.me/555199987333`,
-  });
-}
-
-// Região Metropolitana de Porto Alegre e Serra
-if (estado === "RS" && [
-  "porto alegre", "canoas", "sapucaia do sul", "cachoeirinha",
-  "gravataí", "esteio", "nova santa rita", "alvorada", "guaíba"
-].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para Região Metropolitana de Porto Alegre e Serra Gaúcha:\n\n📍 *Adriano e Reginaldo*\n📞 WhatsApp: https://wa.me/5551991089339`,
-  });
-}
-
-// Oeste Gaúcho (e parte do Oeste Catarinense)
-if (
-  (estado === "RS" && [
-    "santa rosa", "ijui", "cruz alta", "são luiz gonzaga",
-    "santo ângelo", "passo fundo", "santa maria", "alegrete", "uruguaiana"
-  ].includes(cidadeUsuario)) ||
-  (estado === "SC" && [
-    "chapecó", "palmitos", "pinhalzinho", "são miguel do oeste"
-  ].includes(cidadeUsuario))
-) {
-  return res.status(200).json({
-    reply: `✅ Representante para Oeste Gaúcho e Extremo Oeste Catarinense:\n\n📍 *Cristian (Andre)*\n📞 WhatsApp: https://wa.me/555984491079`,
-  });
-}
-
   if (["RJ", "ES"].includes(estado)) {
     return res.status(200).json({
       reply: `✅ Representante para todo o estado do ${estado}:\n\n📍 *Rafa*\n📞 WhatsApp: https://wa.me/5522992417676`,
@@ -260,102 +187,7 @@ if (
     });
   }
 
-  if (estado === "PR") {
-    const distLoanda = haversine(latCliente, lonCliente, -22.9297, -53.1366);
-    const cidadesOeste = ["toledo", "cascavel", "foz do iguaçu", "medianeira", "marechal cândido rondon"];
-    if (distLoanda <= 200 || cidadesOeste.includes(cidadeUsuario)) {
-      return res.status(200).json({
-        reply: `✅ Representante para raio de 200km a partir de Loanda (PR) e Oeste do PR:\n\n📍 *Mela*\n📞 WhatsApp: https://wa.me/5544991254963`,
-      });
-    }
-    return res.status(200).json({
-      reply: `✅ Representante para Curitiba e demais regiões do Paraná:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
-    });
-  }
-
- // 📍 Representantes SC
-
-// Blumenau a Brusque – Alan
-if (estado === "SC" && ["blumenau", "brusque"].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para Blumenau a Brusque:\n\n📍 *Alan*\n📞 WhatsApp: https://wa.me/554191690057`,
-  });
-}
-
-// Litoral Sul de SC (Gaivotas, Sombrio, Criciúma e 30km) – Peterson
-if (estado === "SC" && [
-  "balneário gaivota", "gaivota", "sombrio", "criciúma", "araranguá",
-  "forquilhinha", "turuçu", "timbé do sul", "turvo", "meleiro",
-  "maracajá", "nova veneza", "içara", "siderópolis", "morro grande", "laguna"
-].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para o Litoral Sul de SC:\n\n📍 *Peterson*\n📞 WhatsApp: https://wa.me/554896894570`,
-  });
-}
-
-// Itapema, Tijucas, Bombinhas, Porto Belo e região – Fagner
-if (estado === "SC" && [
-  "itapema", "tijucas", "bombinhas", "porto belo",
-  "camboriú", "canelinha", "são joão batista"
-].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para Itapema, Tijucas, Bombinhas, Porto Belo e região:\n\n📍 *Fagner*\n📞 WhatsApp: https://wa.me/554797693483`,
-  });
-}
-
-// Demais regiões do litoral de SC – Diego
-if (estado === "SC" && [
-  "balneário camboriú", "itajai", "navegantes", "penha", "piçarras",
-  "barra velha", "joinville", "são francisco do sul"
-].includes(cidadeUsuario)) {
-  return res.status(200).json({
-    reply: `✅ Representante para outras regiões do Litoral de SC:\n\n📍 *Diego*\n📞 WhatsApp: https://wa.me/554896823353`,
-  });
-}
-
-  if (estado === "SP") {
-   const marceloCidadesSP = [
-  // Litoral Paulista
-  "santos", "são vicente", "guarujá", "praia grande", "cubatão", "bertioga",
-  "caraguatatuba", "ubatuba", "ilhabela", "mongaguá", "itanhaém", "peruíbe",
-
-  // Vale do Paraíba
-  "taubaté", "pindamonhangaba", "são josé dos campos", "guaratinguetá", "cruzeiro"
-];
-
-    const interiorSP = [
-      "barretos", "franca", "ribeirão preto", "guaira", "batatais", "são joaquim da barra",
-      "sertãozinho", "bebedouro", "orlândia", "altinópolis", "jardinópolis"
-    ];
-
-    const oesteSP = [
-      "santo anastácio", "presidente prudente", "presidente epitácio", "dracena",
-      "teodoro sampaio", "mirante do paranapanema"
-    ];
-
-    if (marceloCidadesSP.includes(cidadeUsuario)) {
-      return res.status(200).json({
-        reply: `✅ Representante para o Litoral Paulista:\n\n📍 *Marcelo*\n📞 WhatsApp: https://wa.me/5516997774274`
-      });
-    }
-
-    if (interiorSP.includes(cidadeUsuario)) {
-      return res.status(200).json({
-        reply: `✅ Representante para o Interior de São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
-      });
-    }
-
-    if (oesteSP.includes(cidadeUsuario)) {
-      return res.status(200).json({
-        reply: `✅ Representante para o Oeste Paulista:\n\n📍 *Aguinaldo*\n📞 WhatsApp: https://wa.me/5518996653510`
-      });
-    }
-
-    return res.status(200).json({
-      reply: `✅ Representante para São Paulo:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/55179981233263`
-    });
-  }
-
+ 
 // 🌎 Regras para o Nordeste
 
 // Piauí (apenas Teresina)
