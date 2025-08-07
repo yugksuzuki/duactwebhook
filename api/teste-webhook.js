@@ -186,6 +186,12 @@ if (cepOriginal === "94480560") {
       reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5516999774274`,
     });
   }
+// MT e MS – Representante Gabriel
+if (["MT", "MS"].includes(estado)) {
+  return res.status(200).json({
+    reply: `✅ Representante para o estado do ${estado}:\n\n📍 *Gabriel*\n📞 WhatsApp: https://wa.me/554999230141`
+  });
+}
 
  
 // 🌎 Regras para o Nordeste
