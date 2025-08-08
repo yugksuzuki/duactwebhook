@@ -213,22 +213,32 @@ if (["CE", "RN"].includes(estado)) {
 // Paraíba (somente Campina Grande)
 if (estado === "PB" && cidadeUsuario === "campina grande") {
   return res.status(200).json({
-    reply: `✅ Representante para Campina Grande (PB):\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
   });
 }
 
-// Pernambuco / Alagoas (apenas Maceió) / Sergipe / Bahia inteira
-if (
-  estado === "PE" ||
-  estado === "SE" ||
-  estado === "BA" ||
-  (estado === "AL" && cidadeUsuario === "maceió")
-) {
+// Pernambuco / Sergipe / Bahia / Alagoas (estado inteiro)
+if (["PE", "SE", "BA", "AL"].includes(estado)) {
   return res.status(200).json({
-    reply: `✅ Representante para ${estado === "PE" ? "Pernambuco" : estado === "SE" ? "Sergipe" : estado === "BA" ? "Bahia" : "Maceió (AL)"}:\n\n📍 *Fabrício*\n📞 WhatsApp: https://wa.me/554788541414`,
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
   });
 }
 
+
+
+// Região Norte → Everson
+if (["PA", "AM", "RR", "AP", "RO", "TO", "AC"].includes(estado)) {
+  return res.status(200).json({
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
+  });
+}
+
+// GO e DF → Circuit Store
+if (["GO", "DF"].includes(estado)) {
+  return res.status(200).json({
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Circuit Store*\n📞 WhatsApp: https://wa.me/556292421447`,
+  });
+}
 
   // 🔄 Fallback com cálculo de distância por Haversine
   const lista = carregarRepresentantes().filter(rep => rep.estado === estado);
