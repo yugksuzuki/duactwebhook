@@ -116,7 +116,7 @@ export default async function handler(req, res) {
 // 🔒 Força retorno fixo para Adriano em 94480560
 if (cepOriginal === "94480560") {
   return res.status(200).json({
-    reply: `✅ Representante responsável por sua região:\n\n📍 *Adriano*\n📞 WhatsApp: https://wa.me/5551991089339`,
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Reginaldo*\n📞 WhatsApp: https://wa.me/5551991089339`,
   });
 }
 
@@ -183,7 +183,7 @@ if (cepOriginal === "94480560") {
 
   if (estado === "MG") {
     return res.status(200).json({
-      reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/5516999774274`,
+      reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/553497646714`,
     });
   }
 // MT e MS – Representante Gabriel
@@ -252,6 +252,6 @@ if (
   }
 
   return res.status(200).json({
-    reply: `❗ Nenhum representante encontrado em até 200 km no seu estado.\n\nPara assuntos gerais, por favor entre em contato com nosso atendimento:\n☎️ *Everson*\n+55 (48) 9211-0383`,
+    reply: `❗ Nenhum representante encontrado em até 200 km no seu estado.\n\nPara assuntos gerais, por favor entre em contato com nosso atendimento:\n☎️ *Everson*\n WhatsApp: https://wa.me/554892110383`,
   });
 }
