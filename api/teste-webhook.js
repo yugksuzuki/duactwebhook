@@ -172,68 +172,45 @@ if (cepOriginal === "94480560") {
  const cidadeUsuario = normalize(dados.localidade || "");
 
 
-  // 📌 Regras personalizadas:
-// 🎯 Regras específicas para o estado do RS
+ // 📌 Regras personalizadas por estado/região
 
-  if (["RJ", "ES"].includes(estado)) {
-    return res.status(200).json({
-      reply: `✅ Representante para todo o estado do ${estado}:\n\n📍 *Rafa*\n📞 WhatsApp: https://wa.me/5522992417676`,
-    });
-  }
+// 🟦 RJ e ES → Rafa
+if (["RJ", "ES"].includes(estado)) {
+  return res.status(200).json({
+    reply: `✅ Representante para todo o estado do ${estado}:\n\n📍 *Rafa*\n📞 WhatsApp: https://wa.me/5522992417676`,
+  });
+}
 
-  if (estado === "MG") {
-    return res.status(200).json({
-      reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/553497646714`,
-    });
-  }
-// MT e MS – Representante Gabriel
+// 🟦 MG → Neilson
+if (estado === "MG") {
+  return res.status(200).json({
+    reply: `✅ Representante para Minas Gerais:\n\n📍 *Neilson*\n📞 WhatsApp: https://wa.me/553497646714`,
+  });
+}
+
+// 🟧 MT e MS → Gabriel
 if (["MT", "MS"].includes(estado)) {
   return res.status(200).json({
-    reply: `✅ Representante para o estado do ${estado}:\n\n📍 *Gabriel*\n📞 WhatsApp: https://wa.me/554999230141`
+    reply: `✅ Representante para o estado do ${estado}:\n\n📍 *Gabriel*\n📞 WhatsApp: https://wa.me/554999230141`,
   });
 }
 
- 
-// 🌎 Regras para o Nordeste
-
-// Piauí (apenas Teresina)
-if (estado === "PI" && cidadeUsuario === "teresina") {
+// 🟨 TODO NORDESTE → Júnior
+const estadosNordeste = ["AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE"];
+if (estadosNordeste.includes(estado)) {
   return res.status(200).json({
-    reply: `✅ Representante para Teresina (PI):\n\n📍 *Nonato*\n📞 WhatsApp: https://wa.me/5586998492624`,
+    reply: `✅ Representante responsável por sua região:\n\n📍 *Júnior*\n📞 WhatsApp: https://wa.me/5585999965434`,
   });
 }
 
-// Ceará e Rio Grande do Norte (inteiros)
-if (["CE", "RN"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante para ${estado === "CE" ? "Ceará" : "Rio Grande do Norte"}:\n\n📍 *Júnior*\n📞 WhatsApp: https://wa.me/5585999965434`,
-  });
-}
-
-// Paraíba (somente Campina Grande)
-if (estado === "PB" && cidadeUsuario === "campina grande") {
-  return res.status(200).json({
-    reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
-  });
-}
-
-// Pernambuco / Sergipe / Bahia / Alagoas (estado inteiro)
-if (["PE", "SE", "BA", "AL"].includes(estado)) {
-  return res.status(200).json({
-    reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
-  });
-}
-
-
-
-// Região Norte → Everson
+// 🟩 Região NORTE → Everson
 if (["PA", "AM", "RR", "AP", "RO", "TO", "AC"].includes(estado)) {
   return res.status(200).json({
     reply: `✅ Representante responsável por sua região:\n\n📍 *Everson*\n📞 WhatsApp: https://wa.me/554892110383`,
   });
 }
 
-// GO e DF → Circuit Store
+// 🟨 GO e DF → Circuit Store
 if (["GO", "DF"].includes(estado)) {
   return res.status(200).json({
     reply: `✅ Representante responsável por sua região:\n\n📍 *Circuit Store*\n📞 WhatsApp: https://wa.me/556292421447`,
