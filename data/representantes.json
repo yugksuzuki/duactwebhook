@@ -1,3995 +1,3987 @@
 [
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Alegrete",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.790166",
-    "Longitude":"-55.794862"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Barra do Quaraí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.208947",
-    "Longitude":"-57.5505128"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Garruchos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.2467634",
-    "Longitude":"-55.5639291"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Itaqui",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.1222037",
-    "Longitude":"-56.5551258"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Maçambará",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.144485",
-    "Longitude":"-56.067444"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Manoel Viana",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.585935",
-    "Longitude":"-55.484112"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Quaraí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.2910749",
-    "Longitude":"-56.128326"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"São Borja",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.6592237",
-    "Longitude":"-56.0044295"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"São Francisco de Assis",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.559214",
-    "Longitude":"-55.1209843"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Uruguaiana",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.7560726",
-    "Longitude":"-57.0867546"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Rosário do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.2527151",
-    "Longitude":"-54.9179382"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Margarida do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.339117",
-    "Longitude":"-54.0856735"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"São Gabriel",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.334214",
-    "Longitude":"-54.3227149"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Aceguá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.8695131",
-    "Longitude":"-54.1615593"
+   {
+    "UF": "RS",
+    "NM_MUNICIP": "Barra do Quaraí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.208947",
+    "Longitude": "-57.5505128"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Garruchos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.2467634",
+    "Longitude": "-55.5639291"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Itaqui",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.1222037",
+    "Longitude": "-56.5551258"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Maçambará",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.144485",
+    "Longitude": "-56.067444"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Manoel Viana",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.585935",
+    "Longitude": "-55.484112"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Quaraí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.2910749",
+    "Longitude": "-56.128326"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "São Borja",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.6592237",
+    "Longitude": "-56.0044295"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "São Francisco de Assis",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.559214",
+    "Longitude": "-55.1209843"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Uruguaiana",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.7560726",
+    "Longitude": "-57.0867546"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Rosário do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.2527151",
+    "Longitude": "-54.9179382"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Margarida do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.339117",
+    "Longitude": "-54.0856735"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "São Gabriel",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.334214",
+    "Longitude": "-54.3227149"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Aceguá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.8695131",
+    "Longitude": "-54.1615593"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bagé",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.3314264",
-    "Longitude":"-54.1062808"
+    "UF": "RS",
+    "NM_MUNICIP": "Bagé",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.3314264",
+    "Longitude": "-54.1062808"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dom Pedrito",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.983755",
-    "Longitude":"-54.6746483"
+    "UF": "RS",
+    "NM_MUNICIP": "Dom Pedrito",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.983755",
+    "Longitude": "-54.6746483"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Hulha Negra",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.5137824",
-    "Longitude":"-53.9010034"
+    "UF": "RS",
+    "NM_MUNICIP": "Hulha Negra",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.5137824",
+    "Longitude": "-53.9010034"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lavras do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.8118057",
-    "Longitude":"-53.8982856"
+    "UF": "RS",
+    "NM_MUNICIP": "Lavras do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.8118057",
+    "Longitude": "-53.8982856"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capão do Cipó",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.9489259",
-    "Longitude":"-54.56084"
+    "UF": "RS",
+    "NM_MUNICIP": "Capão do Cipó",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.9489259",
+    "Longitude": "-54.56084"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Itacurubi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.8149915",
-    "Longitude":"-55.2121455"
+    "UF": "RS",
+    "NM_MUNICIP": "Itacurubi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.8149915",
+    "Longitude": "-55.2121455"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jari",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.2712375",
-    "Longitude":"-54.2836247"
+    "UF": "RS",
+    "NM_MUNICIP": "Jari",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.2712375",
+    "Longitude": "-54.2836247"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Júlio de Castilhos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.2286575",
-    "Longitude":"-53.6825217"
+    "UF": "RS",
+    "NM_MUNICIP": "Júlio de Castilhos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.2286575",
+    "Longitude": "-53.6825217"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinhal Grande",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.3472446",
-    "Longitude":"-53.3343023"
+    "UF": "RS",
+    "NM_MUNICIP": "Pinhal Grande",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.3472446",
+    "Longitude": "-53.3343023"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Quevedos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.2928843",
-    "Longitude":"-54.0582959"
+    "UF": "RS",
+    "NM_MUNICIP": "Quevedos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.2928843",
+    "Longitude": "-54.0582959"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santiago",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.189675",
-    "Longitude":"-54.866624"
+    "UF": "RS",
+    "NM_MUNICIP": "Santiago",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.189675",
+    "Longitude": "-54.866624"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tupanciretã",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.0798756",
-    "Longitude":"-53.8386668"
+    "UF": "RS",
+    "NM_MUNICIP": "Tupanciretã",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.0798756",
+    "Longitude": "-53.8386668"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Unistalda",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.0734662",
-    "Longitude":"-55.1511525"
+    "UF": "RS",
+    "NM_MUNICIP": "Unistalda",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.0734662",
+    "Longitude": "-55.1511525"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ajuricaba",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.239654",
-    "Longitude":"-53.7693013"
+    "UF": "RS",
+    "NM_MUNICIP": "Ajuricaba",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.239654",
+    "Longitude": "-53.7693013"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alecrim",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6463451",
-    "Longitude":"-54.7875456"
+    "UF": "RS",
+    "NM_MUNICIP": "Alecrim",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6463451",
+    "Longitude": "-54.7875456"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alegria",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8332103",
-    "Longitude":"-54.0574959"
+    "UF": "RS",
+    "NM_MUNICIP": "Alegria",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8332103",
+    "Longitude": "-54.0574959"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Almirante Tamandaré do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1141129",
-    "Longitude":"-52.9134874"
+    "UF": "RS",
+    "NM_MUNICIP": "Almirante Tamandaré do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1141129",
+    "Longitude": "-52.9134874"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alpestre",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2512339",
-    "Longitude":"-53.0349646"
+    "UF": "RS",
+    "NM_MUNICIP": "Alpestre",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2512339",
+    "Longitude": "-53.0349646"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ametista do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3589528",
-    "Longitude":"-53.1944346"
+    "UF": "RS",
+    "NM_MUNICIP": "Ametista do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3589528",
+    "Longitude": "-53.1944346"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Aratiba",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3811175",
-    "Longitude":"-52.291613"
+    "UF": "RS",
+    "NM_MUNICIP": "Aratiba",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3811175",
+    "Longitude": "-52.291613"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio Grande",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-32.2384246",
-    "Longitude":"-53.0866661"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio Grande",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-32.2384246",
+    "Longitude": "-53.0866661"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio do Padre",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.4388839",
-    "Longitude":"-52.4099333"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio do Padre",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.4388839",
+    "Longitude": "-52.4099333"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Augusto Pestana",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.5148413",
-    "Longitude":"-53.9906433"
+    "UF": "RS",
+    "NM_MUNICIP": "Augusto Pestana",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.5148413",
+    "Longitude": "-53.9906433"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barra Funda",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9199952",
-    "Longitude":"-53.0124807"
+    "UF": "RS",
+    "NM_MUNICIP": "Barra Funda",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9199952",
+    "Longitude": "-53.0124807"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barra do Guarita",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2135021",
-    "Longitude":"-53.750679"
+    "UF": "RS",
+    "NM_MUNICIP": "Barra do Guarita",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2135021",
+    "Longitude": "-53.750679"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barra do Rio Azul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.392682",
-    "Longitude":"-52.3999126"
+    "UF": "RS",
+    "NM_MUNICIP": "Barra do Rio Azul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.392682",
+    "Longitude": "-52.3999126"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barracão",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6722339",
-    "Longitude":"-51.4583497"
+    "UF": "RS",
+    "NM_MUNICIP": "Barracão",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6722339",
+    "Longitude": "-51.4583497"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barão de Cotegipe",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5756619",
-    "Longitude":"-52.4115359"
+    "UF": "RS",
+    "NM_MUNICIP": "Barão de Cotegipe",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5756619",
+    "Longitude": "-52.4115359"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Benjamin Constant do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4845389",
-    "Longitude":"-52.6336308"
+    "UF": "RS",
+    "NM_MUNICIP": "Benjamin Constant do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4845389",
+    "Longitude": "-52.6336308"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boa Vista das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6677983",
-    "Longitude":"-53.3127622"
+    "UF": "RS",
+    "NM_MUNICIP": "Boa Vista das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6677983",
+    "Longitude": "-53.3127622"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boa Vista do Buricá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6797696",
-    "Longitude":"-54.0991269"
+    "UF": "RS",
+    "NM_MUNICIP": "Boa Vista do Buricá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6797696",
+    "Longitude": "-54.0991269"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boa Vista do Cadeado",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.5783827",
-    "Longitude":"-53.8123759"
+    "UF": "RS",
+    "NM_MUNICIP": "Boa Vista do Cadeado",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.5783827",
+    "Longitude": "-53.8123759"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boa Vista do Incra",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.8860851",
-    "Longitude":"-53.4837401"
+    "UF": "RS",
+    "NM_MUNICIP": "Boa Vista do Incra",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.8860851",
+    "Longitude": "-53.4837401"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bom Progresso",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5404542",
-    "Longitude":"-53.8447293"
+    "UF": "RS",
+    "NM_MUNICIP": "Bom Progresso",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5404542",
+    "Longitude": "-53.8447293"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bossoroca",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.7278885",
-    "Longitude":"-54.9120278"
+    "UF": "RS",
+    "NM_MUNICIP": "Bossoroca",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.7278885",
+    "Longitude": "-54.9120278"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Braga",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.617348",
-    "Longitude":"-53.740514"
+    "UF": "RS",
+    "NM_MUNICIP": "Braga",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.617348",
+    "Longitude": "-53.740514"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cacequi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.8838059",
-    "Longitude":"-54.8273443"
+    "UF": "RS",
+    "NM_MUNICIP": "Cacequi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.8838059",
+    "Longitude": "-54.8273443"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cachoeira do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.0482234",
-    "Longitude":"-52.8901686"
+    "UF": "RS",
+    "NM_MUNICIP": "Cachoeira do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.0482234",
+    "Longitude": "-52.8901686"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caibaté",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.287909",
-    "Longitude":"-54.64027"
+    "UF": "RS",
+    "NM_MUNICIP": "Caibaté",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.287909",
+    "Longitude": "-54.64027"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caiçara",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2470588",
-    "Longitude":"-53.4443522"
+    "UF": "RS",
+    "NM_MUNICIP": "Caiçara",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2470588",
+    "Longitude": "-53.4443522"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campina das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9627888",
-    "Longitude":"-54.8423869"
+    "UF": "RS",
+    "NM_MUNICIP": "Campina das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9627888",
+    "Longitude": "-54.8423869"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campinas do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7407096",
-    "Longitude":"-52.6419432"
+    "UF": "RS",
+    "NM_MUNICIP": "Campinas do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7407096",
+    "Longitude": "-52.6419432"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campo Novo",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6792143",
-    "Longitude":"-53.8051654"
+    "UF": "RS",
+    "NM_MUNICIP": "Campo Novo",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6792143",
+    "Longitude": "-53.8051654"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Candiota",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.5240806",
-    "Longitude":"-53.7049103"
+    "UF": "RS",
+    "NM_MUNICIP": "Candiota",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.5240806",
+    "Longitude": "-53.7049103"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Canguçu",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.398276",
-    "Longitude":"-52.6773522"
+    "UF": "RS",
+    "NM_MUNICIP": "Canguçu",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.398276",
+    "Longitude": "-52.6773522"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capão do Leão",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.766133",
-    "Longitude":"-52.5013148"
+    "UF": "RS",
+    "NM_MUNICIP": "Capão do Leão",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.766133",
+    "Longitude": "-52.5013148"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Carazinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.2981634",
-    "Longitude":"-52.7942363"
+    "UF": "RS",
+    "NM_MUNICIP": "Carazinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.2981634",
+    "Longitude": "-52.7942363"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Carlos Gomes",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.704118",
-    "Longitude":"-51.9346182"
+    "UF": "RS",
+    "NM_MUNICIP": "Carlos Gomes",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.704118",
+    "Longitude": "-51.9346182"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Catuípe",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":null,
-    "Longitude":null
+    "UF": "RS",
+    "NM_MUNICIP": "Catuípe",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": null,
+    "Longitude": null
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caçapava do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.5113286",
-    "Longitude":"-53.4916761"
+    "UF": "RS",
+    "NM_MUNICIP": "Caçapava do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.5113286",
+    "Longitude": "-53.4916761"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Centenário",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7633729",
-    "Longitude":"-51.9890066"
+    "UF": "RS",
+    "NM_MUNICIP": "Centenário",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7633729",
+    "Longitude": "-51.9890066"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cerrito",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.8546304",
-    "Longitude":"-52.8151659"
+    "UF": "RS",
+    "NM_MUNICIP": "Cerrito",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.8546304",
+    "Longitude": "-52.8151659"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cerro Grande",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6290494",
-    "Longitude":"-53.1600658"
+    "UF": "RS",
+    "NM_MUNICIP": "Cerro Grande",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6290494",
+    "Longitude": "-53.1600658"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cerro Largo",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.147498",
-    "Longitude":"-54.7383681"
+    "UF": "RS",
+    "NM_MUNICIP": "Cerro Largo",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.147498",
+    "Longitude": "-54.7383681"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Chapada",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0587829",
-    "Longitude":"-53.0657459"
+    "UF": "RS",
+    "NM_MUNICIP": "Chapada",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0587829",
+    "Longitude": "-53.0657459"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Chiapetta",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9836153",
-    "Longitude":"-53.9165594"
+    "UF": "RS",
+    "NM_MUNICIP": "Chiapetta",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9836153",
+    "Longitude": "-53.9165594"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Colorado",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.525842",
-    "Longitude":"-52.99282"
+    "UF": "RS",
+    "NM_MUNICIP": "Colorado",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.525842",
+    "Longitude": "-52.99282"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Condor",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1565222",
-    "Longitude":"-53.4851199"
+    "UF": "RS",
+    "NM_MUNICIP": "Condor",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1565222",
+    "Longitude": "-53.4851199"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Constantina",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7331711",
-    "Longitude":"-52.9929561"
+    "UF": "RS",
+    "NM_MUNICIP": "Constantina",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7331711",
+    "Longitude": "-52.9929561"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coqueiros do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1184032",
-    "Longitude":"-52.7824375"
+    "UF": "RS",
+    "NM_MUNICIP": "Coqueiros do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1184032",
+    "Longitude": "-52.7824375"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coronel Barros",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4032424",
-    "Longitude":"-54.0441323"
+    "UF": "RS",
+    "NM_MUNICIP": "Coronel Barros",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4032424",
+    "Longitude": "-54.0441323"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coronel Bicaco",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7174002",
-    "Longitude":"-53.705821"
+    "UF": "RS",
+    "NM_MUNICIP": "Coronel Bicaco",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7174002",
+    "Longitude": "-53.705821"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Crissiumal",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4982242",
-    "Longitude":"-54.1024643"
+    "UF": "RS",
+    "NM_MUNICIP": "Crissiumal",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4982242",
+    "Longitude": "-54.1024643"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cristal do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4312355",
-    "Longitude":"-53.2543444"
+    "UF": "RS",
+    "NM_MUNICIP": "Cristal do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4312355",
+    "Longitude": "-53.2543444"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cruz Alta",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.645056",
-    "Longitude":"-53.6058047"
+    "UF": "RS",
+    "NM_MUNICIP": "Cruz Alta",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.645056",
+    "Longitude": "-53.6058047"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cruzaltense",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6297189",
-    "Longitude":"-52.6482083"
+    "UF": "RS",
+    "NM_MUNICIP": "Cruzaltense",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6297189",
+    "Longitude": "-52.6482083"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cândido Godói",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9254295",
-    "Longitude":"-54.7154221"
+    "UF": "RS",
+    "NM_MUNICIP": "Cândido Godói",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9254295",
+    "Longitude": "-54.7154221"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Derrubadas",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2292616",
-    "Longitude":"-53.8996028"
+    "UF": "RS",
+    "NM_MUNICIP": "Derrubadas",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2292616",
+    "Longitude": "-53.8996028"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dezesseis de Novembro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1987686",
-    "Longitude":"-55.0815131"
+    "UF": "RS",
+    "NM_MUNICIP": "Dezesseis de Novembro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1987686",
+    "Longitude": "-55.0815131"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dilermando de Aguiar",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.8113167",
-    "Longitude":"-54.1204788"
+    "UF": "RS",
+    "NM_MUNICIP": "Dilermando de Aguiar",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.8113167",
+    "Longitude": "-54.1204788"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dois Irmãos das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6785273",
-    "Longitude":"-53.4891693"
+    "UF": "RS",
+    "NM_MUNICIP": "Dois Irmãos das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6785273",
+    "Longitude": "-53.4891693"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dona Francisca",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.5600626",
-    "Longitude":"-53.3524247"
+    "UF": "RS",
+    "NM_MUNICIP": "Dona Francisca",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.5600626",
+    "Longitude": "-53.3524247"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Doutor Maurício Cardoso",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5067264",
-    "Longitude":"-54.3626756"
+    "UF": "RS",
+    "NM_MUNICIP": "Doutor Maurício Cardoso",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5067264",
+    "Longitude": "-54.3626756"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Engenho Velho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6783193",
-    "Longitude":"-52.903841"
+    "UF": "RS",
+    "NM_MUNICIP": "Engenho Velho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6783193",
+    "Longitude": "-52.903841"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Entre Rios do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5120703",
-    "Longitude":"-52.7287932"
+    "UF": "RS",
+    "NM_MUNICIP": "Entre Rios do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5120703",
+    "Longitude": "-52.7287932"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Entre-Ijuís",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4897877",
-    "Longitude":"-54.3597345"
+    "UF": "RS",
+    "NM_MUNICIP": "Entre-Ijuís",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4897877",
+    "Longitude": "-54.3597345"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Erebango",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8252515",
-    "Longitude":"-52.3160426"
+    "UF": "RS",
+    "NM_MUNICIP": "Erebango",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8252515",
+    "Longitude": "-52.3160426"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Erechim",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6350709",
-    "Longitude":"-52.2738654"
+    "UF": "RS",
+    "NM_MUNICIP": "Erechim",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6350709",
+    "Longitude": "-52.2738654"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Erval Grande",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3910282",
-    "Longitude":"-52.5703742"
+    "UF": "RS",
+    "NM_MUNICIP": "Erval Grande",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3910282",
+    "Longitude": "-52.5703742"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Erval Seco",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5511418",
-    "Longitude":"-53.506851"
+    "UF": "RS",
+    "NM_MUNICIP": "Erval Seco",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5511418",
+    "Longitude": "-53.506851"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Esperança do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3617442",
-    "Longitude":"-53.9909736"
+    "UF": "RS",
+    "NM_MUNICIP": "Esperança do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3617442",
+    "Longitude": "-53.9909736"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Estação",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9260227",
-    "Longitude":"-52.2948716"
+    "UF": "RS",
+    "NM_MUNICIP": "Estação",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9260227",
+    "Longitude": "-52.2948716"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Eugênio de Castro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.5780373",
-    "Longitude":"-54.2447988"
+    "UF": "RS",
+    "NM_MUNICIP": "Eugênio de Castro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.5780373",
+    "Longitude": "-54.2447988"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Faxinal do Soturno",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.5771687",
-    "Longitude":"-53.445804"
+    "UF": "RS",
+    "NM_MUNICIP": "Faxinal do Soturno",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.5771687",
+    "Longitude": "-53.445804"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Faxinalzinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3699745",
-    "Longitude":"-52.6633355"
+    "UF": "RS",
+    "NM_MUNICIP": "Faxinalzinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3699745",
+    "Longitude": "-52.6633355"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Formigueiro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.9795815",
-    "Longitude":"-53.4677905"
+    "UF": "RS",
+    "NM_MUNICIP": "Formigueiro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.9795815",
+    "Longitude": "-53.4677905"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Fortaleza dos Valos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.7959241",
-    "Longitude":"-53.2246622"
+    "UF": "RS",
+    "NM_MUNICIP": "Fortaleza dos Valos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.7959241",
+    "Longitude": "-53.2246622"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Frederico Westphalen",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.35711",
-    "Longitude":"-53.3964117"
+    "UF": "RS",
+    "NM_MUNICIP": "Frederico Westphalen",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.35711",
+    "Longitude": "-53.3964117"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gaurama",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5879319",
-    "Longitude":"-52.0927073"
+    "UF": "RS",
+    "NM_MUNICIP": "Gaurama",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5879319",
+    "Longitude": "-52.0927073"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Getúlio Vargas",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8871493",
-    "Longitude":"-52.2257967"
+    "UF": "RS",
+    "NM_MUNICIP": "Getúlio Vargas",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8871493",
+    "Longitude": "-52.2257967"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Giruá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0299396",
-    "Longitude":"-54.3506855"
+    "UF": "RS",
+    "NM_MUNICIP": "Giruá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0299396",
+    "Longitude": "-54.3506855"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gramado dos Loureiros",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.444656",
-    "Longitude":"-52.9149435"
+    "UF": "RS",
+    "NM_MUNICIP": "Gramado dos Loureiros",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.444656",
+    "Longitude": "-52.9149435"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Guarani das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1445277",
-    "Longitude":"-54.5570355"
+    "UF": "RS",
+    "NM_MUNICIP": "Guarani das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1445277",
+    "Longitude": "-54.5570355"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Herval",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-32.0260806",
-    "Longitude":"-53.3951333"
+    "UF": "RS",
+    "NM_MUNICIP": "Herval",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-32.0260806",
+    "Longitude": "-53.3951333"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Horizontina",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.627931",
-    "Longitude":"-54.3090256"
+    "UF": "RS",
+    "NM_MUNICIP": "Horizontina",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.627931",
+    "Longitude": "-54.3090256"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Humaitá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.9794491",
-    "Longitude":"-51.1868816"
+    "UF": "RS",
+    "NM_MUNICIP": "Humaitá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.9794491",
+    "Longitude": "-51.1868816"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ibiraiaras",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3655247",
-    "Longitude":"-51.6457482"
+    "UF": "RS",
+    "NM_MUNICIP": "Ibiraiaras",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3655247",
+    "Longitude": "-51.6457482"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ibirapuitã",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6170526",
-    "Longitude":"-52.4411786"
+    "UF": "RS",
+    "NM_MUNICIP": "Ibirapuitã",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6170526",
+    "Longitude": "-52.4411786"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ibirubá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.630161",
-    "Longitude":"-53.096124"
+    "UF": "RS",
+    "NM_MUNICIP": "Ibirubá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.630161",
+    "Longitude": "-53.096124"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ijuí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3878734",
-    "Longitude":"-53.9201692"
+    "UF": "RS",
+    "NM_MUNICIP": "Ijuí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3878734",
+    "Longitude": "-53.9201692"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Independência",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8523717",
-    "Longitude":"-54.1909592"
+    "UF": "RS",
+    "NM_MUNICIP": "Independência",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8523717",
+    "Longitude": "-54.1909592"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Inhacorá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9228505",
-    "Longitude":"-54.0459988"
+    "UF": "RS",
+    "NM_MUNICIP": "Inhacorá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9228505",
+    "Longitude": "-54.0459988"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ipiranga do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9243967",
-    "Longitude":"-52.4399687"
+    "UF": "RS",
+    "NM_MUNICIP": "Ipiranga do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9243967",
+    "Longitude": "-52.4399687"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Iraí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2546686",
-    "Longitude":"-53.2375659"
+    "UF": "RS",
+    "NM_MUNICIP": "Iraí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2546686",
+    "Longitude": "-53.2375659"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Itaara",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.5609585",
-    "Longitude":"-53.7670401"
+    "UF": "RS",
+    "NM_MUNICIP": "Itaara",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.5609585",
+    "Longitude": "-53.7670401"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Itatiba do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3859383",
-    "Longitude":"-52.4559831"
+    "UF": "RS",
+    "NM_MUNICIP": "Itatiba do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3859383",
+    "Longitude": "-52.4559831"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ivorá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.5107068",
-    "Longitude":"-53.5828873"
+    "UF": "RS",
+    "NM_MUNICIP": "Ivorá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.5107068",
+    "Longitude": "-53.5828873"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jaboticaba",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6311203",
-    "Longitude":"-53.2794089"
+    "UF": "RS",
+    "NM_MUNICIP": "Jaboticaba",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6311203",
+    "Longitude": "-53.2794089"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jacutinga",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.729135",
-    "Longitude":"-52.53724"
+    "UF": "RS",
+    "NM_MUNICIP": "Jacutinga",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.729135",
+    "Longitude": "-52.53724"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jaguari",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.4980313",
-    "Longitude":"-54.6919404"
+    "UF": "RS",
+    "NM_MUNICIP": "Jaguari",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.4980313",
+    "Longitude": "-54.6919404"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jóia",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.7413115",
-    "Longitude":"-54.1825338"
+    "UF": "RS",
+    "NM_MUNICIP": "Jóia",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.7413115",
+    "Longitude": "-54.1825338"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lajeado do Bugre",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7034224",
-    "Longitude":"-53.2063688"
+    "UF": "RS",
+    "NM_MUNICIP": "Lajeado do Bugre",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7034224",
+    "Longitude": "-53.2063688"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Liberato Salzano",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6003296",
-    "Longitude":"-53.0714815"
+    "UF": "RS",
+    "NM_MUNICIP": "Liberato Salzano",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6003296",
+    "Longitude": "-53.0714815"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Machadinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5658904",
-    "Longitude":"-51.6677057"
+    "UF": "RS",
+    "NM_MUNICIP": "Machadinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5658904",
+    "Longitude": "-51.6677057"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Marcelino Ramos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4622708",
-    "Longitude":"-51.9081009"
+    "UF": "RS",
+    "NM_MUNICIP": "Marcelino Ramos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4622708",
+    "Longitude": "-51.9081009"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mariano Moro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3408678",
-    "Longitude":"-52.1667451"
+    "UF": "RS",
+    "NM_MUNICIP": "Mariano Moro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3408678",
+    "Longitude": "-52.1667451"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mata",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.5637643",
-    "Longitude":"-54.4590898"
+    "UF": "RS",
+    "NM_MUNICIP": "Mata",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.5637643",
+    "Longitude": "-54.4590898"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mato Queimado",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.245655",
-    "Longitude":"-54.6596296"
+    "UF": "RS",
+    "NM_MUNICIP": "Mato Queimado",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.245655",
+    "Longitude": "-54.6596296"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Maximiliano de Almeida",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5964139",
-    "Longitude":"-51.8175605"
+    "UF": "RS",
+    "NM_MUNICIP": "Maximiliano de Almeida",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5964139",
+    "Longitude": "-51.8175605"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Miraguaí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4943651",
-    "Longitude":"-53.6874223"
+    "UF": "RS",
+    "NM_MUNICIP": "Miraguaí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4943651",
+    "Longitude": "-53.6874223"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Morro Redondo",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.6220184",
-    "Longitude":"-52.643254"
+    "UF": "RS",
+    "NM_MUNICIP": "Morro Redondo",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.6220184",
+    "Longitude": "-52.643254"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nonoai",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3660882",
-    "Longitude":"-52.7717853"
+    "UF": "RS",
+    "NM_MUNICIP": "Nonoai",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3660882",
+    "Longitude": "-52.7717853"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Boa Vista",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9965743",
-    "Longitude":"-52.9759722"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Boa Vista",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9965743",
+    "Longitude": "-52.9759722"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Candelária",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6022969",
-    "Longitude":"-54.1417704"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Candelária",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6022969",
+    "Longitude": "-54.1417704"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Esperança do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.4085709",
-    "Longitude":"-54.8144288"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Esperança do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.4085709",
+    "Longitude": "-54.8144288"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Palma",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.4711081",
-    "Longitude":"-53.4693751"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Palma",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.4711081",
+    "Longitude": "-53.4693751"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Ramada",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0685",
-    "Longitude":"-53.7025294"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Ramada",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0685",
+    "Longitude": "-53.7025294"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Barreiro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.902802",
-    "Longitude":"-53.1279172"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Barreiro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.902802",
+    "Longitude": "-53.1279172"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Machado",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5780463",
-    "Longitude":"-54.5010396"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Machado",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5780463",
+    "Longitude": "-54.5010396"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Tiradentes",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5559803",
-    "Longitude":"-53.1719811"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Tiradentes",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5559803",
+    "Longitude": "-53.1719811"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Xingu",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7396242",
-    "Longitude":"-53.0650922"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Xingu",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7396242",
+    "Longitude": "-53.0650922"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Não-Me-Toque",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4575507",
-    "Longitude":"-52.8196547"
+    "UF": "RS",
+    "NM_MUNICIP": "Não-Me-Toque",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4575507",
+    "Longitude": "-52.8196547"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Paim Filho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7369943",
-    "Longitude":"-51.7743753"
+    "UF": "RS",
+    "NM_MUNICIP": "Paim Filho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7369943",
+    "Longitude": "-51.7743753"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Palmeira das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9010519",
-    "Longitude":"-53.3135927"
+    "UF": "RS",
+    "NM_MUNICIP": "Palmeira das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9010519",
+    "Longitude": "-53.3135927"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Palmitinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3196636",
-    "Longitude":"-53.6006247"
+    "UF": "RS",
+    "NM_MUNICIP": "Palmitinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3196636",
+    "Longitude": "-53.6006247"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Panambi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3549019",
-    "Longitude":"-53.4996461"
+    "UF": "RS",
+    "NM_MUNICIP": "Panambi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3549019",
+    "Longitude": "-53.4996461"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Paulo Bento",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7179767",
-    "Longitude":"-52.4002205"
+    "UF": "RS",
+    "NM_MUNICIP": "Paulo Bento",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7179767",
+    "Longitude": "-52.4002205"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pedras Altas",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.7324042",
-    "Longitude":"-53.585424"
+    "UF": "RS",
+    "NM_MUNICIP": "Pedras Altas",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.7324042",
+    "Longitude": "-53.585424"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pedro Osório",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.861921",
-    "Longitude":"-52.8219388"
+    "UF": "RS",
+    "NM_MUNICIP": "Pedro Osório",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.861921",
+    "Longitude": "-52.8219388"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pejuçara",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4447029",
-    "Longitude":"-53.6216119"
+    "UF": "RS",
+    "NM_MUNICIP": "Pejuçara",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4447029",
+    "Longitude": "-53.6216119"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pelotas",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.7699736",
-    "Longitude":"-52.3410161"
+    "UF": "RS",
+    "NM_MUNICIP": "Pelotas",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.7699736",
+    "Longitude": "-52.3410161"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinhal",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.7188139",
-    "Longitude":"-52.3232584"
+    "UF": "RS",
+    "NM_MUNICIP": "Pinhal",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.7188139",
+    "Longitude": "-52.3232584"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinheirinho do Vale",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2229247",
-    "Longitude":"-53.6280263"
+    "UF": "RS",
+    "NM_MUNICIP": "Pinheirinho do Vale",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2229247",
+    "Longitude": "-53.6280263"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinheiro Machado",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.5792646",
-    "Longitude":"-53.3822191"
+    "UF": "RS",
+    "NM_MUNICIP": "Pinheiro Machado",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.5792646",
+    "Longitude": "-53.3822191"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pirapó",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.045428",
-    "Longitude":"-55.1987198"
+    "UF": "RS",
+    "NM_MUNICIP": "Pirapó",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.045428",
+    "Longitude": "-55.1987198"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Piratini",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-31.448451",
-    "Longitude":"-53.1039931"
+    "UF": "RS",
+    "NM_MUNICIP": "Piratini",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-31.448451",
+    "Longitude": "-53.1039931"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Planalto",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3297033",
-    "Longitude":"-53.0575473"
+    "UF": "RS",
+    "NM_MUNICIP": "Planalto",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3297033",
+    "Longitude": "-53.0575473"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ponte Preta",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6577598",
-    "Longitude":"-52.4895431"
+    "UF": "RS",
+    "NM_MUNICIP": "Ponte Preta",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6577598",
+    "Longitude": "-52.4895431"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pontão",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0409923",
-    "Longitude":"-52.6277631"
+    "UF": "RS",
+    "NM_MUNICIP": "Pontão",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0409923",
+    "Longitude": "-52.6277631"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Porto Lucena",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8532199",
-    "Longitude":"-54.9258178"
+    "UF": "RS",
+    "NM_MUNICIP": "Porto Lucena",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8532199",
+    "Longitude": "-54.9258178"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Porto Mauá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5837873",
-    "Longitude":"-54.6790198"
+    "UF": "RS",
+    "NM_MUNICIP": "Porto Mauá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5837873",
+    "Longitude": "-54.6790198"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Porto Vera Cruz",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7550157",
-    "Longitude":"-54.8815679"
+    "UF": "RS",
+    "NM_MUNICIP": "Porto Vera Cruz",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7550157",
+    "Longitude": "-54.8815679"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Porto Xavier",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.9061459",
-    "Longitude":"-55.1395757"
+    "UF": "RS",
+    "NM_MUNICIP": "Porto Xavier",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.9061459",
+    "Longitude": "-55.1395757"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Quatro Irmãos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8465305",
-    "Longitude":"-52.4713629"
+    "UF": "RS",
+    "NM_MUNICIP": "Quatro Irmãos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8465305",
+    "Longitude": "-52.4713629"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Quinze de Novembro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.742279",
-    "Longitude":"-53.0951692"
+    "UF": "RS",
+    "NM_MUNICIP": "Quinze de Novembro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.742279",
+    "Longitude": "-53.0951692"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Redentora",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6616073",
-    "Longitude":"-53.6421338"
+    "UF": "RS",
+    "NM_MUNICIP": "Redentora",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6616073",
+    "Longitude": "-53.6421338"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Restinga Sêca",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.7989087",
-    "Longitude":"-53.4178348"
+    "UF": "RS",
+    "NM_MUNICIP": "Restinga Sêca",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.7989087",
+    "Longitude": "-53.4178348"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rio Grande",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-32.0334252",
-    "Longitude":"-52.0991297"
+    "UF": "RS",
+    "NM_MUNICIP": "Rio Grande",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-32.0334252",
+    "Longitude": "-52.0991297"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rio dos Índios",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3010535",
-    "Longitude":"-52.8406196"
+    "UF": "RS",
+    "NM_MUNICIP": "Rio dos Índios",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3010535",
+    "Longitude": "-52.8406196"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rodeio Bonito",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4725021",
-    "Longitude":"-53.1705906"
+    "UF": "RS",
+    "NM_MUNICIP": "Rodeio Bonito",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4725021",
+    "Longitude": "-53.1705906"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rolador",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.2558989",
-    "Longitude":"-54.8179212"
+    "UF": "RS",
+    "NM_MUNICIP": "Rolador",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.2558989",
+    "Longitude": "-54.8179212"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ronda Alta",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.782064",
-    "Longitude":"-52.8078036"
+    "UF": "RS",
+    "NM_MUNICIP": "Ronda Alta",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.782064",
+    "Longitude": "-52.8078036"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rondinha",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8264882",
-    "Longitude":"-52.9129426"
+    "UF": "RS",
+    "NM_MUNICIP": "Rondinha",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8264882",
+    "Longitude": "-52.9129426"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Roque Gonzales",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1324578",
-    "Longitude":"-55.0263416"
+    "UF": "RS",
+    "NM_MUNICIP": "Roque Gonzales",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1324578",
+    "Longitude": "-55.0263416"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sagrada Família",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7085454",
-    "Longitude":"-53.1364113"
+    "UF": "RS",
+    "NM_MUNICIP": "Sagrada Família",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7085454",
+    "Longitude": "-53.1364113"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Saldanha Marinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3966396",
-    "Longitude":"-53.0952929"
+    "UF": "RS",
+    "NM_MUNICIP": "Saldanha Marinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3966396",
+    "Longitude": "-53.0952929"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Salto do Jacuí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.0899771",
-    "Longitude":"-53.2111244"
+    "UF": "RS",
+    "NM_MUNICIP": "Salto do Jacuí",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.0899771",
+    "Longitude": "-53.2111244"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Salvador das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1232686",
-    "Longitude":"-54.8354107"
+    "UF": "RS",
+    "NM_MUNICIP": "Salvador das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1232686",
+    "Longitude": "-54.8354107"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Bárbara do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3654722",
-    "Longitude":"-53.2510995"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Bárbara do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3654722",
+    "Longitude": "-53.2510995"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Maria",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.6860512",
-    "Longitude":"-53.8069214"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Maria",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.6860512",
+    "Longitude": "-53.8069214"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Rosa",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8643546",
-    "Longitude":"-54.4779287"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Rosa",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8643546",
+    "Longitude": "-54.4779287"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santana da Boa Vista",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.7405685",
-    "Longitude":"-53.0814176"
+    "UF": "RS",
+    "NM_MUNICIP": "Santana da Boa Vista",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.7405685",
+    "Longitude": "-53.0814176"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Antônio das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.5117897",
-    "Longitude":"-55.2290047"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Antônio das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.5117897",
+    "Longitude": "-55.2290047"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Augusto",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.852577",
-    "Longitude":"-53.777605"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Augusto",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.852577",
+    "Longitude": "-53.777605"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Cristo",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.826259",
-    "Longitude":"-54.661963"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Cristo",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.826259",
+    "Longitude": "-54.661963"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Ângelo",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3000481",
-    "Longitude":"-54.2669971"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Ângelo",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3000481",
+    "Longitude": "-54.2669971"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sarandi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.942",
-    "Longitude":"-52.923085"
+    "UF": "RS",
+    "NM_MUNICIP": "Sarandi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.942",
+    "Longitude": "-52.923085"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Seberi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4828134",
-    "Longitude":"-53.4013251"
+    "UF": "RS",
+    "NM_MUNICIP": "Seberi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4828134",
+    "Longitude": "-53.4013251"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sede Nova",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.636739",
-    "Longitude":"-53.94929"
+    "UF": "RS",
+    "NM_MUNICIP": "Sede Nova",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.636739",
+    "Longitude": "-53.94929"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Selbach",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.6299869",
-    "Longitude":"-52.9530657"
+    "UF": "RS",
+    "NM_MUNICIP": "Selbach",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.6299869",
+    "Longitude": "-52.9530657"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Senador Salgado Filho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0270233",
-    "Longitude":"-54.5435136"
+    "UF": "RS",
+    "NM_MUNICIP": "Senador Salgado Filho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0270233",
+    "Longitude": "-54.5435136"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sertão",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0122013",
-    "Longitude":"-52.4123722"
+    "UF": "RS",
+    "NM_MUNICIP": "Sertão",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0122013",
+    "Longitude": "-52.4123722"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sete de Setembro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1579552",
-    "Longitude":"-54.4509784"
+    "UF": "RS",
+    "NM_MUNICIP": "Sete de Setembro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1579552",
+    "Longitude": "-54.4509784"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Severiano de Almeida",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4332178",
-    "Longitude":"-52.1155068"
+    "UF": "RS",
+    "NM_MUNICIP": "Severiano de Almeida",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4332178",
+    "Longitude": "-52.1155068"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Silveira Martins",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.6378793",
-    "Longitude":"-53.5496462"
+    "UF": "RS",
+    "NM_MUNICIP": "Silveira Martins",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.6378793",
+    "Longitude": "-53.5496462"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7948687",
-    "Longitude":"-53.1294109"
+    "UF": "RS",
+    "NM_MUNICIP": "São José das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7948687",
+    "Longitude": "-53.1294109"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Inhacorá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7361765",
-    "Longitude":"-54.1315823"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Inhacorá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7361765",
+    "Longitude": "-54.1315823"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Ouro",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7736185",
-    "Longitude":"-51.5947672"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Ouro",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7736185",
+    "Longitude": "-51.5947672"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São João da Urtiga",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7886497",
-    "Longitude":"-51.8474008"
+    "UF": "RS",
+    "NM_MUNICIP": "São João da Urtiga",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7886497",
+    "Longitude": "-51.8474008"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São João do Polêsine",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.6156424",
-    "Longitude":"-53.4455412"
+    "UF": "RS",
+    "NM_MUNICIP": "São João do Polêsine",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.6156424",
+    "Longitude": "-53.4455412"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Luiz Gonzaga",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4074546",
-    "Longitude":"-54.9609081"
+    "UF": "RS",
+    "NM_MUNICIP": "São Luiz Gonzaga",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4074546",
+    "Longitude": "-54.9609081"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Martinho",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7079086",
-    "Longitude":"-53.9623041"
+    "UF": "RS",
+    "NM_MUNICIP": "São Martinho",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7079086",
+    "Longitude": "-53.9623041"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Martinho da Serra",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.4767156",
-    "Longitude":"-53.8873718"
+    "UF": "RS",
+    "NM_MUNICIP": "São Martinho da Serra",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.4767156",
+    "Longitude": "-53.8873718"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Miguel das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.5451471",
-    "Longitude":"-54.5469209"
+    "UF": "RS",
+    "NM_MUNICIP": "São Miguel das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.5451471",
+    "Longitude": "-54.5469209"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Nicolau",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1857386",
-    "Longitude":"-55.2615035"
+    "UF": "RS",
+    "NM_MUNICIP": "São Nicolau",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1857386",
+    "Longitude": "-55.2615035"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Paulo das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0225895",
-    "Longitude":"-54.936466"
+    "UF": "RS",
+    "NM_MUNICIP": "São Paulo das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0225895",
+    "Longitude": "-54.936466"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Pedro das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7826869",
-    "Longitude":"-53.2324052"
+    "UF": "RS",
+    "NM_MUNICIP": "São Pedro das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7826869",
+    "Longitude": "-53.2324052"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Pedro do Butiá",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.1241467",
-    "Longitude":"-54.8914661"
+    "UF": "RS",
+    "NM_MUNICIP": "São Pedro do Butiá",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.1241467",
+    "Longitude": "-54.8914661"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Pedro do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.6152729",
-    "Longitude":"-54.1790311"
+    "UF": "RS",
+    "NM_MUNICIP": "São Pedro do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.6152729",
+    "Longitude": "-54.1790311"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Sepé",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.167219",
-    "Longitude":"-53.5690914"
+    "UF": "RS",
+    "NM_MUNICIP": "São Sepé",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.167219",
+    "Longitude": "-53.5690914"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Valentim",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.7512955",
-    "Longitude":"-53.8958536"
+    "UF": "RS",
+    "NM_MUNICIP": "São Valentim",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.7512955",
+    "Longitude": "-53.8958536"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Valério do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.8289029",
-    "Longitude":"-53.8911253"
+    "UF": "RS",
+    "NM_MUNICIP": "São Valério do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.8289029",
+    "Longitude": "-53.8911253"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Taquaruçu do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4065857",
-    "Longitude":"-53.4973437"
+    "UF": "RS",
+    "NM_MUNICIP": "Taquaruçu do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4065857",
+    "Longitude": "-53.4973437"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tenente Portela",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.371058",
-    "Longitude":"-53.758484"
+    "UF": "RS",
+    "NM_MUNICIP": "Tenente Portela",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.371058",
+    "Longitude": "-53.758484"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tiradentes do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.3973624",
-    "Longitude":"-54.0853785"
+    "UF": "RS",
+    "NM_MUNICIP": "Tiradentes do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.3973624",
+    "Longitude": "-54.0853785"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Toropi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.478246",
-    "Longitude":"-54.224398"
+    "UF": "RS",
+    "NM_MUNICIP": "Toropi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.478246",
+    "Longitude": "-54.224398"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Trindade do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5254598",
-    "Longitude":"-52.9021255"
+    "UF": "RS",
+    "NM_MUNICIP": "Trindade do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5254598",
+    "Longitude": "-52.9021255"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Arroios",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4995057",
-    "Longitude":"-52.149354"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Arroios",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4995057",
+    "Longitude": "-52.149354"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Palmeiras",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.6166217",
-    "Longitude":"-52.8412626"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Palmeiras",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.6166217",
+    "Longitude": "-52.8412626"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Passos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.4556106",
-    "Longitude":"-53.9294399"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Passos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.4556106",
+    "Longitude": "-53.9294399"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três de Maio",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7799415",
-    "Longitude":"-54.2356626"
+    "UF": "RS",
+    "NM_MUNICIP": "Três de Maio",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7799415",
+    "Longitude": "-54.2356626"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tucunduva",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.631259",
-    "Longitude":"-54.4583137"
+    "UF": "RS",
+    "NM_MUNICIP": "Tucunduva",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.631259",
+    "Longitude": "-54.4583137"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tuparendi",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.7622992",
-    "Longitude":"-54.4829323"
+    "UF": "RS",
+    "NM_MUNICIP": "Tuparendi",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.7622992",
+    "Longitude": "-54.4829323"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ubiretama",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.0168175",
-    "Longitude":"-54.6616457"
+    "UF": "RS",
+    "NM_MUNICIP": "Ubiretama",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.0168175",
+    "Longitude": "-54.6616457"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Viadutos",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.5785035",
-    "Longitude":"-52.0190403"
+    "UF": "RS",
+    "NM_MUNICIP": "Viadutos",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.5785035",
+    "Longitude": "-52.0190403"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vicente Dutra",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.1669307",
-    "Longitude":"-53.4048541"
+    "UF": "RS",
+    "NM_MUNICIP": "Vicente Dutra",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.1669307",
+    "Longitude": "-53.4048541"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Victor Graeff",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.563163",
-    "Longitude":"-52.749535"
+    "UF": "RS",
+    "NM_MUNICIP": "Victor Graeff",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.563163",
+    "Longitude": "-52.749535"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vila Nova do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.3514033",
-    "Longitude":"-53.8534991"
+    "UF": "RS",
+    "NM_MUNICIP": "Vila Nova do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.3514033",
+    "Longitude": "-53.8534991"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vista Alegre",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.4136442",
-    "Longitude":"-52.9911572"
+    "UF": "RS",
+    "NM_MUNICIP": "Vista Alegre",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.4136442",
+    "Longitude": "-52.9911572"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vista Gaúcha",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.2897171",
-    "Longitude":"-53.7024746"
+    "UF": "RS",
+    "NM_MUNICIP": "Vista Gaúcha",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.2897171",
+    "Longitude": "-53.7024746"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vitória das Missões",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3525794",
-    "Longitude":"-54.4995706"
+    "UF": "RS",
+    "NM_MUNICIP": "Vitória das Missões",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3525794",
+    "Longitude": "-54.4995706"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Áurea",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-27.717813",
-    "Longitude":"-52.0844487"
+    "UF": "RS",
+    "NM_MUNICIP": "Áurea",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-27.717813",
+    "Longitude": "-52.0844487"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bozano",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-28.3669953",
-    "Longitude":"-53.7705165"
+    "UF": "RS",
+    "NM_MUNICIP": "Bozano",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-28.3669953",
+    "Longitude": "-53.7705165"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sant'ana do Livramento",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-30.8894097",
-    "Longitude":"-55.5317694"
+    "UF": "RS",
+    "NM_MUNICIP": "Sant'ana do Livramento",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-30.8894097",
+    "Longitude": "-55.5317694"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Vicente do Sul",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-29.688161",
-    "Longitude":"-54.682643"
+    "UF": "RS",
+    "NM_MUNICIP": "São Vicente do Sul",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-29.688161",
+    "Longitude": "-54.682643"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio do Sal",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.5108743",
-    "Longitude":"-49.8866849"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio do Sal",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.5108743",
+    "Longitude": "-49.8866849"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Balneário Pinhal",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-30.2482237",
-    "Longitude":"-50.2339198"
+    "UF": "RS",
+    "NM_MUNICIP": "Balneário Pinhal",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-30.2482237",
+    "Longitude": "-50.2339198"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capão da Canoa",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.7508278",
-    "Longitude":"-50.0210729"
+    "UF": "RS",
+    "NM_MUNICIP": "Capão da Canoa",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.7508278",
+    "Longitude": "-50.0210729"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capivari do Sul",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-30.1437605",
-    "Longitude":"-50.5129169"
+    "UF": "RS",
+    "NM_MUNICIP": "Capivari do Sul",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-30.1437605",
+    "Longitude": "-50.5129169"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caraá",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.7709245",
-    "Longitude":"-50.359565"
+    "UF": "RS",
+    "NM_MUNICIP": "Caraá",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.7709245",
+    "Longitude": "-50.359565"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cidreira",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-30.1657063",
-    "Longitude":"-50.218331"
+    "UF": "RS",
+    "NM_MUNICIP": "Cidreira",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-30.1657063",
+    "Longitude": "-50.218331"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dom Pedro de Alcântara",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.3698329",
-    "Longitude":"-49.8479971"
+    "UF": "RS",
+    "NM_MUNICIP": "Dom Pedro de Alcântara",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.3698329",
+    "Longitude": "-49.8479971"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Imbé",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.9766491",
-    "Longitude":"-50.1278714"
+    "UF": "RS",
+    "NM_MUNICIP": "Imbé",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.9766491",
+    "Longitude": "-50.1278714"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Itati",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.4624765",
-    "Longitude":"-50.1648628"
+    "UF": "RS",
+    "NM_MUNICIP": "Itati",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.4624765",
+    "Longitude": "-50.1648628"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mampituba",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.2742492",
-    "Longitude":"-50.0272237"
+    "UF": "RS",
+    "NM_MUNICIP": "Mampituba",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.2742492",
+    "Longitude": "-50.0272237"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Maquiné",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.6756372",
-    "Longitude":"-50.2056317"
+    "UF": "RS",
+    "NM_MUNICIP": "Maquiné",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.6756372",
+    "Longitude": "-50.2056317"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Morrinhos do Sul",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.3653782",
-    "Longitude":"-49.9314425"
+    "UF": "RS",
+    "NM_MUNICIP": "Morrinhos do Sul",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.3653782",
+    "Longitude": "-49.9314425"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mostardas",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-31.10538",
-    "Longitude":"-50.916692"
+    "UF": "RS",
+    "NM_MUNICIP": "Mostardas",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-31.10538",
+    "Longitude": "-50.916692"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Osório",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.8890733",
-    "Longitude":"-50.2740498"
+    "UF": "RS",
+    "NM_MUNICIP": "Osório",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.8890733",
+    "Longitude": "-50.2740498"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Palmares do Sul",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-30.2580247",
-    "Longitude":"-50.5097954"
+    "UF": "RS",
+    "NM_MUNICIP": "Palmares do Sul",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-30.2580247",
+    "Longitude": "-50.5097954"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Antônio da Patrulha",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.826768",
-    "Longitude":"-50.517489"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Antônio da Patrulha",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.826768",
+    "Longitude": "-50.517489"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tavares",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-31.287471",
-    "Longitude":"-51.0897986"
+    "UF": "RS",
+    "NM_MUNICIP": "Tavares",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-31.287471",
+    "Longitude": "-51.0897986"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Terra de Areia",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.5789455",
-    "Longitude":"-50.06336"
+    "UF": "RS",
+    "NM_MUNICIP": "Terra de Areia",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.5789455",
+    "Longitude": "-50.06336"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Torres",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.3373663",
-    "Longitude":"-49.7299648"
+    "UF": "RS",
+    "NM_MUNICIP": "Torres",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.3373663",
+    "Longitude": "-49.7299648"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tramandaí",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.9855339",
-    "Longitude":"-50.1316076"
+    "UF": "RS",
+    "NM_MUNICIP": "Tramandaí",
+    "REPRESENTANTE": "Daniel",
+    "CELULAR": "555199987333",
+    "Latitude": "-29.9855339",
+    "Longitude": "-50.1316076"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Cachoeiras",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.4521243",
-    "Longitude":"-49.9190608"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Cachoeiras",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.4521243",
+    "Longitude": "-49.9190608"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Forquilhas",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.4449138",
-    "Longitude":"-50.0924678"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Forquilhas",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.4449138",
+    "Longitude": "-50.0924678"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Xangri-lá",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-29.8039422",
-    "Longitude":"-50.0413748"
+    "UF": "RS",
+    "NM_MUNICIP": "Xangri-lá",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.8039422",
+    "Longitude": "-50.0413748"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Norte",
-    "REPRESENTANTE":"Daniel",
-    "CELULAR":"555199987333",
-    "Latitude":"-32.0145182",
-    "Longitude":"-52.0406082"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Norte",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-32.0145182",
+    "Longitude": "-52.0406082"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bom Jesus",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6692723",
-    "Longitude":"-50.4346894"
+    "UF": "RS",
+    "NM_MUNICIP": "Bom Jesus",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6692723",
+    "Longitude": "-50.4346894"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cambará do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0489517",
-    "Longitude":"-50.145412"
+    "UF": "RS",
+    "NM_MUNICIP": "Cambará do Sul",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.0489517",
+    "Longitude": "-50.145412"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campestre da Serra",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7966535",
-    "Longitude":"-51.0958149"
+    "UF": "RS",
+    "NM_MUNICIP": "Campestre da Serra",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7966535",
+    "Longitude": "-51.0958149"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capão Bonito do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.1287941",
-    "Longitude":"-51.393771"
+    "UF": "RS",
+    "NM_MUNICIP": "Capão Bonito do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.1287941",
+    "Longitude": "-51.393771"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Esmeralda",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.0543707",
-    "Longitude":"-51.1921896"
+    "UF": "RS",
+    "NM_MUNICIP": "Esmeralda",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.0543707",
+    "Longitude": "-51.1921896"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ipê",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8189281",
-    "Longitude":"-51.2796422"
+    "UF": "RS",
+    "NM_MUNICIP": "Ipê",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8189281",
+    "Longitude": "-51.2796422"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jaquirana",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8836757",
-    "Longitude":"-50.3580098"
+    "UF": "RS",
+    "NM_MUNICIP": "Jaquirana",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8836757",
+    "Longitude": "-50.3580098"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoa Vermelha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.2087034",
-    "Longitude":"-51.527499"
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoa Vermelha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.2087034",
+    "Longitude": "-51.527499"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Monte Alegre dos Campos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6840498",
-    "Longitude":"-50.7820322"
+    "UF": "RS",
+    "NM_MUNICIP": "Monte Alegre dos Campos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6840498",
+    "Longitude": "-50.7820322"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Muitos Capões",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3162856",
-    "Longitude":"-51.1836226"
+    "UF": "RS",
+    "NM_MUNICIP": "Muitos Capões",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3162856",
+    "Longitude": "-51.1836226"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinhal da Serra",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.852038",
-    "Longitude":"-51.1746033"
+    "UF": "RS",
+    "NM_MUNICIP": "Pinhal da Serra",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.852038",
+    "Longitude": "-51.1746033"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Agudo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6424487",
-    "Longitude":"-53.2684971"
+    "UF": "RS",
+    "NM_MUNICIP": "Agudo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6424487",
+    "Longitude": "-53.2684971"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alto Alegre",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7755582",
-    "Longitude":"-52.9915086"
+    "UF": "RS",
+    "NM_MUNICIP": "Alto Alegre",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7755582",
+    "Longitude": "-52.9915086"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alto Feliz",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3687774",
-    "Longitude":"-51.3160038"
+    "UF": "RS",
+    "NM_MUNICIP": "Alto Feliz",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3687774",
+    "Longitude": "-51.3160038"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Alvorada",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9981184",
-    "Longitude":"-51.0772509"
+    "UF": "RS",
+    "NM_MUNICIP": "Alvorada",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9981184",
+    "Longitude": "-51.0772509"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Amaral Ferrador",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.7924606",
-    "Longitude":"-52.3615893"
+    "UF": "RS",
+    "NM_MUNICIP": "Amaral Ferrador",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.7924606",
+    "Longitude": "-52.3615893"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"André da Rocha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5900902",
-    "Longitude":"-51.5019513"
+    "UF": "RS",
+    "NM_MUNICIP": "André da Rocha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5900902",
+    "Longitude": "-51.5019513"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Anta Gorda",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9718745",
-    "Longitude":"-52.0069187"
+    "UF": "RS",
+    "NM_MUNICIP": "Anta Gorda",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9718745",
+    "Longitude": "-52.0069187"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Antônio Prado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8555285",
-    "Longitude":"-51.2795932"
+    "UF": "RS",
+    "NM_MUNICIP": "Antônio Prado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8555285",
+    "Longitude": "-51.2795932"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arambaré",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.9132252",
-    "Longitude":"-51.4994625"
+    "UF": "RS",
+    "NM_MUNICIP": "Arambaré",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.9132252",
+    "Longitude": "-51.4994625"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Araricá",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6433625",
-    "Longitude":"-50.9289597"
+    "UF": "RS",
+    "NM_MUNICIP": "Araricá",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6433625",
+    "Longitude": "-50.9289597"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio do Meio",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4020392",
-    "Longitude":"-51.9444993"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio do Meio",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4020392",
+    "Longitude": "-51.9444993"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio do Tigre",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.334158",
-    "Longitude":"-53.0888935"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio do Tigre",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.334158",
+    "Longitude": "-53.0888935"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arroio dos Ratos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.1766717",
-    "Longitude":"-51.7611669"
+    "UF": "RS",
+    "NM_MUNICIP": "Arroio dos Ratos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.1766717",
+    "Longitude": "-51.7611669"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Arvorezinha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8731093",
-    "Longitude":"-52.1757917"
+    "UF": "RS",
+    "NM_MUNICIP": "Arvorezinha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8731093",
+    "Longitude": "-52.1757917"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barra do Ribeiro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.2925989",
-    "Longitude":"-51.3033906"
+    "UF": "RS",
+    "NM_MUNICIP": "Barra do Ribeiro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.2925989",
+    "Longitude": "-51.3033906"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barros Cassal",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0991074",
-    "Longitude":"-52.6041244"
+    "UF": "RS",
+    "NM_MUNICIP": "Barros Cassal",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0991074",
+    "Longitude": "-52.6041244"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.372474",
-    "Longitude":"-51.494908"
+    "UF": "RS",
+    "NM_MUNICIP": "Barão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.372474",
+    "Longitude": "-51.494908"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Barão do Triunfo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.4305341",
-    "Longitude":"-51.8011493"
+    "UF": "RS",
+    "NM_MUNICIP": "Barão do Triunfo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.4305341",
+    "Longitude": "-51.8011493"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bento Gonçalves",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1656734",
-    "Longitude":"-51.5201166"
+    "UF": "RS",
+    "NM_MUNICIP": "Bento Gonçalves",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1656734",
+    "Longitude": "-51.5201166"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boa Vista do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3541995",
-    "Longitude":"-51.6874056"
+    "UF": "RS",
+    "NM_MUNICIP": "Boa Vista do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3541995",
+    "Longitude": "-51.6874056"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bom Princípio",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4732762",
-    "Longitude":"-51.3627364"
+    "UF": "RS",
+    "NM_MUNICIP": "Bom Princípio",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4732762",
+    "Longitude": "-51.3627364"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Bom Retiro do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6363796",
-    "Longitude":"-51.9286068"
+    "UF": "RS",
+    "NM_MUNICIP": "Bom Retiro do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6363796",
+    "Longitude": "-51.9286068"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Boqueirão do Leão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2957417",
-    "Longitude":"-52.4145799"
+    "UF": "RS",
+    "NM_MUNICIP": "Boqueirão do Leão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2957417",
+    "Longitude": "-52.4145799"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Brochier",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5433738",
-    "Longitude":"-51.6221592"
+    "UF": "RS",
+    "NM_MUNICIP": "Brochier",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5433738",
+    "Longitude": "-51.6221592"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Butiá",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.1256795",
-    "Longitude":"-51.9692224"
+    "UF": "RS",
+    "NM_MUNICIP": "Butiá",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.1256795",
+    "Longitude": "-51.9692224"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cachoeirinha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9189661",
-    "Longitude":"-51.0930328"
+    "UF": "RS",
+    "NM_MUNICIP": "Cachoeirinha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9189661",
+    "Longitude": "-51.0930328"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cacique Doble",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.7700117",
-    "Longitude":"-51.6616409"
+    "UF": "RS",
+    "NM_MUNICIP": "Cacique Doble",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.7700117",
+    "Longitude": "-51.6616409"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Camaquã",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.8524752",
-    "Longitude":"-51.8075619"
+    "UF": "RS",
+    "NM_MUNICIP": "Camaquã",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.8524752",
+    "Longitude": "-51.8075619"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Camargo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6107562",
-    "Longitude":"-52.223635"
+    "UF": "RS",
+    "NM_MUNICIP": "Camargo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6107562",
+    "Longitude": "-52.223635"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campo Bom",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.665956",
-    "Longitude":"-51.0495276"
+    "UF": "RS",
+    "NM_MUNICIP": "Campo Bom",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.665956",
+    "Longitude": "-51.0495276"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Campos Borges",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8852198",
-    "Longitude":"-52.999098"
+    "UF": "RS",
+    "NM_MUNICIP": "Campos Borges",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8852198",
+    "Longitude": "-52.999098"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Candelária",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.668391",
-    "Longitude":"-52.789495"
+    "UF": "RS",
+    "NM_MUNICIP": "Candelária",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.668391",
+    "Longitude": "-52.789495"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Canela",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3447033",
-    "Longitude":"-50.7604149"
+    "UF": "RS",
+    "NM_MUNICIP": "Canela",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3447033",
+    "Longitude": "-50.7604149"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Canoas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9153779",
-    "Longitude":"-51.1772699"
+    "UF": "RS",
+    "NM_MUNICIP": "Canoas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9153779",
+    "Longitude": "-51.1772699"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Canudos do Vale",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3240418",
-    "Longitude":"-52.2348494"
+    "UF": "RS",
+    "NM_MUNICIP": "Canudos do Vale",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3240418",
+    "Longitude": "-52.2348494"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capela de Santana",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7111314",
-    "Longitude":"-51.370674"
+    "UF": "RS",
+    "NM_MUNICIP": "Capela de Santana",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7111314",
+    "Longitude": "-51.370674"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Capitão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2815808",
-    "Longitude":"-51.9848763"
+    "UF": "RS",
+    "NM_MUNICIP": "Capitão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2815808",
+    "Longitude": "-51.9848763"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Carlos Barbosa",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2978372",
-    "Longitude":"-51.5005613"
+    "UF": "RS",
+    "NM_MUNICIP": "Carlos Barbosa",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2978372",
+    "Longitude": "-51.5005613"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Casca",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5652711",
-    "Longitude":"-51.9769207"
+    "UF": "RS",
+    "NM_MUNICIP": "Casca",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5652711",
+    "Longitude": "-51.9769207"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caseiros",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.2370405",
-    "Longitude":"-51.7372794"
+    "UF": "RS",
+    "NM_MUNICIP": "Caseiros",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.2370405",
+    "Longitude": "-51.7372794"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Caxias do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1685045",
-    "Longitude":"-51.1796385"
+    "UF": "RS",
+    "NM_MUNICIP": "Caxias do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1685045",
+    "Longitude": "-51.1796385"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cerro Branco",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6262579",
-    "Longitude":"-53.0000531"
+    "UF": "RS",
+    "NM_MUNICIP": "Cerro Branco",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6262579",
+    "Longitude": "-53.0000531"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cerro Grande do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.5784956",
-    "Longitude":"-51.77661"
+    "UF": "RS",
+    "NM_MUNICIP": "Cerro Grande do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.5784956",
+    "Longitude": "-51.77661"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Charqueadas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9956856",
-    "Longitude":"-51.5484918"
+    "UF": "RS",
+    "NM_MUNICIP": "Charqueadas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9956856",
+    "Longitude": "-51.5484918"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Charrua",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.9485309",
-    "Longitude":"-52.003601"
+    "UF": "RS",
+    "NM_MUNICIP": "Charrua",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.9485309",
+    "Longitude": "-52.003601"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Chuvisca",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.7664225",
-    "Longitude":"-51.9974437"
+    "UF": "RS",
+    "NM_MUNICIP": "Chuvisca",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.7664225",
+    "Longitude": "-51.9974437"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Chuí",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-33.6537122",
-    "Longitude":"-53.4084818"
+    "UF": "RS",
+    "NM_MUNICIP": "Chuí",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-33.6537122",
+    "Longitude": "-53.4084818"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ciríaco",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3429139",
-    "Longitude":"-51.8763682"
+    "UF": "RS",
+    "NM_MUNICIP": "Ciríaco",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3429139",
+    "Longitude": "-51.8763682"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Colinas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.383898",
-    "Longitude":"-51.8390603"
+    "UF": "RS",
+    "NM_MUNICIP": "Colinas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.383898",
+    "Longitude": "-51.8390603"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coqueiro Baixo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.159507",
-    "Longitude":"-52.1099338"
+    "UF": "RS",
+    "NM_MUNICIP": "Coqueiro Baixo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.159507",
+    "Longitude": "-52.1099338"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coronel Pilar",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2583136",
-    "Longitude":"-51.7002438"
+    "UF": "RS",
+    "NM_MUNICIP": "Coronel Pilar",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2583136",
+    "Longitude": "-51.7002438"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cotiporã",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9950719",
-    "Longitude":"-51.696359"
+    "UF": "RS",
+    "NM_MUNICIP": "Cotiporã",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9950719",
+    "Longitude": "-51.696359"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Coxilha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.1247078",
-    "Longitude":"-52.3285119"
+    "UF": "RS",
+    "NM_MUNICIP": "Coxilha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.1247078",
+    "Longitude": "-52.3285119"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cristal",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-31.00166",
-    "Longitude":"-52.0491777"
+    "UF": "RS",
+    "NM_MUNICIP": "Cristal",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-31.00166",
+    "Longitude": "-52.0491777"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Cruzeiro do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5527162",
-    "Longitude":"-52.0350422"
+    "UF": "RS",
+    "NM_MUNICIP": "Cruzeiro do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5527162",
+    "Longitude": "-52.0350422"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"David Canabarro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.4143421",
-    "Longitude":"-51.8104956"
+    "UF": "RS",
+    "NM_MUNICIP": "David Canabarro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.4143421",
+    "Longitude": "-51.8104956"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dois Irmãos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5978063",
-    "Longitude":"-51.0892667"
+    "UF": "RS",
+    "NM_MUNICIP": "Dois Irmãos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5978063",
+    "Longitude": "-51.0892667"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dois Lajeados",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9720512",
-    "Longitude":"-51.8398919"
+    "UF": "RS",
+    "NM_MUNICIP": "Dois Lajeados",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9720512",
+    "Longitude": "-51.8398919"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Dom Feliciano",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.6089541",
-    "Longitude":"-52.1722015"
+    "UF": "RS",
+    "NM_MUNICIP": "Dom Feliciano",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.6089541",
+    "Longitude": "-52.1722015"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Doutor Ricardo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0864203",
-    "Longitude":"-51.9766932"
+    "UF": "RS",
+    "NM_MUNICIP": "Doutor Ricardo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0864203",
+    "Longitude": "-51.9766932"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Eldorado do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9976311",
-    "Longitude":"-51.3063965"
+    "UF": "RS",
+    "NM_MUNICIP": "Eldorado do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9976311",
+    "Longitude": "-51.3063965"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Encantado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2392716",
-    "Longitude":"-51.8744817"
+    "UF": "RS",
+    "NM_MUNICIP": "Encantado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2392716",
+    "Longitude": "-51.8744817"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Encruzilhada do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.5433066",
-    "Longitude":"-52.5223514"
+    "UF": "RS",
+    "NM_MUNICIP": "Encruzilhada do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.5433066",
+    "Longitude": "-52.5223514"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ernestina",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.4250145",
-    "Longitude":"-52.5264703"
+    "UF": "RS",
+    "NM_MUNICIP": "Ernestina",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.4250145",
+    "Longitude": "-52.5264703"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Espumoso",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7256962",
-    "Longitude":"-52.8453751"
+    "UF": "RS",
+    "NM_MUNICIP": "Espumoso",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7256962",
+    "Longitude": "-52.8453751"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Esteio",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.8509795",
-    "Longitude":"-51.1832033"
+    "UF": "RS",
+    "NM_MUNICIP": "Esteio",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.8509795",
+    "Longitude": "-51.1832033"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Estrela",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5010545",
-    "Longitude":"-51.962226"
+    "UF": "RS",
+    "NM_MUNICIP": "Estrela",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5010545",
+    "Longitude": "-51.962226"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Estrela Velha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1775802",
-    "Longitude":"-53.1597523"
+    "UF": "RS",
+    "NM_MUNICIP": "Estrela Velha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1775802",
+    "Longitude": "-53.1597523"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Estância Velha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.0167646",
-    "Longitude":"-50.2375711"
+    "UF": "RS",
+    "NM_MUNICIP": "Estância Velha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.0167646",
+    "Longitude": "-50.2375711"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Fagundes Varela",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8866166",
-    "Longitude":"-51.7237058"
+    "UF": "RS",
+    "NM_MUNICIP": "Fagundes Varela",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8866166",
+    "Longitude": "-51.7237058"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Farroupilha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.22647",
-    "Longitude":"-51.3468188"
+    "UF": "RS",
+    "NM_MUNICIP": "Farroupilha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.22647",
+    "Longitude": "-51.3468188"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Fazenda Vilanova",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5878223",
-    "Longitude":"-51.8404432"
+    "UF": "RS",
+    "NM_MUNICIP": "Fazenda Vilanova",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5878223",
+    "Longitude": "-51.8404432"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Feliz",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4573112",
-    "Longitude":"-51.2934691"
+    "UF": "RS",
+    "NM_MUNICIP": "Feliz",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4573112",
+    "Longitude": "-51.2934691"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Flores da Cunha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.030129",
-    "Longitude":"-51.1833349"
+    "UF": "RS",
+    "NM_MUNICIP": "Flores da Cunha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.030129",
+    "Longitude": "-51.1833349"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Floriano Peixoto",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.8540966",
-    "Longitude":"-52.0345421"
+    "UF": "RS",
+    "NM_MUNICIP": "Floriano Peixoto",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.8540966",
+    "Longitude": "-52.0345421"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Fontoura Xavier",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.981655",
-    "Longitude":"-52.344455"
+    "UF": "RS",
+    "NM_MUNICIP": "Fontoura Xavier",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.981655",
+    "Longitude": "-52.344455"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Forquetinha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3793249",
-    "Longitude":"-52.1268973"
+    "UF": "RS",
+    "NM_MUNICIP": "Forquetinha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3793249",
+    "Longitude": "-52.1268973"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Garibaldi",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2562253",
-    "Longitude":"-51.5269167"
+    "UF": "RS",
+    "NM_MUNICIP": "Garibaldi",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2562253",
+    "Longitude": "-51.5269167"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"General Câmara",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9059611",
-    "Longitude":"-51.7626198"
+    "UF": "RS",
+    "NM_MUNICIP": "General Câmara",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9059611",
+    "Longitude": "-51.7626198"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gentil",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3891814",
-    "Longitude":"-52.0411565"
+    "UF": "RS",
+    "NM_MUNICIP": "Gentil",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3891814",
+    "Longitude": "-52.0411565"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Glorinha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.8827834",
-    "Longitude":"-50.7617618"
+    "UF": "RS",
+    "NM_MUNICIP": "Glorinha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.8827834",
+    "Longitude": "-50.7617618"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gramado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3924346",
-    "Longitude":"-50.9125926"
+    "UF": "RS",
+    "NM_MUNICIP": "Gramado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3924346",
+    "Longitude": "-50.9125926"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gramado Xavier",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2949507",
-    "Longitude":"-52.6187463"
+    "UF": "RS",
+    "NM_MUNICIP": "Gramado Xavier",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2949507",
+    "Longitude": "-52.6187463"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Gravataí",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9440222",
-    "Longitude":"-50.9930938"
+    "UF": "RS",
+    "NM_MUNICIP": "Gravataí",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9440222",
+    "Longitude": "-50.9930938"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Guabiju",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5902329",
-    "Longitude":"-51.6576434"
+    "UF": "RS",
+    "NM_MUNICIP": "Guabiju",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5902329",
+    "Longitude": "-51.6576434"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Guaporé",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8471928",
-    "Longitude":"-51.8907881"
+    "UF": "RS",
+    "NM_MUNICIP": "Guaporé",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8471928",
+    "Longitude": "-51.8907881"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Guaíba",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.164367",
-    "Longitude":"-51.4329026"
+    "UF": "RS",
+    "NM_MUNICIP": "Guaíba",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.164367",
+    "Longitude": "-51.4329026"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Harmonia",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-31.3256663",
-    "Longitude":"-52.2448878"
+    "UF": "RS",
+    "NM_MUNICIP": "Harmonia",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-31.3256663",
+    "Longitude": "-52.2448878"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Herveiras",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4451032",
-    "Longitude":"-52.6552352"
+    "UF": "RS",
+    "NM_MUNICIP": "Herveiras",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4451032",
+    "Longitude": "-52.6552352"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ibarama",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4204926",
-    "Longitude":"-53.1670741"
+    "UF": "RS",
+    "NM_MUNICIP": "Ibarama",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4204926",
+    "Longitude": "-53.1670741"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ibiaçá",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.0564247",
-    "Longitude":"-51.8566036"
+    "UF": "RS",
+    "NM_MUNICIP": "Ibiaçá",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.0564247",
+    "Longitude": "-51.8566036"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Igrejinha",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5648814",
-    "Longitude":"-50.7739578"
+    "UF": "RS",
+    "NM_MUNICIP": "Igrejinha",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5648814",
+    "Longitude": "-50.7739578"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ilópolis",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9302563",
-    "Longitude":"-52.1378523"
+    "UF": "RS",
+    "NM_MUNICIP": "Ilópolis",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9302563",
+    "Longitude": "-52.1378523"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Imigrante",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3409129",
-    "Longitude":"-51.7524537"
+    "UF": "RS",
+    "NM_MUNICIP": "Imigrante",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3409129",
+    "Longitude": "-51.7524537"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Itapuca",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9001873",
-    "Longitude":"-52.0368597"
+    "UF": "RS",
+    "NM_MUNICIP": "Itapuca",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9001873",
+    "Longitude": "-52.0368597"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Ivoti",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5808501",
-    "Longitude":"-51.1586553"
+    "UF": "RS",
+    "NM_MUNICIP": "Ivoti",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5808501",
+    "Longitude": "-51.1586553"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jacuizinho",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0506172",
-    "Longitude":"-53.0058864"
+    "UF": "RS",
+    "NM_MUNICIP": "Jacuizinho",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0506172",
+    "Longitude": "-53.0058864"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Jaguarão",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-32.4016664",
-    "Longitude":"-53.3357135"
+    "UF": "RS",
+    "NM_MUNICIP": "Jaguarão",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-32.4016664",
+    "Longitude": "-53.3357135"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoa Bonita do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5039286",
-    "Longitude":"-53.0472883"
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoa Bonita do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5039286",
+    "Longitude": "-53.0472883"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoa dos Três Cantos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5668647",
-    "Longitude":"-52.8581637"
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoa dos Três Cantos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5668647",
+    "Longitude": "-52.8581637"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2407945",
-    "Longitude":"-52.7823357"
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2407945",
+    "Longitude": "-52.7823357"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lajeado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4496196",
-    "Longitude":"-51.9891245"
+    "UF": "RS",
+    "NM_MUNICIP": "Lajeado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4496196",
+    "Longitude": "-51.9891245"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Lindolfo Collor",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5850969",
-    "Longitude":"-51.2159042"
+    "UF": "RS",
+    "NM_MUNICIP": "Lindolfo Collor",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5850969",
+    "Longitude": "-51.2159042"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Linha Nova",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4545",
-    "Longitude":"-51.2100887"
+    "UF": "RS",
+    "NM_MUNICIP": "Linha Nova",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4545",
+    "Longitude": "-51.2100887"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Maratá",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.549349",
-    "Longitude":"-51.5546411"
+    "UF": "RS",
+    "NM_MUNICIP": "Maratá",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.549349",
+    "Longitude": "-51.5546411"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Marau",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.4493053",
-    "Longitude":"-52.2002156"
+    "UF": "RS",
+    "NM_MUNICIP": "Marau",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.4493053",
+    "Longitude": "-52.2002156"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mariana Pimentel",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.2957172",
-    "Longitude":"-51.5851393"
+    "UF": "RS",
+    "NM_MUNICIP": "Mariana Pimentel",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.2957172",
+    "Longitude": "-51.5851393"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Marques de Souza",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3275642",
-    "Longitude":"-52.0961801"
+    "UF": "RS",
+    "NM_MUNICIP": "Marques de Souza",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3275642",
+    "Longitude": "-52.0961801"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mato Castelhano",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.2619189",
-    "Longitude":"-52.1991925"
+    "UF": "RS",
+    "NM_MUNICIP": "Mato Castelhano",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.2619189",
+    "Longitude": "-52.1991925"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mato Leitão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5281244",
-    "Longitude":"-52.1278069"
+    "UF": "RS",
+    "NM_MUNICIP": "Mato Leitão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5281244",
+    "Longitude": "-52.1278069"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Minas do Leão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.0737554",
-    "Longitude":"-52.0729733"
+    "UF": "RS",
+    "NM_MUNICIP": "Minas do Leão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.0737554",
+    "Longitude": "-52.0729733"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Montauri",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.664065",
-    "Longitude":"-52.0512856"
+    "UF": "RS",
+    "NM_MUNICIP": "Montauri",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.664065",
+    "Longitude": "-52.0512856"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Monte Belo do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1391863",
-    "Longitude":"-51.6548289"
+    "UF": "RS",
+    "NM_MUNICIP": "Monte Belo do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1391863",
+    "Longitude": "-51.6548289"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Montenegro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6826112",
-    "Longitude":"-51.4687455"
+    "UF": "RS",
+    "NM_MUNICIP": "Montenegro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6826112",
+    "Longitude": "-51.4687455"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Mormaço",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6828663",
-    "Longitude":"-52.6547351"
+    "UF": "RS",
+    "NM_MUNICIP": "Mormaço",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6828663",
+    "Longitude": "-52.6547351"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Morro Reuter",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5131079",
-    "Longitude":"-51.0723115"
+    "UF": "RS",
+    "NM_MUNICIP": "Morro Reuter",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5131079",
+    "Longitude": "-51.0723115"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Muliterno",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3112967",
-    "Longitude":"-51.7779426"
+    "UF": "RS",
+    "NM_MUNICIP": "Muliterno",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3112967",
+    "Longitude": "-51.7779426"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Muçum",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1402771",
-    "Longitude":"-51.7938582"
+    "UF": "RS",
+    "NM_MUNICIP": "Muçum",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1402771",
+    "Longitude": "-51.7938582"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nicolau Vergueiro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5205052",
-    "Longitude":"-52.4567994"
+    "UF": "RS",
+    "NM_MUNICIP": "Nicolau Vergueiro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5205052",
+    "Longitude": "-52.4567994"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Alvorada",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6774191",
-    "Longitude":"-52.1663732"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Alvorada",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6774191",
+    "Longitude": "-52.1663732"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Araçá",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6458824",
-    "Longitude":"-51.7318367"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Araçá",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6458824",
+    "Longitude": "-51.7318367"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Bassano",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7263055",
-    "Longitude":"-51.7547452"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Bassano",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7263055",
+    "Longitude": "-51.7547452"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Bréscia",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2169856",
-    "Longitude":"-52.0258016"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Bréscia",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2169856",
+    "Longitude": "-52.0258016"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Hartz",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5888359",
-    "Longitude":"-50.9013467"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Hartz",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5888359",
+    "Longitude": "-50.9013467"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Petrópolis",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3759836",
-    "Longitude":"-51.1123342"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Petrópolis",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3759836",
+    "Longitude": "-51.1123342"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Prata",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7318409",
-    "Longitude":"-51.6035722"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Prata",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7318409",
+    "Longitude": "-51.6035722"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Pádua",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9954697",
-    "Longitude":"-51.32658"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Pádua",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9954697",
+    "Longitude": "-51.32658"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Roma do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.993653",
-    "Longitude":"-51.418498"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Roma do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.993653",
+    "Longitude": "-51.418498"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Nova Santa Rita",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.8468808",
-    "Longitude":"-51.2917859"
+    "UF": "RS",
+    "NM_MUNICIP": "Nova Santa Rita",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.8468808",
+    "Longitude": "-51.2917859"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Cabrais",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7507807",
-    "Longitude":"-52.9922358"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Cabrais",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7507807",
+    "Longitude": "-52.9922358"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Novo Hamburgo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7338918",
-    "Longitude":"-51.0227082"
+    "UF": "RS",
+    "NM_MUNICIP": "Novo Hamburgo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7338918",
+    "Longitude": "-51.0227082"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pantano Grande",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.1907942",
-    "Longitude":"-52.3721771"
+    "UF": "RS",
+    "NM_MUNICIP": "Pantano Grande",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.1907942",
+    "Longitude": "-52.3721771"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Paraí",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5950716",
-    "Longitude":"-51.7821047"
+    "UF": "RS",
+    "NM_MUNICIP": "Paraí",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5950716",
+    "Longitude": "-51.7821047"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Paraíso do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7048772",
-    "Longitude":"-53.1337122"
+    "UF": "RS",
+    "NM_MUNICIP": "Paraíso do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7048772",
+    "Longitude": "-53.1337122"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pareci Novo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6125166",
-    "Longitude":"-51.4235327"
+    "UF": "RS",
+    "NM_MUNICIP": "Pareci Novo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6125166",
+    "Longitude": "-51.4235327"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Parobé",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.624257",
-    "Longitude":"-50.83118"
+    "UF": "RS",
+    "NM_MUNICIP": "Parobé",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.624257",
+    "Longitude": "-50.83118"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Passa Sete",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4498383",
-    "Longitude":"-52.9652172"
+    "UF": "RS",
+    "NM_MUNICIP": "Passa Sete",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4498383",
+    "Longitude": "-52.9652172"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Passo Fundo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.2550598",
-    "Longitude":"-52.3966606"
+    "UF": "RS",
+    "NM_MUNICIP": "Passo Fundo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.2550598",
+    "Longitude": "-52.3966606"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Passo do Sobrado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7696882",
-    "Longitude":"-52.2673997"
+    "UF": "RS",
+    "NM_MUNICIP": "Passo do Sobrado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7696882",
+    "Longitude": "-52.2673997"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Paverama",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5753537",
-    "Longitude":"-51.7294278"
+    "UF": "RS",
+    "NM_MUNICIP": "Paverama",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5753537",
+    "Longitude": "-51.7294278"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Picada Café",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4586849",
-    "Longitude":"-51.0900553"
+    "UF": "RS",
+    "NM_MUNICIP": "Picada Café",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4586849",
+    "Longitude": "-51.0900553"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Porto Alegre",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.0324999",
-    "Longitude":"-51.2303767"
+    "UF": "RS",
+    "NM_MUNICIP": "Porto Alegre",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.0324999",
+    "Longitude": "-51.2303767"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Portão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6887102",
-    "Longitude":"-51.2514464"
+    "UF": "RS",
+    "NM_MUNICIP": "Portão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6887102",
+    "Longitude": "-51.2514464"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Pouso Novo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1613985",
-    "Longitude":"-52.2394203"
+    "UF": "RS",
+    "NM_MUNICIP": "Pouso Novo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1613985",
+    "Longitude": "-52.2394203"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Poço das Antas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4418931",
-    "Longitude":"-51.6407897"
+    "UF": "RS",
+    "NM_MUNICIP": "Poço das Antas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4418931",
+    "Longitude": "-51.6407897"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Presidente Lucena",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5246418",
-    "Longitude":"-51.1743369"
+    "UF": "RS",
+    "NM_MUNICIP": "Presidente Lucena",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5246418",
+    "Longitude": "-51.1743369"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Progresso",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2419958",
-    "Longitude":"-52.3108869"
+    "UF": "RS",
+    "NM_MUNICIP": "Progresso",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2419958",
+    "Longitude": "-52.3108869"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Protásio Alves",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7510044",
-    "Longitude":"-51.4819338"
+    "UF": "RS",
+    "NM_MUNICIP": "Protásio Alves",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7510044",
+    "Longitude": "-51.4819338"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Putinga",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0017469",
-    "Longitude":"-52.1566367"
+    "UF": "RS",
+    "NM_MUNICIP": "Putinga",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0017469",
+    "Longitude": "-52.1566367"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Relvado",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1139368",
-    "Longitude":"-52.075112"
+    "UF": "RS",
+    "NM_MUNICIP": "Relvado",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1139368",
+    "Longitude": "-52.075112"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rio Pardo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9820554",
-    "Longitude":"-52.3702447"
+    "UF": "RS",
+    "NM_MUNICIP": "Rio Pardo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9820554",
+    "Longitude": "-52.3702447"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Riozinho",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6065245",
-    "Longitude":"-50.3985802"
+    "UF": "RS",
+    "NM_MUNICIP": "Riozinho",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.6065245",
+    "Longitude": "-50.3985802"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Roca Sales",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2872555",
-    "Longitude":"-51.8724318"
+    "UF": "RS",
+    "NM_MUNICIP": "Roca Sales",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2872555",
+    "Longitude": "-51.8724318"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Rolante",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6527945",
-    "Longitude":"-50.5769391"
+    "UF": "RS",
+    "NM_MUNICIP": "Rolante",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.6527945",
+    "Longitude": "-50.5769391"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Salvador do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4395698",
-    "Longitude":"-51.5103295"
+    "UF": "RS",
+    "NM_MUNICIP": "Salvador do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4395698",
+    "Longitude": "-51.5103295"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sananduva",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.9499376",
-    "Longitude":"-51.8074435"
+    "UF": "RS",
+    "NM_MUNICIP": "Sananduva",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.9499376",
+    "Longitude": "-51.8074435"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Cecília do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.1936051",
-    "Longitude":"-51.8830479"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Cecília do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.1936051",
+    "Longitude": "-51.8830479"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Clara do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4530214",
-    "Longitude":"-52.1305529"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Clara do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4530214",
+    "Longitude": "-52.1305529"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Cruz do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.714209",
-    "Longitude":"-52.4285807"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Cruz do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.714209",
+    "Longitude": "-52.4285807"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Maria do Herval",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4693032",
-    "Longitude":"-50.9605118"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Maria do Herval",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4693032",
+    "Longitude": "-50.9605118"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Tereza",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1697808",
-    "Longitude":"-51.7363155"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Tereza",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1697808",
+    "Longitude": "-51.7363155"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santa Vitória do Palmar",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-33.5198333",
-    "Longitude":"-53.3693967"
+    "UF": "RS",
+    "NM_MUNICIP": "Santa Vitória do Palmar",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-33.5198333",
+    "Longitude": "-53.3693967"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Antônio do Palma",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.4946558",
-    "Longitude":"-52.0254769"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Antônio do Palma",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.4946558",
+    "Longitude": "-52.0254769"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Antônio do Planalto",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.3698113",
-    "Longitude":"-52.7070578"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Antônio do Planalto",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.3698113",
+    "Longitude": "-52.7070578"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Santo Expedito do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.9222338",
-    "Longitude":"-51.6680556"
+    "UF": "RS",
+    "NM_MUNICIP": "Santo Expedito do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.9222338",
+    "Longitude": "-51.6680556"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sapiranga",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6392382",
-    "Longitude":"-51.0068586"
+    "UF": "RS",
+    "NM_MUNICIP": "Sapiranga",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6392382",
+    "Longitude": "-51.0068586"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sapucaia do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.8222352",
-    "Longitude":"-51.1275799"
+    "UF": "RS",
+    "NM_MUNICIP": "Sapucaia do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.8222352",
+    "Longitude": "-51.1275799"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Segredo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3431272",
-    "Longitude":"-52.9793788"
+    "UF": "RS",
+    "NM_MUNICIP": "Segredo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3431272",
+    "Longitude": "-52.9793788"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sentinela do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.6309907",
-    "Longitude":"-51.6021687"
+    "UF": "RS",
+    "NM_MUNICIP": "Sentinela do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.6309907",
+    "Longitude": "-51.6021687"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Serafina Corrêa",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7120266",
-    "Longitude":"-51.9343269"
+    "UF": "RS",
+    "NM_MUNICIP": "Serafina Corrêa",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7120266",
+    "Longitude": "-51.9343269"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sertão Santana",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.4634169",
-    "Longitude":"-51.6236615"
+    "UF": "RS",
+    "NM_MUNICIP": "Sertão Santana",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.4634169",
+    "Longitude": "-51.6236615"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sinimbu",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.444958",
-    "Longitude":"-52.5248271"
+    "UF": "RS",
+    "NM_MUNICIP": "Sinimbu",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.444958",
+    "Longitude": "-52.5248271"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sobradinho",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4009026",
-    "Longitude":"-53.0146415"
+    "UF": "RS",
+    "NM_MUNICIP": "Sobradinho",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4009026",
+    "Longitude": "-53.0146415"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Soledade",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8272467",
-    "Longitude":"-52.5109157"
+    "UF": "RS",
+    "NM_MUNICIP": "Soledade",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8272467",
+    "Longitude": "-52.5109157"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Domingos do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5297239",
-    "Longitude":"-51.8905306"
+    "UF": "RS",
+    "NM_MUNICIP": "São Domingos do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5297239",
+    "Longitude": "-51.8905306"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Francisco de Paula",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.448454",
-    "Longitude":"-50.5833027"
+    "UF": "RS",
+    "NM_MUNICIP": "São Francisco de Paula",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-29.448454",
+    "Longitude": "-50.5833027"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Jerônimo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.959642",
-    "Longitude":"-51.7238192"
+    "UF": "RS",
+    "NM_MUNICIP": "São Jerônimo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.959642",
+    "Longitude": "-51.7238192"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Jorge",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5051589",
-    "Longitude":"-51.6978538"
+    "UF": "RS",
+    "NM_MUNICIP": "São Jorge",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5051589",
+    "Longitude": "-51.6978538"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Herval",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0666962",
-    "Longitude":"-52.2730359"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Herval",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0666962",
+    "Longitude": "-52.2730359"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Hortêncio",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5360737",
-    "Longitude":"-51.2667282"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Hortêncio",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5360737",
+    "Longitude": "-51.2667282"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5533083",
-    "Longitude":"-51.4900612"
+    "UF": "RS",
+    "NM_MUNICIP": "São José do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5533083",
+    "Longitude": "-51.4900612"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São José dos Ausentes",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.747731",
-    "Longitude":"-50.0645582"
+    "UF": "RS",
+    "NM_MUNICIP": "São José dos Ausentes",
+    "REPRESENTANTE": "Gabriel Garcia",
+    "CELULAR": "5551991120557",
+    "Latitude": "-28.747731",
+    "Longitude": "-50.0645582"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Leopoldo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7420897",
-    "Longitude":"-51.1688985"
+    "UF": "RS",
+    "NM_MUNICIP": "São Leopoldo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7420897",
+    "Longitude": "-51.1688985"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Lourenço do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-31.3669286",
-    "Longitude":"-51.9814839"
+    "UF": "RS",
+    "NM_MUNICIP": "São Lourenço do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-31.3669286",
+    "Longitude": "-51.9814839"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Marcos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9706799",
-    "Longitude":"-51.0687665"
+    "UF": "RS",
+    "NM_MUNICIP": "São Marcos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9706799",
+    "Longitude": "-51.0687665"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Pedro da Serra",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4190241",
-    "Longitude":"-51.4911563"
+    "UF": "RS",
+    "NM_MUNICIP": "São Pedro da Serra",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4190241",
+    "Longitude": "-51.4911563"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Sebastião do Caí",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5847876",
-    "Longitude":"-51.3392465"
+    "UF": "RS",
+    "NM_MUNICIP": "São Sebastião do Caí",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5847876",
+    "Longitude": "-51.3392465"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Valentim do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0503352",
-    "Longitude":"-51.7675031"
+    "UF": "RS",
+    "NM_MUNICIP": "São Valentim do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0503352",
+    "Longitude": "-51.7675031"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"São Vendelino",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.3883457",
-    "Longitude":"-51.3701898"
+    "UF": "RS",
+    "NM_MUNICIP": "São Vendelino",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.3883457",
+    "Longitude": "-51.3701898"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Sério",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4033806",
-    "Longitude":"-52.243533"
+    "UF": "RS",
+    "NM_MUNICIP": "Sério",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4033806",
+    "Longitude": "-52.243533"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tabaí",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6667593",
-    "Longitude":"-51.7347775"
+    "UF": "RS",
+    "NM_MUNICIP": "Tabaí",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6667593",
+    "Longitude": "-51.7347775"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tapejara",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.069233",
-    "Longitude":"-52.0117161"
+    "UF": "RS",
+    "NM_MUNICIP": "Tapejara",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.069233",
+    "Longitude": "-52.0117161"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tapera",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.6262957",
-    "Longitude":"-52.8680873"
+    "UF": "RS",
+    "NM_MUNICIP": "Tapera",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.6262957",
+    "Longitude": "-52.8680873"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tapes",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.6764701",
-    "Longitude":"-51.4820089"
+    "UF": "RS",
+    "NM_MUNICIP": "Tapes",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.6764701",
+    "Longitude": "-51.4820089"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Taquara",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.6452036",
-    "Longitude":"-50.7832169"
+    "UF": "RS",
+    "NM_MUNICIP": "Taquara",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.6452036",
+    "Longitude": "-50.7832169"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Taquari",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.7942136",
-    "Longitude":"-51.8647988"
+    "UF": "RS",
+    "NM_MUNICIP": "Taquari",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.7942136",
+    "Longitude": "-51.8647988"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Teutônia",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4816568",
-    "Longitude":"-51.813752"
+    "UF": "RS",
+    "NM_MUNICIP": "Teutônia",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4816568",
+    "Longitude": "-51.813752"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tio Hugo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5829036",
-    "Longitude":"-52.6103575"
+    "UF": "RS",
+    "NM_MUNICIP": "Tio Hugo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5829036",
+    "Longitude": "-52.6103575"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Travesseiro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.2807613",
-    "Longitude":"-52.0780246"
+    "UF": "RS",
+    "NM_MUNICIP": "Travesseiro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.2807613",
+    "Longitude": "-52.0780246"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Triunfo",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.9407972",
-    "Longitude":"-51.7191859"
+    "UF": "RS",
+    "NM_MUNICIP": "Triunfo",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.9407972",
+    "Longitude": "-51.7191859"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Três Coroas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4713786",
-    "Longitude":"-50.7613614"
+    "UF": "RS",
+    "NM_MUNICIP": "Três Coroas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4713786",
+    "Longitude": "-50.7613614"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tunas",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.1053032",
-    "Longitude":"-52.9569329"
+    "UF": "RS",
+    "NM_MUNICIP": "Tunas",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.1053032",
+    "Longitude": "-52.9569329"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tupanci do Sul",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-27.9241973",
-    "Longitude":"-51.5291837"
+    "UF": "RS",
+    "NM_MUNICIP": "Tupanci do Sul",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-27.9241973",
+    "Longitude": "-51.5291837"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Tupandi",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4779592",
-    "Longitude":"-51.4272177"
+    "UF": "RS",
+    "NM_MUNICIP": "Tupandi",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4779592",
+    "Longitude": "-51.4272177"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Turuçu",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-31.4872389",
-    "Longitude":"-52.1278659"
+    "UF": "RS",
+    "NM_MUNICIP": "Turuçu",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-31.4872389",
+    "Longitude": "-52.1278659"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"União da Serra",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.7531756",
-    "Longitude":"-52.0152854"
+    "UF": "RS",
+    "NM_MUNICIP": "União da Serra",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.7531756",
+    "Longitude": "-52.0152854"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vacaria",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5102901",
-    "Longitude":"-50.9356044"
+    "UF": "RS",
+    "NM_MUNICIP": "Vacaria",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5102901",
+    "Longitude": "-50.9356044"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vale Real",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.391944",
-    "Longitude":"-51.255859"
+    "UF": "RS",
+    "NM_MUNICIP": "Vale Real",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.391944",
+    "Longitude": "-51.255859"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vale Verde",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.8297107",
-    "Longitude":"-52.1147857"
+    "UF": "RS",
+    "NM_MUNICIP": "Vale Verde",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.8297107",
+    "Longitude": "-52.1147857"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vale do Sol",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.5833919",
-    "Longitude":"-52.695483"
+    "UF": "RS",
+    "NM_MUNICIP": "Vale do Sol",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.5833919",
+    "Longitude": "-52.695483"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vanini",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.496895",
-    "Longitude":"-51.8323056"
+    "UF": "RS",
+    "NM_MUNICIP": "Vanini",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.496895",
+    "Longitude": "-51.8323056"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Venâncio Aires",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.614306",
-    "Longitude":"-52.193159"
+    "UF": "RS",
+    "NM_MUNICIP": "Venâncio Aires",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.614306",
+    "Longitude": "-52.193159"
   },
   {
-    "UF":"RS",
-    "NM_MUNICIP":"Vera Cruz",
-    "REPRESENTANTE":"LEONARDO",
-    "CELULAR":"5518981552352",
-    "Latitude":"-29.7302051",
-    "Longitude":"-52.5324337"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Veranópolis",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.9802065",
-    "Longitude":"-51.5380555"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Vespasiano Corrêa",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0652034",
-    "Longitude":"-51.8646292"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Viamão",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-30.0819338",
-    "Longitude":"-51.0261927"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Vila Flores",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8599673",
-    "Longitude":"-51.5539634"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Vila Lângaro",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.1321929",
-    "Longitude":"-52.1391192"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Vila Maria",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.5745684",
-    "Longitude":"-52.1333244"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Vista Alegre do Prata",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.8306756",
-    "Longitude":"-51.7877743"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Westfália",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.4016682",
-    "Longitude":"-51.7360709"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Água Santa",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-28.1775297",
-    "Longitude":"-52.0360304"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoa Dos Patos",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-31.2510772",
-    "Longitude":"-51.3959719"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Lagoa Mirim",
-    "REPRESENTANTE":"CRISTIAN",
-    "CELULAR":"555584491079",
-    "Latitude":"-32.8309398",
-    "Longitude":"-53.1125613"
-  },
-  {
-    "UF":"RS",
-    "NM_MUNICIP":"Pinto Bandeira",
-    "REPRESENTANTE":"Reginaldo",
-    "CELULAR":"5551991089339",
-    "Latitude":"-29.0977191",
-    "Longitude":"-51.4498258"
+    "UF": "RS",
+    "NM_MUNICIP": "Vera Cruz",
+    "REPRESENTANTE": "LEONARDO",
+    "CELULAR": "5518981552352",
+    "Latitude": "-29.7302051",
+    "Longitude": "-52.5324337"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Veranópolis",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.9802065",
+    "Longitude": "-51.5380555"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Vespasiano Corrêa",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0652034",
+    "Longitude": "-51.8646292"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Viamão",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-30.0819338",
+    "Longitude": "-51.0261927"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Vila Flores",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8599673",
+    "Longitude": "-51.5539634"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Vila Lângaro",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.1321929",
+    "Longitude": "-52.1391192"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Vila Maria",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.5745684",
+    "Longitude": "-52.1333244"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Vista Alegre do Prata",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.8306756",
+    "Longitude": "-51.7877743"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Westfália",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.4016682",
+    "Longitude": "-51.7360709"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Água Santa",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-28.1775297",
+    "Longitude": "-52.0360304"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoa Dos Patos",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-31.2510772",
+    "Longitude": "-51.3959719"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Lagoa Mirim",
+    "REPRESENTANTE": "CRISTIAN",
+    "CELULAR": "555584491079",
+    "Latitude": "-32.8309398",
+    "Longitude": "-53.1125613"
+  },
+  {
+    "UF": "RS",
+    "NM_MUNICIP": "Pinto Bandeira",
+    "REPRESENTANTE": "Reginaldo",
+    "CELULAR": "5551991089339",
+    "Latitude": "-29.0977191",
+    "Longitude": "-51.4498258"
   },
   {
     "UF":"SC",
